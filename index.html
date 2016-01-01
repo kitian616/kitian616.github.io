@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="home.css">
+    <script src="http://cdn.jsdelivr.net/vivus/latest/vivus.min.js"></script>
+    <title></title>
+</head>
+<body>
+    <div class="title">
+        <svg id="logo" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <g transform="translate(1 1)">
+                <path id="logo-path" d="M0 0H18V4H11V18H7V4H0V0"/>
+            </g>
+        </svg>
+        <h1 id="title-text">homas Tian</h1>
+    </div>
+    <div id="follow-me">
+        <a class="social-link round-rect-button" href="http://kitian616.github.io/blog/">Blog</a>
+        <a class="social-link round-rect-button" href="mailto:kitian616@outlook.com">e-mail</a>
+        <a class="social-link round-rect-button" href="http://weibo.com/234695683">Weibo</a>
+        <a class="social-link round-rect-button" href="https://twitter.com/kitian616">Twitter</a>
+        <a class="social-link round-rect-button" href="https://plus.google.com/u/0/101827554735084402671">Google+</a>
+        <a class="social-link round-rect-button" href="https://github.com/kitian616">Github</a>
+        <a class="social-link round-rect-button" href="http://www.douban.com/people/kitian616">Douban</a>
+    </div>
+    <script>
+        new Vivus(  'logo',
+                    {duration: 150,
+                    delay: 0,
+                    },
+                    function(){ document.getElementById("logo-path").style.fill="#cc3399";
+                        document.getElementById("title-text").style.opacity="1";
+                        document.getElementById("follow-me").style.opacity="1";
+                });
+    </script>
+</body>
+</html>
