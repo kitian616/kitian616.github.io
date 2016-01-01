@@ -8,55 +8,48 @@ body {
     margin: 0;
 }
 
-.title {   
+#content {
+    padding: 15px;
+    margin: 8em auto 0 auto;
+}
+
+#title {
     display: table;
-    margin: 10em auto 0 auto;
+    margin: 0 auto;
     color: white;
 }
 
-.title:after {
-    content: "";
-    display: table;
-    clear: both;
-}
 
-#logo {
-    width: 6em;
-    height: 6em;
-    margin: 0em -1.4em 0 0;
-    transform: rotate(15deg);
-}
-
-#logo:hover {
-    transform: rotate(0deg);
-}
-
-#logo path {
-    fill: #3366cc;
-    stroke: white;
-    stroke: 20px;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    transition: fill 1s;
-}
-
-#title-text {
-    display: inline-block;
+.title-text {
     line-height: 1;
-    font-size: 4em;
-
-    margin: 0;
-    padding: 0;
-
-    opacity: 0;
-    transition: opacity 1s;
+    font-size: 3em;
 }
 
 #follow-me {
     display: table;
-    margin: 2em auto 0 auto;
-    opacity: 0;
-    transition: opacity 1s;
+    margin: 0 auto;
+}
+
+.social-link {
+    display: inline-block;
+    text-decoration: none;
+    line-height: 1.5;
+    margin: 0.5em 0;
+}
+
+.social-link:not(:last-child) {
+    margin-right: 0.5em;
+}
+
+
+#social-link--blog {
+    color: #cc3399;
+    background-color: #ffccff;
+}
+
+#social-link--blog:hover {
+    color: #f1f4f9;
+    background-color: #cc3399;
 }
 
 .round-rect-button {
@@ -83,13 +76,3 @@ body {
     color: #f1f4f9;
     background-color: #cc3399;
 }
-
-.social-link {
-    text-decoration: none;
-}
-
-.social-link:not(:last-child) {
-    margin: 0 0.5em 0 0;
-}
-
-
