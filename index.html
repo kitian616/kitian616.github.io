@@ -1,51 +1,57 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Thomas Tian</title>
-    <meta name="description" content="Thomas Tian's Home Page | 田琦的主页">
-    <link rel="canonical" href="http://www.thomastian.com/">
-
-    <link rel="icon" sizes="128x128" type="image/vnd.microsoft.icon" href="/logo/favicon-128x128.ico"/>
-    <link rel="icon" sizes="64x64" type="image/vnd.microsoft.icon" href="/logo/favicon-64x64.ico"/>
-    <link rel="icon" sizes="48x48" type="image/vnd.microsoft.icon" href="/logo/favicon-48x48.ico"/>
-    <link rel="icon" sizes="32x32" type="image/vnd.microsoft.icon" href="/logo/favicon-32x32.ico"/>
-    <link rel="icon" sizes="16x16" type="image/vnd.microsoft.icon" href="/logo/favicon-16x16.ico"/>
-    <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="/favicon.ico">
-
-    <link rel="apple-touch-icon" href="/logo/touch-icon-iphone.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/logo/touch-icon-ipad.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/logo/touch-icon-iphone-retina.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/logo/touch-icon-ipad-retina.png">
-    
-    <link rel="stylesheet" href="home.css">
-</head>
+---
+layout: base
+title: Thomas Tian
+excerpt: Thomas Tian's Home Page | 田琦的主页
+---
 <body>
     <div id="content" itemscope itemtype="http://schema.org/Person">
-        <div id="title">
-            <h1 itemprop="name" class="title-text" title="Thomas is my name, since I Love TRAIN.">Thomas Tian</h1>
-        </div>
-        <div id="follow-me">
-            <a itemprop="url" id="social-link--blog" class="social-link round-rect-button" title="Visit my Blog !!!" href="http://www.thomastian.com/blog/">Blog</a>
-            <a itemprop="sameAs" class="social-link round-rect-button" title="Send me E-Mail" href="mailto:kitian616@outlook.com">Email</a>
-            <a itemprop="sameAs" class="social-link round-rect-button" title="Follow me on Weibo" href="http://weibo.com/234695683">Weibo</a>
-            <a itemprop="sameAs" class="social-link round-rect-button" title="Follow me on Twitter" href="https://twitter.com/kitian616">Twitter</a>
-            <a itemprop="sameAs" class="social-link round-rect-button" title="Follow me on Google+" href="https://plus.google.com/u/0/101827554735084402671">Google+</a>
-            <a itemprop="sameAs" class="social-link round-rect-button" title="Follow me on Github" href="https://github.com/kitian616">Github</a>
-            <a itemprop="sameAs" class="social-link round-rect-button" title="Follow me on Douban" href="http://www.douban.com/people/kitian616">Douban</a>
+        <div class="main">
+            <div class="my-photo">
+                <img alt="my photo" src="/logo/thomas-face.jpg" />
+            </div>
+            <div id="title">
+                <h1 itemprop="name" class="title-text" title="Thomas is my name, since I Love TRAIN.">Thomas Tian</h1>
+            </div>
+            <div id="follow-me">            
+                <ul class="wrapper-col" itemscope itemtype="http://schema.org/Person">
+                    <meta itemprop="name" content="{{ site.author }}">
+                    
+                    
+                    <li class="round-button icon--weibo" title="Follow me on Weibo.">
+                        <a itemprop="sameAs" href="http://weibo.com/{{ site.weibo_username }}" target="_blank">
+                            <div class="icon">{% include icon/icon-weibo.svg %}</div>
+                        </a>
+                    </li>
+                    <li class="round-button icon--twitter" title="Follow me on Twitter.">
+                        <a itemprop="sameAs" href="https://twitter.com/{{ site.twitter_username }}" target="_blank">
+                            <div class="icon">{% include icon/icon-twitter.svg %}</div>
+                        </a>
+                    </li>
+                    <li class="round-button icon--googlepluse" title="Follow me on Google+.">
+                        <a itemprop="sameAs" href="https://plus.google.com/u/0/{{ site.googleplus_username }}" target="_blank">
+                            <div class="icon">{% include icon/icon-googleplus.svg %}</div>
+                        </a>
+                    </li>
+                    <li class="round-button icon--github" title="Follow me on Github.">
+                        <a itemprop="sameAs" href="https://github.com/{{ site.github_username }}" target="_blank">
+                            <div class="icon">{% include icon/icon-github.svg %}</div>
+                        </a>
+                    </li>
+                    <li class="round-button icon--douban" title="Follow me on Douban.">
+                        <a itemprop="sameAs" href="http://www.douban.com/people/{{ site.douban_username }}" target="_blank">
+                            <div class="icon">{% include icon/icon-douban.svg %}</div>
+                        </a>
+                    </li>
+                </ul>
+                <link itemprop="url" href="{{ '/' | prepend: site.url }}">
+                <p>
+                    <a class="social-link blog" title="Visit my Blog." itemprop="sameAs" href="{{ '/blog' | prepend: site.url }}" target="_self">{{ '/blog' | prepend: site.url }}</a>
+                </p>
+                <p>
+                    <a class="social-link e-mail" title="Send me e-mail." itemprop="sameAs" href="mailto:{{ site.email }}" target="_self">{{ site.email }}</a>
+                </p> 
+            </div>
         </div>
     </div>
-    <script>
-        /*new Vivus(  'logo',
-                    {duration: 150,
-                    delay: 0,
-                    },
-                    function(){ document.getElementById("logo-path").style.fill="#cc3399";
-                        document.getElementByClass("title-text").style.opacity="1";
-                        document.getElementById("follow-me").style.opacity="1";
-                });*.
-    </script>
 </body>
-</html>
+

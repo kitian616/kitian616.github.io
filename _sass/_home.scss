@@ -1,0 +1,128 @@
+body {
+    font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB",
+                 "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    background-color: $bg-color;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    margin: 0;
+}
+
+
+#content {
+    display: table;
+    padding: 15px;
+    margin: 8em auto 0 auto;
+    text-align: center;
+}
+
+.main {
+    display: table-cell;
+}
+
+.my-photo {
+    display: table;
+    margin: 0 auto;
+    padding: 0;
+    -webkit-transition: all 0.8s ease 0s;
+    -moz-transition: all 0.8s ease 0s;
+    transition: all 0.8s ease 0s;
+    
+    &:hover {
+        transform: rotate(340deg);
+    }
+
+    img {
+        display: block;
+        box-sizing: border-box;
+        height: 140px;
+        width: 140px;
+        border-radius: 70px;
+        border-style: solid;
+        border-width: 5px;
+        border-color: rgba(255, 255, 255, 0.5);
+    }
+}
+
+#title {
+    margin: 0 auto;
+    color: #ffffff;
+}
+
+
+.title-text {
+    line-height: 1;
+    font-size: 3em;
+    font-weight: 800;
+}
+
+#follow-me {
+    ul {
+        margin: 2.5em 0 1.5em 0;
+        li {
+            float: left;
+            &:not(:last-child) {
+                margin-right: 10px;
+            }
+        }
+    }
+    p {
+        margin: 0;
+    }
+    .icon {
+        width: 32px;
+        height: 32px;
+    }
+    .round-button {
+        &:hover {
+            background-color: $bg-color;
+            border-color: $bg-color;
+            transform: rotate(30deg)
+        }
+    }
+    .icon--weibo {
+        background-color: $weibo-color;
+        border-color: $weibo-color;
+    }
+    .icon--twitter {
+        background-color: $twitter-color;
+        border-color: $twitter-color;
+    }
+    .icon--googlepluse {
+        background-color: $google-plus-color;
+        border-color: $google-plus-color;
+    }
+    .icon--github {
+        background-color: $github-color;
+        border-color: $github-color;
+    }
+    .icon--douban {
+        background-color: $douban-color;
+        border-color: $douban-color;
+    }
+}
+
+.social-link {
+    font-size: 1em;
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+@include media-query($on-palm) {
+    #content {
+        margin: 3em auto 0 auto;
+    }
+    .title-text {
+        font-size: 1.8em;
+    }
+    #follow-me {
+        .icon {
+            width: 24px;
+            height: 24px;
+        }
+    } 
+}
+

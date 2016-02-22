@@ -1,0 +1,31 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+author: "Thomas Tian"
+title: Thomas Tian
+subtitle: 田琦的主页
+email: kitian616@outlook.com
+description: > # this means to ignore newlines until "baseurl:"
+    Thomas Tian's Home | 田琦的主页
+    
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://www.thomastian.com" # the base hostname & protocol for your site
+timezone: Asia/Shanghai
+
+twitter_username: kitian616
+github_username:  kitian616
+googleplus_username: 101827554735084402671
+weibo_username: 234695683
+douban_username: kitian616
+ga_tracking_id: "UA-71907556-1"
+
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: date

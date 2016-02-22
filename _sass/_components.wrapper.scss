@@ -1,0 +1,14 @@
+/**
+ * Wrapper
+ */
+.wrapper-col {
+     @extend %clearfix;
+}
+
+%clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
