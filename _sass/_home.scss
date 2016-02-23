@@ -129,7 +129,7 @@ body {
 }
 
 @include media-query($on-palm) {
-    #content {
+    .main {
         margin: 3em auto 0 auto;
     }
     .title-text {
