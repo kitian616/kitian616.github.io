@@ -10,11 +10,10 @@ body {
     height: 100%;
     border: 0;
     margin: 0;
-    overflow: hidden;
 }
 
 
-#content {
+#home {
     position: absolute;
     top: 0;
     box-sizing: border-box;
@@ -33,7 +32,7 @@ body {
     text-align: center;
 }
 
-.table-cell {
+.content {
     display: table-cell;
 }
 
@@ -41,12 +40,9 @@ body {
     display: table;
     margin: 0 auto;
     padding: 0;
-    -webkit-transition: all 0.8s ease 0s;
-    -moz-transition: all 0.8s ease 0s;
-    transition: all 0.8s ease 0s;
     
     &:hover {
-        transform: rotate(340deg);
+        transform: rotate(360deg);
     }
 
     img {
@@ -59,11 +55,13 @@ body {
         border-width: 5px;
         border-color: rgba(255, 255, 255, 0.5);
     }
+    -webkit-transition: transform 0.8s ease 0s;
+    -moz-transition: transform 0.8s ease 0s;
+    transition: transform 0.8s ease 0s;
 }
 
 #title {
     margin: 0 auto;
-    color: #ffffff;
 }
 
 
@@ -71,6 +69,10 @@ body {
     line-height: 1;
     font-size: 3em;
     font-weight: 800;
+    color: rgba(255, 255, 255, 0.9);
+    &:hover {
+        color: $white-color;
+    }
 }
 
 #follow-me {
@@ -94,7 +96,6 @@ body {
         &:hover {
             background-color: $bg-color;
             border-color: $bg-color;
-            transform: rotate(30deg)
         }
     }
     .icon--weibo {
@@ -118,7 +119,7 @@ body {
         border-color: $douban-color;
     }
     .blog {
-        color: $link-color;
+        color: $main-color-l;
     }
 }
 
