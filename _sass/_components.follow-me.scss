@@ -1,0 +1,78 @@
+/**
+* Follow ME !! ^^ ^^ (aside)
+*/
+.follow-me {
+    display: inline-block;
+    padding: 10px;
+    margin: 0 auto;
+    p {
+        padding: 0;
+        margin: 5px 0;
+    }
+    ul{
+        display: inline-block;
+        margin-bottom: 15px;
+    }
+    li {
+        float: left;
+        list-style-type: none;
+    }
+    .icon {
+        > svg {
+            display: block;
+            width: 32px;
+            height: 32px;
+            @include media-query($on-palm) {
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+    
+    //default colors
+    .round-button {
+        &:hover, &:active {
+            background-color: $bg-color;
+            border-color: $bg-color;
+        }
+        .icon > svg path {
+            fill: $white-color;
+        }
+        &:not(:last-child){
+            margin-right: 5px;
+        }
+    }
+    .weibo {
+        background-color: $weibo-color;
+        border-color: $weibo-color;
+    }
+    .twitter {
+        background-color: $twitter-color;
+        border-color: $twitter-color;
+    }
+    .googlepluse {
+        background-color: $google-plus-color;
+        border-color: $google-plus-color;
+    }
+    .github {
+        background-color: $github-color;
+        border-color: $github-color;
+    }
+    .douban {
+        background-color: $douban-color;
+        border-color: $douban-color;
+
+    }
+    .social-link {
+        font-size: 1em;
+        color: rgba(255, 255, 255, 0.5);
+        text-decoration: none;
+        &:hover, &:active {
+            text-decoration: underline;
+        }
+    }
+    
+    .blog {
+        color: $main-color-l;
+    }
+}

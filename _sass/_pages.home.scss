@@ -17,7 +17,7 @@ body {
     box-sizing: border-box;
     width: 100%;
     height: 100%;
-    border-width: 1em;
+    border-width: 1px;
     border-color: transparent;
     border-style: solid;
 }
@@ -35,9 +35,7 @@ body {
 }
 
 .my-photo {
-    display: table;
-    margin: 0 auto;
-    padding: 0;
+    display: inline-block;
     
     &:hover {
         transform: rotate(360deg);
@@ -62,7 +60,6 @@ body {
     margin: 0 auto;
 }
 
-
 .title-text {
     line-height: 1;
     font-size: 3em;
@@ -73,62 +70,7 @@ body {
     }
 }
 
-#follow-me {
-    ul {
-        margin: 2.5em 0 1.5em 0;
-        li {
-            float: left;
-            &:not(:last-child) {
-                margin-right: 10px;
-            }
-        }
-    }
-    p {
-        margin: 0;
-    }
-    .icon {
-        width: 32px;
-        height: 32px;
-    }
-    .round-button {
-        &:hover {
-            background-color: $bg-color;
-            border-color: $bg-color;
-        }
-    }
-    .icon--weibo {
-        background-color: $weibo-color;
-        border-color: $weibo-color;
-    }
-    .icon--twitter {
-        background-color: $twitter-color;
-        border-color: $twitter-color;
-    }
-    .icon--googlepluse {
-        background-color: $google-plus-color;
-        border-color: $google-plus-color;
-    }
-    .icon--github {
-        background-color: $github-color;
-        border-color: $github-color;
-    }
-    .icon--douban {
-        background-color: $douban-color;
-        border-color: $douban-color;
-    }
-    .blog {
-        color: $main-color-l;
-    }
-}
 
-.social-link {
-    font-size: 1em;
-    color: rgba(255, 255, 255, 0.5);
-    text-decoration: none;
-    &:hover {
-        text-decoration: underline;
-    }
-}
 
 @include media-query($on-palm) {
     .main {
@@ -137,11 +79,4 @@ body {
     .title-text {
         font-size: 1.8em;
     }
-    #follow-me {
-        .icon {
-            width: 24px;
-            height: 24px;
-        }
-    } 
 }
-
