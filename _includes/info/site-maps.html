@@ -1,0 +1,5 @@
+{% if site.blog_url %}
+    <p>
+        <a class="social-link blog" title="Visit my blog." itemprop="sameAs" href="{{ site.blog_site_url | prepend: site.baseurl | append: tag | replace: '//', '/' }}" target="_self"> Visit My Blog </a>
+    </p>
+{% endif %}

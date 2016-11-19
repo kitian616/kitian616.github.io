@@ -6,27 +6,60 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-author: "Thomas Tian"
 title: Thomas Tian
 subtitle: 田琦的主页
-email: kitian616@outlook.com
 description: > # this means to ignore newlines until "baseurl:"
     Thomas Tian's Home | 田琦的主页
     
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/" # the subpath of your site, e.g. /blog
+blog_site_url: "/blog"
+
 url: "http://www.thomastian.com" # the base hostname & protocol for your site
+
+# site github reop url
+github_repo: blog
+github_repo_tree: gh-pages
+
+# language
+lang: zh # the language of your site
 timezone: Asia/Shanghai
 
+# author
+author: "Thomas Tian"
+avata_url: http://7xpqpj.com1.z0.glb.clouddn.com/image/me/peitaiho.JPG
+bio: 前端开发实习生，立志成为全栈开发者。
+email: kitian616@outlook.com
 twitter_username: kitian616
 github_username:  kitian616
 googleplus_username: 101827554735084402671
 weibo_username: 234695683
 douban_username: kitian616
-ga_tracking_id: "UA-71907556-1"
+homepage_url: http://www.thomastian.com/blog/about/
 blog_url: "http://www.thomastian.com/blog"
 
-
+## develop
+## paginate
+paginate: 7
+paginate_path: /blog/page:num
+# Basic settings
+excerpt_separator: <!--more-->
 # Build settings
 markdown: kramdown
-highlighter: rouge
 permalink: date
+# google analytics
+ga_tracking_id: UA-71907556-1
+# comment
+duoshuo_shortname: thomas-blog
+# leancloud vies
+app_id: uAG3OhdcH8H4fxSqXLyBljA7-gzGzoHsz
+app_key: Mzf5m9skSwYVWVXhGiYMNyXs
+app_class: ThomasBlog
+# plugins
+gems:
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-paginate
+
+# server
+server_url: "0.0.0.0"
+debug: false

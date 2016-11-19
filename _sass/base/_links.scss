@@ -1,0 +1,121 @@
+/**
+ * Links
+ */
+
+a {
+    font-weight: $bold-font-weight;
+    text-decoration: none;
+    &, &:visited, &.active {
+        color: $link-clr;
+    }
+    &:hover{
+        color: $link-hv-clr;
+        text-decoration: underline;
+    }
+    -webkit-transition: all 0.8s ease 0s;
+    -moz-transition: all 0.8s ease 0s;
+    transition: all 0.8s ease 0s;
+
+}
+
+%button {
+    cursor:pointer;
+}
+
+.round-button {
+    @extend %button;
+    display: block;
+    font-weight: $base-font-weight;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 8px;
+    border-radius: 50%;
+    &, &:visited {
+        border: 1px solid $bd-clr;
+        color: $main-tx-clr-sub;
+        text-decoration: none;
+    }
+    &:hover, &:active {
+        border: 1px solid $botton-hv-clr;
+        background-color: $botton-hv-clr;
+        color: $main-tx-odd-clr;
+        text-decoration: none;
+    }
+
+    .icon {
+        &, &:visited {
+            path {
+                fill: $main-tx-clr-sub;
+            }
+        }
+        &:hover, &:active {
+            path {
+                fill: $main-tx-odd-clr;
+            }
+        }
+    }
+    //inactive button (gray)
+    &.inactive {
+        &, &:visited {
+            color: $main-tx-clr-sub;
+        }
+        &:hover, &:active {
+            border-color: $bd-clr;
+            background-color: transparent;
+            color: $bd-clr;
+        }
+        .icon {
+            &, &:visited {
+                path {
+                    fill: $bd-clr;
+                }
+            }
+            &:hover, &:active {
+                path {
+                    fill: $bd-clr;
+                }
+            }
+        }
+    }
+
+    -webkit-transition: all 0.8s ease 0s;
+    -moz-transition: all 0.8s ease 0s;
+    transition: all 0.8s ease 0s;
+}
+
+.round-rect-button {
+    @extend %button;
+    display: block;
+    font-weight: $base-font-weight;
+    box-sizing: border-box;
+    padding: 0 0.6em;
+    line-height: 1.6;
+    border-radius: 1em;
+    &, &:visited {
+        border: 1px solid $bd-clr;
+        color: $main-tx-clr-sub;
+        text-decoration: none;
+    }
+    &:hover, &:active {
+        border: 1px solid $botton-hv-clr;
+        background-color: $botton-hv-clr;
+        color: $main-tx-odd-clr;
+        text-decoration: none;
+
+    }
+    .icon {
+        &, &:visited {
+            path {
+                fill: $main-tx-clr-sub;
+            }
+        }
+        &:hover, &:active {
+            path {
+                fill: $main-tx-odd-clr;
+            }
+        }
+    }
+    -webkit-transition: all 0.8s ease 0s;
+    -moz-transition: all 0.8s ease 0s;
+    transition: all 0.8s ease 0s;
+}

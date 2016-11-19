@@ -5,15 +5,16 @@
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-    "setting.base",
-    "setting.colors",
+    "settings/base",
+    "settings/colors",
+    "settings/font",
     
-    "base.tags",
-    "base.links",
+    "base/base",
+    "base/image&icon",
+    "base/links",
     
-    "components.wrapper",
-    "components.stage",
-    "components.follow-me",
+    "components/wrapper",
+    "components/follow-me",
     
-    "pages.home"
+    "home/page.home"
 ;

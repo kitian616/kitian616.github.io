@@ -1,0 +1,14 @@
+.post-list {
+    article {
+        padding: $spacing-unit / 3 0;
+        &:not(:last-child) {         
+            border-bottom-width: 1px;
+            border-bottom-style: dashed;
+            border-color: $bd-clr;
+        }
+        .article-content {
+            padding-top: $spacing-unit / 2;
+        }
+    }
+}
+

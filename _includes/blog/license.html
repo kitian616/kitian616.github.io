@@ -1,0 +1,13 @@
+<div class="license">
+    <div class="wrapper-col">
+        {% if site.github_username and site.github_repo and site.github_repo_tree %}
+        <a class="octocat" href="https://github.com/{{ site.github_username }}/{{ site.github_repo }}/tree/{{ site.github_repo_tree }}/{{ page.path }}">
+            <img alt="View on Github" src="{{ "/res/pic/octocat.jpg" | prepend: site.baseurl | replace: '//', '/'}}" />
+        </a>
+        <p><a href="https://github.com/{{ site.github_username }}/{{ site.github_repo }}/tree/{{ site.github_repo_tree }}/{{ page.path }}">View this POST on Github</a>.</P>
+        {% endif %}
+        <p>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a> license.</p>
+        <a class="cc-license" rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License"src="{{ "/res/pic/license-cc4.png" | prepend: site.baseurl  | replace: '//', '/'}}" /></a>
+        <p>欢迎转载，转载需注明出处：<a class="url" href="{{ page.url | prepend: site.baseurl | replace: '//', '/' | prepend: site.url }}">{{ page.url | prepend: site.baseurl | replace: '//', '/' | prepend: site.url }}</a>，且禁止用于商业目的。</p>
+    </div>
+</div>

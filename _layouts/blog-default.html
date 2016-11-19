@@ -1,0 +1,107 @@
+---
+layout: blog-base
+---
+<div id="page-content">
+    <div id="page-stage">
+        {% include blog/header.html %}
+        <div id="page-main">
+            {{ content }}
+        </div>
+    </div>
+    <div id="page-footer">
+        <aside id="footer-follow-me">
+            {% include info/follow-me.html %}
+        </aside>
+        <footer id="footer-site-info">
+            {% include blog/site-info.html %}
+        </footer>
+    </div>
+</div>
+<script src="//cdn.bootcss.com/emojione/2.2.6/lib/js/emojione.min.js"></script>
+<script>
+    function affix() {
+        function getMinHeight() {
+            var min_height = 0;
+            $(".affix").each(function(index) {
+                var cur_height = $(this).offset().top;
+                if (0 === index) {
+                    min_height = cur_height;
+                } else {
+                    if (min_height > cur_height) {
+                        min_height = cur_height;
+                    }
+                }
+            });
+            return min_height;
+        }
+        var min_height = getMinHeight();
+        $(window).on("resize", function() {
+            min_height = getMinHeight();
+        });
+        var flag = false;
+        $(window).on("scroll", function() {
+            if ($(document).scrollTop() < min_height) {
+                flag = false;
+                $(".affix").each(function() {
+                    $(this).css({
+                        position: "relative",
+                        top: 0
+                    });
+                });
+            } else {
+                if (flag == false) {
+                    $(".affix").each(function() {
+                        $(this).css({
+                            position: 'relative',
+                            top: 0
+                        });
+                    });
+                    $(".affix").each(function() {
+                        var width = $(this).width();
+                        $(this).css({
+                            top: function() {
+                                var top = $(this).offset().top - min_height;
+                                return top;
+                            }
+                        });
+                        $(this).width(width);
+                    });
+                    $(".affix").each(function() {
+                        $(this).css({position: 'fixed'});
+                    });
+                }
+                if (flag != true) {
+                    flag = true;
+                }
+            }
+        });
+    }
+    function setFooterHeight() {
+        /* responsive design : change height */
+        //var header_height = $("#page-header").outerHeight();
+        var footer_height = $("#page-footer").outerHeight();
+        $("#page-footer").css("margin-top", (-footer_height) + "px");
+        //$("#page-main").css("padding-top", header_height + 15 + "px");
+        $("#page-stage").css("padding-bottom", footer_height + "px");
+    }
+    $(document).ready(function(){
+        setFooterHeight();
+        // display coding language //
+        $(".highlight").each(function() {
+            $(this).attr("data-lang", $(this).find("code").attr("data-lang"));
+        });
+        // picture lazy load //
+        // $(".article-content img").each(function(){
+        //     $(this).attr('data-src', $(this).attr('src'));
+        // });
+        // $(".article-content img").unveil();
+        // 
+        affix();
+        $(".article-content").each(function() {
+            var original = $(this).html();
+            emojione.imageType = 'svg';
+            var converted = emojione.toImage(original);
+            $(this).html(converted);
+        });
+    });
+</script>

@@ -1,0 +1,18 @@
+$base-font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB",
+                   "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+$code-font-family: Menlo, Consolas, "Courier New", Courier, "Liberation Mono", monospace;
+
+$base-font-size: 1em;
+$base-font-weight: 400;
+$bold-font-weight: 700;
+
+$h1-font-size: $base-font-size * 2;
+$h2-font-size: $base-font-size * 1.4;
+$h3-font-size: $base-font-size * 1.16;
+$h4-font-size: $base-font-size * 1.064;
+$h5-font-size: $base-font-size;
+$h6-font-size: $base-font-size;
+$code-font-size: $base-font-size * 15 / 16;
+$small-font-size:  $base-font-size * 15 / 16;
+
+$footer-font-size: $small-font-size;

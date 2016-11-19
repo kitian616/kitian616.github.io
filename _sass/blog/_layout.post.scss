@@ -1,0 +1,16 @@
+.article-header {
+    margin-bottom: 1em;
+    padding: 0 0 1em 0;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-color: $bd-clr;
+}
+
+
+#post-license {
+	position: relative;
+    max-width: 500px;
+    margin: 1.5em 0;
+    background-color: $license-bg-clr;
+    box-shadow: 0 0.5px 2px 0 $sd-clr;
+}

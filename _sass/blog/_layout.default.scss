@@ -1,0 +1,112 @@
+/**
+ * Page content
+ */
+#page-content {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto 0 auto;
+}
+#page-stage {
+    box-sizing: border-box;
+    min-height: 100%;
+    overflow:auto;
+}
+#page-main {
+    max-width: $paper-max-width;
+    padding: $spacing-unit * 1.5 $spacing-unit $spacing-unit;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    .card {
+        box-shadow: 0 0 4px $bd-clr;
+        padding: $spacing-unit * 3;
+    }
+    @include media-query($on-laptop) {
+        padding: $spacing-unit / 4 $spacing-unit / 2;
+        .card {
+            box-shadow: 0 0 0 $bd-clr;
+            padding: $spacing-unit;
+        }
+    }
+    @include media-query($on-palm) {
+        padding: 0;
+        .card {
+            padding: $spacing-unit / 2;
+        }
+    }
+    .one-col {
+        width: 70%;
+        margin: $spacing-unit / 2 auto 0 auto;
+        @include media-query($on-laptop) {
+            width: 100%;
+            margin: 0;
+        }
+    }
+    .left-col {
+        box-sizing: border-box;
+        width: 100%;
+        margin: $spacing-unit / 2 0 0 0;
+        @include media-query($on-laptop) {
+            width: 100%;
+            margin: 0;
+        }
+    }
+    .right-col {
+        box-sizing: border-box;
+        width: $aside-width;
+        h1 {
+            line-height: 1.4;
+            font-size: $h2-font-size;
+            color: $main-tx-clr-sub;
+            padding: 0 0 0 $spacing-unit / 3;
+            margin: 0 0 $spacing-unit / 2 (-$spacing-unit / 2);
+            border: 0 solid $right-side-h-clr;
+            border-left-width: 12px;
+        }
+        .card {
+            padding: $spacing-unit / 3 $spacing-unit / 2 $spacing-unit / 2;
+            margin: $spacing-unit / 2 0 $spacing-unit / 2 $spacing-unit / 2;
+        }
+        @include media-query($on-laptop) {
+            display: none;
+        }
+    }
+}
+
+#page-footer {
+    width: 100%;
+    background-color: $footer-bg-clr;
+    box-shadow: 0 -1px 4px $sd-clr;
+    p {
+        color: $footer-tx-clr;
+    }
+    a {
+        color: $footer-lk-clr;
+        &:visited {
+            color: $footer-lk-clr;
+        }
+        &:hover {
+          color: $footer-lk-hv-clr;
+        }
+        &:active {
+            color: $footer-lk-clr;
+        }
+    }
+    .follow-me {
+        padding: $spacing-unit 0 0 0;
+        margin: 0 auto;
+        .round-button {
+            box-shadow: 0 0 4px $sd-clr;
+        }
+        .mail {
+            display: none;
+        }
+    }
+    .site-info {
+        padding: 0 0 $spacing-unit 0;
+        margin: 0 auto;
+    }
+}

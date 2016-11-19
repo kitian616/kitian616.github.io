@@ -1,0 +1,37 @@
+.pagination {
+    padding: $spacing-unit / 3 0;
+    .icon {
+        display: block;
+         > svg {
+            width: 1.6em;
+            height: 1.6em;
+            margin: -1px;
+        }
+    }
+
+    .round-button {    
+        height: 1.6em;
+        width: 1.6em;
+        padding: 0;
+
+        span {
+            line-height: 1.6;
+        }
+    }
+
+    .cur-page {
+        .round-button {
+            background-color: $botton-hv-clr;
+            border-color: $botton-hv-clr;
+            color: $main-tx-odd-clr;
+        }
+    }
+
+    li {
+        list-style-type: none;
+        float: left;
+        &:not(:last-child) {
+            margin-right: $spacing-unit / 6;
+        }
+    }
+}

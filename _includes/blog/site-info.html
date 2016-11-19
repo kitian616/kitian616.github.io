@@ -1,0 +1,13 @@
+<div class="site-info">
+    <div>
+        <p>© {{ site.title }} 2015 - 2016</p>
+        <p>Theme by <a href="{{ site.baseurl }}/">Thomas Tian</a>.
+        {% if site.github_username and site.github_repo %}
+        <iframe
+            style="display: inline-block;vertical-align: text-top;"
+            src="https://ghbtns.com/github-btn.html?user={{ site.github_username }}&repo={{ site.github_repo }}&type=star&count=true" frameborder="0" scrolling="0" width="91px" height="20px" >
+        </iframe>
+        {% endif %}
+        </p>
+    </div>
+</div>

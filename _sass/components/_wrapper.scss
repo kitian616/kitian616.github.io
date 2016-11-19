@@ -1,0 +1,37 @@
+/**
+ * Wrapper
+ */
+.wrapper-col {
+     @extend %clearfix;
+}
+
+.card {
+    padding: $spacing-unit;
+    background-color: $card-bg-clr;
+    @include media-query($on-laptop) {
+        padding: $spacing-unit * 1.5 $spacing-unit * 2;
+    }
+    @include media-query($on-palm) {
+        padding: $spacing-unit / 2;
+    }
+}
+
+.paper-corner-upleft {
+	display: table;
+	position: relative;
+	padding: 4px;
+	left: -4px;
+    top: -4px;
+    margin-bottom: -4px;
+	background-color: $card-bg-clr;
+	    &:before {
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        border-top: $spacing-unit * 0.8 solid transparent;
+        border-right: $spacing-unit * 0.8 solid $bd-clr;       
+        margin-right: -4px;
+        margin-bottom: -4px;
+    }
+}

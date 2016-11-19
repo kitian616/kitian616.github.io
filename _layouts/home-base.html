@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url | replace:'//','/' }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url | replace:'//','/' }}">
+    {% include blog/head-icons-rel.html %}
+    <link rel="stylesheet" href="{{ "/css/home.css" | prepend: site.baseurl | replace:'//','/' }}">
+    <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+</head>
+    <body>
+        {{ content }}
+        {% include utils/google-analytics.html %}
+    </body>
+</html>

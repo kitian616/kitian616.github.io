@@ -1,0 +1,150 @@
+///
+// Colors Setting
+//
+// bg = background
+// bd = border
+// tx = text
+// sd = shadow
+// hv = hover
+// sl = select
+// ac = active
+// m = main
+// l = light
+// d = dark
+// clr = color
+/////
+//
+$black-color:       #000;
+$white-color:       #fff;
+/////
+// main colors (!! Color THEME !!)
+/////
+//
+$main-color-1:      #ff7f27;
+$main-color-1-l:    lighten($main-color-1, 15%);
+//
+$main-color-2:      #22b14c;
+$main-color-2-d:    darken($main-color-2, 15%);
+$main-color-2-dd:    darken($main-color-2, 25%);
+$main-color-2-l:    lighten($main-color-2, 15%);
+$main-color-2-ll:   lighten($main-color-2, 25%);
+//
+$main-color-3:      #2385c7;
+$main-color-3-d:    darken($main-color-3, 15%);
+$main-color-3-dd:    darken($main-color-3, 25%);
+$main-color-3-l:    lighten($main-color-3, 15%);
+$main-color-3-ll:   lighten($main-color-3, 25%);
+
+/////
+// background colors
+/////
+//
+$bg-clr:            #ecf0f1;
+//
+$bg-image:          none;
+//
+$card-bg-clr:      $white-color;
+//
+$content-bg-clr:    rgba(0, 0, 0, .05);
+/////
+// border and shadow colors
+/////
+$bd-clr:            rgba(0, 0, 0, .2);
+$sd-clr:            rgba(0, 0, 0, .4);
+/////
+// text colors
+/////
+$head-tx-clr:       $main-color-2-dd;
+$main-tx-clr:       rgba(0, 0, 0, .9);
+$main-tx-clr-sub:   rgba(0, 0, 0, .7);
+$main-tx-odd-clr:   rgba(255, 255, 255, .9);
+$main-tx-odd-clr-sub: rgba(255, 255, 255, .7);
+//
+$main-tx-sl-clr:    rgba($main-color-2, .5);
+
+//////
+///
+//////
+// link colors
+$link-clr:      $main-color-2;
+$link-hv-clr:	$main-color-2-d;
+//bottom color
+$botton-hv-clr:	$main-color-3;
+
+//table color
+$table-bd-clr:	$bd-clr;
+$table-bg-clr:	$content-bg-clr;
+
+///
+//code color
+$code-title-bg-clr:	$content-bg-clr;
+$code-title-tx-clr:	$bd-clr;
+$code-bg-clr:	$content-bg-clr;
+$code-bd-clr:	$bd-clr;
+
+///
+//header
+$header-bg-clr:     $main-color-2-d;
+$header-tx-clr:     $main-tx-odd-clr;
+$header-lk-clr:     $main-tx-odd-clr;
+$header-lk-hv-clr:  $main-tx-odd-clr-sub;
+$header-nav-bg-clr: $main-color-2;
+
+///
+//right side headign color
+$right-side-h-clr: $bd-clr;
+
+///
+//article tag
+$tag-article-bg-clr:     $content-bg-clr;
+$tag-article-bd-clr:     $bd-clr;
+$tag-article-tx-clr:     $main-tx-clr-sub;
+$tag-article-bg-hv-clr:  $main-color-3;
+$tag-article-bd-hv-clr:  $main-color-3;
+$tag-article-tx-hv-clr:  $main-tx-odd-clr;
+
+///
+//all page tags
+$tag-all-bg-clr: 	$main-color-2;
+$tag-all-bd-clr: 	$main-color-2;
+$tag-all-tx-clr: 	$main-tx-odd-clr;
+$tag-all-bg-hv-clr:	$main-color-1;
+$tag-all-bd-hv-clr: $main-color-1;
+$tag-all-tx-hv-clr: $main-tx-odd-clr;
+
+$tag-bd-clr: 	transparent;
+$tag-bg-clr:    $main-color-3;
+$tag-bg-clr-1:    $main-color-3-ll;
+$tag-bg-clr-2:    $main-color-3-l;
+$tag-bg-clr-3:    $main-color-3;
+$tag-bg-clr-4: 	$main-color-3-d;
+$tag-tx-clr: 	$main-tx-odd-clr;
+$tag-bg-hv-clr: $main-color-1;
+$tag-bd-hv-clr: transparent;
+$tag-tx-hv-clr: $main-tx-odd-clr;
+
+///
+//toc
+$toc-tx-clr: $main-tx-clr-sub;
+$toc-tx-hv-clr: $main-color-1;
+
+///
+//license
+$license-bg-clr: $content-bg-clr;
+$license-bd-clr: $bd-clr;
+
+///
+//footer
+$footer-bg-clr:    $main-color-2-d;
+$footer-tx-clr:    $main-tx-odd-clr-sub;
+$footer-lk-clr:    $main-color-2;
+$footer-lk-hv-clr: $main-color-2-l;
+
+///
+// logo colors
+$mail-color:        #0072c5;
+$weibo-color:       #e6162d;
+$google-plus-color: #ea4335;
+$twitter-color:     #1da1f2;
+$douban-color:      #42bd56;
+$github-color:      #000;

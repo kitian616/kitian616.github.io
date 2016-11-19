@@ -1,0 +1,27 @@
+{
+  "name": "personal-site",
+  "version": "2.0.0",
+  "description": "thomas's site ",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "build": "bundle exec jekyll build --watch",
+    "serve": "bundle exec jekyll serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kitian616/kitian616.github.io.git"
+  },
+  "keywords": [
+    "blog",
+    "jekyll"
+  ],
+  "author": "Thomas Tian",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kitian616/issues"
+  },
+  "homepage": "https://github.com/kitian616#readme"
+}

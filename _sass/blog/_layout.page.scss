@@ -1,0 +1,11 @@
+.page-heading {
+    display: block;
+    margin: 0 0 $spacing-unit / 2 0;
+    padding: 0.2em 0 0.2em 0;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-color: $bd-clr;
+    width: 100%;
+    color: $head-tx-clr;
+    font-size: $h1-font-size;
+}

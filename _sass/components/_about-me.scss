@@ -1,0 +1,36 @@
+.about-me {
+
+    img {
+        display: block;
+        box-sizing: border-box;
+        width: 40%;
+        margin: $spacing-unit / 4 auto;
+        border-radius: 50%;
+        &:hover {
+            box-shadow: 0 0 4px $sd-clr;
+        }
+        -webkit-transition: all 0.8s ease 0s;
+        -moz-transition: all 0.8s ease 0s;
+        transition: all 0.8s ease 0s;
+    }
+    p {
+        padding: 0 0 $spacing-unit / 2 0;
+        font-size: $small-font-size;
+        color: $main-tx-clr-sub;
+        border: 0 solid $bd-clr;
+        border-bottom-width: 1px;
+    }
+    .follow-me {
+        ul {
+            margin: 0;
+        }
+        margin: $spacing-unit / 2 auto 0 auto;
+        .icon > svg {
+            width: 20px;
+            height: 20px;
+        }
+        .twitter, .googlepluse, .email {
+            display: none;
+        }
+    }
+}
