@@ -13,6 +13,7 @@ description: > # this means to ignore newlines until "baseurl:"
     
 baseurl: "/" # the subpath of your site, e.g. /blog
 blog_site_url: "/blog"
+artworks_site_url: "/artworks"
 
 url: "http://www.thomastian.com" # the base hostname & protocol for your site
 
@@ -35,7 +36,6 @@ googleplus_username: 101827554735084402671
 weibo_username: 234695683
 douban_username: kitian616
 homepage_url: http://www.thomastian.com/blog/about/
-blog_url: "http://www.thomastian.com/blog"
 
 ## develop
 ## paginate

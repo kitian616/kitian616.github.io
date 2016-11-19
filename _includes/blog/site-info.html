@@ -1,7 +1,7 @@
 <div class="site-info">
     <div>
         <p>© {{ site.title }} 2015 - 2016</p>
-        <p>Theme by <a href="{{ site.baseurl }}/">Thomas Tian</a>.
+        <p>Theme by <a href="{{ site.baseurl | append: '/' | replace: '//', '/' }}">Thomas Tian</a>.
         {% if site.github_username and site.github_repo %}
         <iframe
             style="display: inline-block;vertical-align: text-top;"

@@ -1,5 +1,13 @@
-{% if site.blog_url %}
-    <p>
-        <a class="social-link blog" title="Visit my blog." itemprop="sameAs" href="{{ site.blog_site_url | prepend: site.baseurl | append: tag | replace: '//', '/' }}" target="_self"> Visit My Blog </a>
-    </p>
-{% endif %}
+
+<div class="site-maps">
+    {% if site.blog_site_url %}
+        <p>
+            <a class="social-link blog" title="Visit my blog." itemprop="sameAs" href="{{ site.blog_site_url | prepend: site.baseurl | replace: '//', '/' }}" target="_self"> Visit My Blog </a>
+        </p>
+    {% endif %}
+    {% if site.artworks_site_url %}
+        <p>
+            <a class="social-link blog" title="See my artworks." itemprop="sameAs" href="{{ site.artworks_site_url | prepend: site.baseurl | replace: '//', '/' }}" target="_self"> See my artworks </a>
+        </p>
+    {% endif %}
+</div>
