@@ -1,0 +1,24 @@
+<svg width="128" height="128" viewBox="0 0 2 2" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <g>
+        <rect x="0" y="0" width="2" height="2" fill="#00e5ae"/>
+    </g>
+    <g transform="translate(.058, -.058) ">
+        <g transform="translate(0.853553, 1.146447) rotate(45) scale(0.8)">
+            <path fill="#ffc90e" stroke="#8B4513" stroke-width=".08" stroke-linecap="round" stroke-linejoin="round" d="
+                M 0 1
+                Q 0 0  1 0
+
+                Q 1 -0.577350  0.692820 -0.4
+                Q 1 -0.577350  0.5 -0.866025
+                
+                Q 0 -1.154700  0 -0.614434
+                Q 0 -1.154700 -0.5 -0.866025
+
+                Q-1 -0.577350 -0.692820 -0.4
+                Q-1 -0.577350 -1 0
+                
+                Q 0 0 0 1">
+            </path>
+        </g>
+    </g>
+</svg>

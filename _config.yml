@@ -12,11 +12,19 @@ description: > # this means to ignore newlines until "baseurl:"
     Thomas Tian's Home | 田琦的主页
     
 baseurl: "/" # the subpath of your site, e.g. /blog
-blog_site_url: "/blog"
-artworks_site_url: "/artworks"
+
+blog:
+  baseurl: "/blog"
+  title: Thomas's blog
+  description: Thomas Tian's Blog | 田琦的博客
+  nav_lists:
+    - title: About
+      url: /blog/about.html
+artworks:
+  baseurl: "/artworks"
 
 url: "http://www.thomastian.com" # the base hostname & protocol for your site
-
+repository: kitian616/kitian616.github.io
 # site github reop url
 github_repo: blog
 github_repo_tree: gh-pages
@@ -45,6 +53,7 @@ paginate_path: /blog/page:num
 excerpt_separator: <!--more-->
 # Build settings
 markdown: kramdown
+highlighter: rouge
 permalink: date
 # google analytics
 ga_tracking_id: UA-71907556-1
@@ -59,7 +68,6 @@ gems:
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-paginate
-
 # server
 server_url: "0.0.0.0"
 debug: false

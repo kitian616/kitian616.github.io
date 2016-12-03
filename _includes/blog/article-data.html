@@ -34,7 +34,7 @@
         <div class="icon icon-tag" title="Article tags">{% include icon/icon-tag.svg %}</div>
         
         {% for tag in cur_page.tags %}
-        <a class="article-tag round-rect-button" href="{{ "/all.html?tag=" | prepend: site.blog_site_url | prepend: site.baseurl | append: tag | replace: '//', '/' }}"> {{ tag }} </a>
+        <a class="article-tag round-rect-button" href="{{ "/all.html?tag=" | prepend: site.blog.baseurl | prepend: site.baseurl | append: tag | replace: '//', '/' }}"> {{ tag }} </a>
         {% endfor %}
     </div>
 	{% endif %}
