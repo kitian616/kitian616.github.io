@@ -47,10 +47,9 @@
                 {{ tag[0] | rstrip }}<div class="tag-count">{{ tag[1].size }}</div>
         </button>
         {% else %}
-        <a class="article-tag tag-{{ tag[0] }} tag-{{ c_index }} tag-other round-rect-button" href="{{ "/all.html?tag=" | prepend: site.baseurl | append: tag[0] | replace: '//', '/' }}">
+        <a class="article-tag tag-{{ tag[0] }} tag-{{ c_index }} tag-other round-rect-button" href="{{ "/all.html?tag=" | prepend: site.blog.baseurl | append: tag[0] | replace: '//', '/' }}">
         {{ tag[0] | rstrip}}<div class="tag-count">{{ tag[1].size }}</div>
         {% endif %}
-        
         </a>
     {% endfor %}
 </div>

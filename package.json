@@ -8,6 +8,7 @@
   "scripts": {
     "build": "bundle exec jekyll build --watch",
     "serve": "bundle exec jekyll serve -H 0.0.0.0",
+    "dev": "(npm run build &) && npm run serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
