@@ -59,10 +59,8 @@ title: All Posts
         if (tag == '') {
             $('.page-heading').text('All Posts');
             $('.post-block').show();
-            $('.tag-show-all').focus();
         } else {
             $('.page-heading').text('Tag: ' + tag);
-            $('.tag-' + tag).focus();
             $('.post-block').not('.tag-' + tag).hide();
             $('.post-block').filter('.tag-' + tag).show();
         }

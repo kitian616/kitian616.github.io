@@ -2,7 +2,7 @@
     &, &:visited {
         color: $color-normal;
     }
-    &:hover, &.active {
+    &:hover, &:active {
         color: $color-emphasize;
     }
 }
@@ -14,7 +14,8 @@
 };
 
 @mixin link-emphasize () {
-    &:hover, &.active {
+    &.hover, &.active, &.focus,
+    &:hover, &:active, &:focus {
         @content;
     }
 };
