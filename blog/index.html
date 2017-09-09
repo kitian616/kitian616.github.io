@@ -61,28 +61,29 @@ excerpt: Thomas Tian's Blog | 田琦的博客
     </nav>
     {% endif %}
 </section>
-
-<script src="https://cdn1.lncld.net/static/js/av-min-1.2.1.js"></script>
-<script>
-    $(document).ready(function() {
-        // 初始化
-        AV.init({
-            appId: '{{ site.app_id }}',
-            appKey: '{{ site.app_key }}'
-        });
-        $(".article-view").each(function() {
-            var curId = this.id;
-            var query = new AV.Query('{{ site.app_class }}');
-            query.equalTo('key', /(.*)-(.*)/.exec(curId)[2]);
-            query.first().then(function(result) {
-                if (result) {
-                    $('#' + curId).text(result.attributes.views);
-                }
-            }, function(error) {
-                if (error) {
-                    throw error;
-                }
+{% if site.isdebug == false %}
+    <script src="https://cdn1.lncld.net/static/js/av-min-1.2.1.js"></script>
+    <script>
+        $(document).ready(function() {
+            // 初始化
+            AV.init({
+                appId: '{{ site.app_id }}',
+                appKey: '{{ site.app_key }}'
+            });
+            $(".article-view").each(function() {
+                var curId = this.id;
+                var query = new AV.Query('{{ site.app_class }}');
+                query.equalTo('key', /(.*)-(.*)/.exec(curId)[2]);
+                query.first().then(function(result) {
+                    if (result) {
+                        $('#' + curId).text(result.attributes.views);
+                    }
+                }, function(error) {
+                    if (error) {
+                        throw error;
+                    }
+                });
             });
         });
-    });
-</script>
+    </script>
+{% endif %}

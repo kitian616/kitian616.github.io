@@ -33,9 +33,7 @@ layout: blog-default
         <section>{% include utils/comment-disqus.html %}</section>
     {% endif %}
 </article>
-
 <script src="//cdn.bootcss.com/toc/0.3.2/toc.min.js"></script>
-<script src="https://cdn1.lncld.net/static/js/av-min-1.2.1.js"></script>
 <script type="text/javascript">
     $(function() {
         // toc //
@@ -43,7 +41,12 @@ layout: blog-default
             'selectors': 'h1,h2,h3',
             'container': '.js-article-content',
         });
-        {% if page.key != null and site.debug != true %}
+    });
+</script>
+{% if page.key != null and site.isdebug == false %}
+    <script src="https://cdn1.lncld.net/static/js/av-min-1.2.1.js"></script>
+    <script type="text/javascript">
+        $(function() {
             // 初始化
             AV.init({
                 appId: '{{ site.app_id }}',
@@ -87,6 +90,6 @@ layout: blog-default
                     throw error;
                 }
             });
-        {% endif %}
-    });
-</script>
+        });
+    </script>
+{% endif %}

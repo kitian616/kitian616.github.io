@@ -13,20 +13,12 @@
 
     .date-wrapper, .tag-wrapper, .view-wrapper {
     	display: inline-block;
-        line-height: 1;
-        font-size: $small-font-size;
-	}
-
-	.date-wrapper {
-		margin: 0 0.5em 0 0;
-		.article-meta {
-            line-height: 1.6;
-		}
+		font-size: $small-font-size;
+		line-height: 2;
 	}
 
 	.tag-wrapper {
 		margin: 0 0.5em 0 0;
-
 		.article-tag {
 			font-weight: $base-font-weight;
 			background-color: $tag-article-bg-clr;
@@ -36,6 +28,20 @@
 			&:not(:last-child) {
 				margin-right: 6px;
 			}
+		}
+	}
+
+	.date-wrapper {
+		margin: 0 0.5em 0 0;
+		.article-meta {
+			line-height: 1.6;
+		}
+	}
+
+	.other-wrapper {
+		float: right;
+		@include media-query($on-palm) {
+			float: none;
 		}
 	}
 }
