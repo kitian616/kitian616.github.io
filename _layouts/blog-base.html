@@ -5,14 +5,14 @@
         {% include blog/head-icons-rel.html %}
         <style>
             {% if page.picture-frame == 'shadow' %}
-            .article-content img {
-                box-shadow: 0 0 5px rgba(0, 0, 0, .4);
-            }
+                .m-article-content img {
+                    box-shadow: 0 0 5px rgba(0, 0, 0, .4);
+                }
             {% endif %}
             {% if page.picture-max-width %}
-            .article-content .content-img {
-                max-width: {{ page.picture-max-width }};
-            }
+                .m-article-content .content-img {
+                    max-width: {{ page.picture-max-width }};
+                }
             {% endif %}
         </style>
         <link rel="stylesheet" href="{{ "/statics/css/blog.css" | prepend: site.baseurl | replace:'//','/' }}">

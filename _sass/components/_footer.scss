@@ -1,0 +1,45 @@
+/**
+ * Site Info
+ */
+
+.m-site-info {
+    display: table;
+    font-size: $footer-font-size;
+    text-align: center;
+    > div {
+        display: table-cell;
+    }
+}
+
+.m-page-footer {
+    width: 100%;
+    p {
+        color: $footer-tx-clr;
+    }
+    a {
+        color: $footer-lk-clr;
+        &:visited {
+            color: $footer-lk-clr;
+        }
+        &:hover {
+          color: $footer-lk-hv-clr;
+        }
+        &:active {
+            color: $footer-lk-clr;
+        }
+    }
+    .follow-me {
+        padding: $spacing-unit 0 0 0;
+        margin: 0 auto;
+        .round-button {
+            box-shadow: 0 0 4px $sd-clr;
+        }
+        .mail {
+            display: none;
+        }
+    }
+    .site-info {
+        padding: 0 0 $spacing-unit 0;
+        margin: 0 auto;
+    }
+}

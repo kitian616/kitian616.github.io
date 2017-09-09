@@ -1,4 +1,4 @@
-.about-me {
+.m-about-me {
 
     img {
         display: block;
@@ -16,7 +16,7 @@
     p {
         padding: 0 0 $spacing-unit / 2 0;
         font-size: $small-font-size;
-        color: $main-tx-clr-sub;
+        color: $text-clr-l;
         border: 0 solid $bd-clr;
         border-bottom-width: 1px;
     }

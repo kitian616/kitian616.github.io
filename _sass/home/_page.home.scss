@@ -6,7 +6,7 @@
     border-width: 1px;
     border-color: transparent;
     border-style: solid;
-    background: 
+    background:
         linear-gradient(to bottom, rgba(0,0,0,.35), rgba(0,0,0,.8)),
         url(http://7xpqpj.com1.z0.glb.clouddn.com/image/cover/lego_dark.jpg)
         #333 no-repeat fixed 50% 50%;
@@ -65,7 +65,7 @@
         -moz-transition: transform 0.8s ease 0s;
         transition: transform 0.8s ease 0s;
     }
-    
+
     @include media-query($on-palm) {
         .main {
             margin: 3em auto 0 auto;

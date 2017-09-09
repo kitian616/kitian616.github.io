@@ -1,22 +1,21 @@
-<div id="page-header">
-    <header class="wrapper-col">
-        <div class="title-wrapper wrapper-col">
-            <a class="site-title" title="{% if site.blog.description %}{{ site.blog.description }}{% else %}{{ site.description }}{% endif %}"
-                href="{{ site.blog.baseurl |  prepend: site.baseurl | replace: '//', '/' }}">{% if site.blog.title %}{{ site.blog.title }}{% else %}{{ site.title }}{% endif %}</a>
-            <a id="rss-button" type="application/rss+xml" href="{{ "/feed.xml" | prepend: site.baseurl | replace: '//', '/'}}" target="_blank">
-                <div class="icon-button" title="Subscribe to my RSS feed!">
-                    <span class="icon icon--rss">{% include icon/icon-rss.svg %}</span>
-                </div>
-            </a>
-        </div>
-        <nav class="site-nav">
-            <ul class="wrapper-col">
-                <li><a href="{{ site.blog.baseurl | prepend: site.baseurl | replace: '//', '/' }}"> Home </a></li>
-                <li><a href="{{ "/all.html" | prepend: site.blog.baseurl | prepend: site.baseurl | append: "?tag=" | replace: '//', '/'}}"> All </a></li>
-                {% for list in site.blog.nav_lists %}
+<header class="m-page-header wrapper-col">
+    <div class="title-wrapper wrapper-col">
+        <a class="site-title" title="{% if site.blog.description %}{{ site.blog.description }}{% else %}{{ site.description }}{% endif %}"
+            href="{{ site.blog.baseurl |  prepend: site.baseurl | replace: '//', '/' }}">{% if site.blog.title %}{{ site.blog.title }}{% else %}{{ site.title }}{% endif %}
+        </a>
+        <a class="rss-button" type="application/rss+xml" href="{{ "/feed.xml" | prepend: site.baseurl | replace: '//', '/'}}" target="_blank">
+            <div class="icon-button" title="Subscribe to my RSS feed!">
+                <span class="icon icon--rss">{% include icon/icon-rss.svg %}</span>
+            </div>
+        </a>
+    </div>
+    <nav class="site-nav">
+        <ul class="wrapper-col">
+            <li><a href="{{ site.blog.baseurl | prepend: site.baseurl | replace: '//', '/' }}">Home</a></li>
+            <li><a href="{{ "/all.html" | prepend: site.blog.baseurl | prepend: site.baseurl | append: "?tag=" | replace: '//', '/'}}">All</a></li>
+            {% for list in site.blog.nav_lists %}
                 <li><a href="{{ list.url }}"> {{ list.title }} </a></li>
-                {% endfor %}
-            </ul>
-        </nav>
-    </header>
-</div>
+            {% endfor %}
+        </ul>
+    </nav>
+</header>

@@ -4,31 +4,31 @@ layout: blog-default
 <div class="left-col card">
     <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
         <meta itemprop="mainEntityOfPage" itemscope itemType="https://schema.org/WebPage" itemid="{{ page.url | prepend: site.baseurl | prepend: site.url }}"/>
-        <header class="article-header">    
+        <header class="article-header">
             {% include blog/article-data.html %}
         </header>
 
-        <div class="article-content" itemprop="articleBody">
+        <div class="m-article-content" itemprop="articleBody">
             {{ content }}
         </div>
-        
+
         <footer>
             {% if page.modify_date %}
-            <div class="article-meta">
-                Last updated
-                <time datetime="{{ page.modify_date | date_to_xmlschema }}" itemprop="dateModified">
-                    {{ page.modify_date | date: "%b %-d, %Y" }}
-                </time>
-            </div>
+                <div class="article-meta">
+                    Last updated
+                    <time datetime="{{ page.modify_date | date_to_xmlschema }}" itemprop="dateModified">
+                        {{ page.modify_date | date: "%b %-d, %Y" }}
+                    </time>
+                </div>
             {% else %}
-            <meta itemprop="dateModified" content="{{ page.date | date_to_xmlschema }}">
+                <meta itemprop="dateModified" content="{{ page.date | date_to_xmlschema }}">
             {% endif %}
-            <div id="post-license">
+            <div class="post-license">
                 <div class="paper-corner-upleft"></div>
                 {% include blog/license.html %}
             </div>
         </footer>
-        
+
         {% if page.share == null or page.share == true %}
         <section>{% include utils/share-duoshuo.html %}</section>
         {% endif %}
@@ -42,7 +42,7 @@ layout: blog-default
         <h1>About me</h1>
         {% include blog/about-me.html %}
     </div>
-    <div id="right-col-toc" class="card affix">
+    <div class="js-toc" class="card affix">
         <h1>Toc</h1>
         {% include blog/toc.html %}
     </div>
@@ -50,56 +50,56 @@ layout: blog-default
 <script src="//cdn.bootcss.com/toc/0.3.2/toc.min.js"></script>
 <script src="https://cdn1.lncld.net/static/js/av-min-1.2.1.js"></script>
 <script type="text/javascript">
-    $(document).ready(function() {
+    $(function() {
         // toc //
-        $("#right-col-toc .toc").toc({
+        $(".js-toc .toc").toc({
             'selectors': 'h1,h2,h3',
             'container': '.article-content',
         });
         {% if page.key != null and site.debug != true %}
-        // 初始化
-        AV.init({
-            appId: '{{ site.app_id }}',
-            appKey: '{{ site.app_key }}'
-        });
-        //查询
-        var query = new AV.Query('{{ site.app_class }}');
-        query.equalTo('key', '{{ page.key }}');
-        query.first().then(function(result) {
-            if (result) {
-                addOne(result)
-            } else {
-                //新建
-                var Blog = AV.Object.extend('{{ site.app_class }}');
-                var blog = new Blog();
-                blog.set('title', '{{ page.title }}');
-                blog.set('key', '{{ page.key }}');
-                blog.set('views', 0);
-                blog.save().then(function(page) {
-                    addOne(page)
-                }, function(error) {
-                    if (error) {
-                        throw error;
-                    }
-                });
-            }
+            // 初始化
+            /*AV.init({
+                appId: '{{ site.app_id }}',
+                appKey: '{{ site.app_key }}'
+            });
+            // 查询
+            var query = new AV.Query('{{ site.app_class }}');
+            query.equalTo('key', '{{ page.key }}');
+            query.first().then(function(result) {
+                if (result) {
+                    addOne(result)
+                } else {
+                    //新建
+                    var Blog = AV.Object.extend('{{ site.app_class }}');
+                    var blog = new Blog();
+                    blog.set('title', '{{ page.title }}');
+                    blog.set('key', '{{ page.key }}');
+                    blog.set('views', 0);
+                    blog.save().then(function(page) {
+                        addOne(page)
+                    }, function(error) {
+                        if (error) {
+                            throw error;
+                        }
+                    });
+                }
 
-            function addOne(page) {
-                page.increment('views', 1);
-                page.fetchWhenSave(true);
-                page.save().then(function(page) {
-                    $("#post-key-{{ page.key }}").text(page.attributes.views);
-                }, function(error) {
-                    if (error) {
-                        throw error;
-                    }
-                });
-            }
-        }, function(error) {
-            if (error) {
-                throw error;
-            }
-        });
-    {% endif %}
+                function addOne(page) {
+                    page.increment('views', 1);
+                    page.fetchWhenSave(true);
+                    page.save().then(function(page) {
+                        $("#post-key-{{ page.key }}").text(page.attributes.views);
+                    }, function(error) {
+                        if (error) {
+                            throw error;
+                        }
+                    });
+                }
+            }, function(error) {
+                if (error) {
+                    throw error;
+                }
+            });*/
+        {% endif %}
     });
 </script>

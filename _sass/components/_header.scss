@@ -1,18 +1,17 @@
 /**
  * Site header (with bg-pic)
  */
-#page-header {
+.m-page-header {
     box-sizing: border-box;
     position: relative;
     width: 100%;
     padding: $spacing-unit / 2 0;
     color: $header-tx-clr;
-    background-color: $header-bg-clr;
-    box-shadow: 0 1px 4px $sd-clr;
     ul {
         list-style-type: none;
     }
     a {
+        font-weight: $base-font-weight;
         color: $header-lk-clr;
         &:visited {
             color: $header-lk-clr;
@@ -39,20 +38,18 @@
     */
     .title-wrapper {
         float: left;
-        padding: 0 0 0 $spacing-unit;
     }
     .site-title {
         display: block;
         float: left;
         font-size: $h2-font-size;
-        font-weight: $bold-font-weight;
         line-height: 1.5;
         letter-spacing: -1px;
 
         margin-right: 8px;
     }
     //RSS
-    #rss-button {
+    .rss-button {
         display: block;
         float: left;
         svg {
@@ -68,10 +65,7 @@
         display: block;
         opacity: 1;
         float: right;
-        padding: 0 $spacing-unit 0 0;
-        background-color: $header-bg-clr;
         font-size: $h4-font-size;
-        font-weight: $bold-font-weight;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
         ul {
@@ -110,7 +104,6 @@
         .site-nav {
             float: none;
             padding: $spacing-unit / 6 $spacing-unit / 2;
-            background-color: $header-nav-bg-clr;
             box-shadow: 0 1px 4px $sd-clr;
         }
     }

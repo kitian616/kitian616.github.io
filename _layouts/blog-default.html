@@ -1,21 +1,14 @@
 ---
 layout: blog-base
 ---
-<div id="page-content">
-    <div id="page-stage">
+<div class="m-page-content">
+    <div class="m-page-stage">
         {% include blog/header.html %}
-        <div id="page-main">
+        <div class="m-page-main">
             {{ content }}
         </div>
     </div>
-    <div id="page-footer">
-        <aside id="footer-follow-me">
-            {% include info/follow-me.html %}
-        </aside>
-        <footer id="footer-site-info">
-            {% include blog/site-info.html %}
-        </footer>
-    </div>
+    {% include blog/footer.html %}
 </div>
 <script src="//cdn.bootcss.com/emojione/2.2.6/lib/js/emojione.min.js"></script>
 <script>
@@ -95,9 +88,9 @@ layout: blog-base
         //     $(this).attr('data-src', $(this).attr('src'));
         // });
         // $(".article-content img").unveil();
-        // 
+        //
         affix();
-        $(".article-content").each(function() {
+        $(".m-article-content").each(function() {
             var original = $(this).html();
             emojione.imageType = 'svg';
             var converted = emojione.toImage(original);

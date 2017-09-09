@@ -32,7 +32,7 @@ a {
     border-radius: 50%;
     &, &:visited {
         border: 1px solid $bd-clr;
-        color: $main-tx-clr-sub;
+        color: $text-clr-l;
         text-decoration: none;
     }
     &:hover, &:active {
@@ -45,7 +45,7 @@ a {
     .icon {
         &, &:visited {
             path {
-                fill: $main-tx-clr-sub;
+                fill: $text-clr-l;
             }
         }
         &:hover, &:active {
@@ -57,7 +57,7 @@ a {
     //inactive button (gray)
     &.inactive {
         &, &:visited {
-            color: $main-tx-clr-sub;
+            color: $text-clr-l;
         }
         &:hover, &:active {
             border-color: $bd-clr;
@@ -93,7 +93,7 @@ a {
     border-radius: 1em;
     &, &:visited {
         border: 1px solid $bd-clr;
-        color: $main-tx-clr-sub;
+        color: $text-clr-l;
         text-decoration: none;
     }
     &:hover, &:active {
@@ -106,7 +106,7 @@ a {
     .icon {
         &, &:visited {
             path {
-                fill: $main-tx-clr-sub;
+                fill: $text-clr-l;
             }
         }
         &:hover, &:active {

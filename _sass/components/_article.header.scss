@@ -1,31 +1,34 @@
-.article-data {
+.m-article-data {
+
 	.article-title {
 		font-size: $h1-font-size;
 		letter-spacing: -1px;
-		color: $head-tx-clr;
 	}
+
 	.article-link {
 		display: block;
 		letter-spacing: -1px;
 		font-size: $h3-font-size;
 	}
+
     .icon {
         float: left;
         > svg {
             width: 1.6em;
             height: 1.6em;
             path {
-                fill: $main-tx-clr-sub;
+                fill: $text-clr-l;
             }
         }
         margin-right: 0.2em;
-    }
+	}
+
     .date-wrapper, .tag-wrapper, .view-wrapper {
     	display: inline-block;
         line-height: 1;
-        color: $main-tx-clr-sub;
         font-size: $small-font-size;
-    }
+	}
+
 	.date-wrapper {
 		margin: 0 0.5em 0 0;
 		.article-meta {
@@ -33,15 +36,15 @@
             line-height: 1.6;
 		}
 	}
+
 	.tag-wrapper {
-        margin: 0 0.5em 0 0;
+		margin: 0 0.5em 0 0;
+
 		.article-tag {
             float: left;
-			color: $tag-article-tx-clr;
 			background-color: $tag-article-bg-clr;
 			border-color: $tag-article-bd-clr;
 			&:hover, &:active {
-				color: $tag-article-tx-hv-clr;
 				background-color: $tag-article-bg-hv-clr;
 				border-color: $tag-article-bd-hv-clr;
 			}
@@ -51,6 +54,7 @@
 			}
 		}
 	}
+
 	.view-wrapper {
 		.icon-view {
 			float: left;
@@ -60,10 +64,5 @@
 			line-height: 1.6;
 		}
 	}
-}
 
-.post {
-	.article-meta {
-		color: $main-tx-clr-sub;
-	}
 }

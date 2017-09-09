@@ -1,9 +1,14 @@
 /**
  * Headings
  */
+
+ body {
+    font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+    color: $text-clr;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-weight: $bold-font-weight;
-    color: $main-tx-clr;
 }
 
 h1 {
@@ -30,11 +35,7 @@ h5 {
 h6 {
     font-size: $h6-font-size;
     font-weight: ($base-font-weight + $bold-font-weight) /  2;
-    color: $main-tx-clr-sub;
-}
-
-p {
-    color: $main-tx-clr;
+    color: $text-clr-l;
 }
 
 /**

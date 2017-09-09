@@ -3,15 +3,14 @@ layout: blog-default
 title: Thomas's Blog
 excerpt: Thomas Tian's Blog | 田琦的博客
 ---
-<div class="left-col card">
+<!-- <div class="left-col card"> -->
     <section class="home">
-        <h1 class="page-heading">Posts</h1>
         <div class="post-list">
             <!-- This loops through the paginated posts -->
             {% for post in paginator.posts %}
             <article class="post-info">
                 {% include blog/article-data.html %}
-                <div class="article-content">
+                <div class="m-article-content">
                     {{ post.excerpt }}
                 </div>
             </article>
@@ -20,7 +19,7 @@ excerpt: Thomas Tian's Blog | 田琦的博客
 
         <!-- Pagination links -->
         {% if paginator.total_pages > 1 %}
-        <nav class="pagination">
+        <nav class="m-pagination">
             <p>{{ site.posts | size }} post articles | {{ paginator.total_pages }} pages. </p>
             <ul class="wrapper-col">
             {% if paginator.previous_page %}
@@ -60,8 +59,8 @@ excerpt: Thomas Tian's Blog | 田琦的博客
         </nav>
         {% endif %}
     </section>
-</div>
-<div class="right-col">
+<!-- </div> -->
+<!-- <div class="right-col">
     <div class="card">
         <h1>About me</h1>
         {% include blog/about-me.html %}
@@ -70,7 +69,7 @@ excerpt: Thomas Tian's Blog | 田琦的博客
         <h1>Tags</h1>
         {% include blog/tags.html %}
     </div>
-</div>
+</div> -->
 
 <script src="https://cdn1.lncld.net/static/js/av-min-1.2.1.js"></script>
 <script>

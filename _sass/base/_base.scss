@@ -24,16 +24,15 @@ html {
 
 body {
     height: 100%;
-    font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
 
     ::-moz-selection {
-        background:$main-tx-sl-clr;
+        background: $select-clr;
     }
     ::-webkit-selection {
-        background:$main-tx-sl-clr;
+        background: $select-clr;
     }
     ::selection {
-        background:$main-tx-sl-clr;
+        background: $select-clr;
     }
 }
 

@@ -69,4 +69,4 @@ gems:
   - jekyll-paginate
 # server
 server_url: "0.0.0.0"
-debug: false
+debug: true

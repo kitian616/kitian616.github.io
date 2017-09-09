@@ -1,5 +1,6 @@
-.pagination {
+.m-pagination {
     padding: $spacing-unit / 3 0;
+
     .icon {
         display: block;
          > svg {
@@ -9,7 +10,7 @@
         }
     }
 
-    .round-button {    
+    .round-button {
         height: 1.6em;
         width: 1.6em;
         padding: 0;
@@ -34,4 +35,5 @@
             margin-right: $spacing-unit / 6;
         }
     }
+
 }
