@@ -48,7 +48,7 @@
         vertical-align: baseline;
         width: 1.3em;
         height: 1.3em;
-        margin: -0.2em 0;
+        margin: -.2em 0;
     }
     //code
     figure {
@@ -59,9 +59,8 @@
             content: attr(data-lang);
             background-color: $code-title-bg-clr;
             display: block;
-            padding: $code-font-size / 2 $code-font-size 0 0;
+            padding: $code-font-size / 4 $code-font-size $code-font-size / 4 0;
             color: $code-title-tx-clr;
-            font-size: $code-font-size;
             font-weight: $bold-font-weight;
             text-align: right;
             text-transform: uppercase;
@@ -69,10 +68,10 @@
     }
 
     code {
-        padding: 0.1em 0.4em;
+        padding: .1em .4em;
         border: 1px dashed $code-bd-clr;
         border-radius: 4px;
-        margin: 0 0.2em;
+        margin: 0 .2em;
         background-color: $code-bg-clr;
         span {
             padding: 0;
@@ -84,15 +83,15 @@
         display: block;
         overflow: auto;
         -webkit-overflow-scrolling: touch;
-        padding: $code-font-size * .6;
         margin: 0;
-        background-image: linear-gradient(
-            rgba(0, 0, 0, .05) 50%, transparent 50%);
-        background-size: auto $code-font-size * $base-line-height * 2;
+        background-image: linear-gradient(rgba(0, 0, 0, .05) 50%, transparent 50%);
+        background-size: auto $code-font-size * $code-line-height * 2;
         background-origin: content-box;
         code {
+            font-size: $code-font-size;
+            padding: 0 .4em;
             display: block;
-            line-height: $base-line-height;
+            line-height: $code-line-height;
             border-width: 0;
             background-color: transparent;
         }
@@ -136,7 +135,7 @@
     	border-collapse: collapse;
     	background-color: $table-bg-clr;
     	th, td {
-    		padding: 0.5em;
+    		padding: .5em;
     	}
     }
 
