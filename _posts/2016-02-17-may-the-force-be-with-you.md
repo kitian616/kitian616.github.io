@@ -7,6 +7,8 @@ category: blog
 date: 2016-02-17 21:30:00 +08:00
 ---
 
+![the-force-awake](http://7xpqpj.com1.z0.glb.clouddn.com/image/post/20160216/the-force-awake.JPG)
+
 去年慕名去电影院看了星战的最新作[《原力觉醒》](http://movie.douban.com/subject/20326665/)。故事简单，不过里面的场景和人物（非常喜欢汉·索洛，可惜了）特别有趣。光剑的吱吱声，武士的服饰，海岛上的拜师（卢克终于出现了）……和中土世界（You walk a lonely road, Oh! How far you are from home...）不同，星战世界处处展现出了一种神秘的东方哲学。
 
 看完了电影后，我就把星战的整个系列看了一遍。星战，在每部电影的开头都会有一段经典的字幕动画，黄色的文字呈梯形向前方流动，渐渐消失，背景则是漆黑的宇宙星空。简单，但令人印象深刻。
@@ -18,8 +20,6 @@ date: 2016-02-17 21:30:00 +08:00
 ![css3_3dtransform](http://7xpqpj.com1.z0.glb.clouddn.com/image/post/20160216/w3ctiy.png)
 
 等等，这不是星战的字幕吗？于是抱着好玩的心态，写出了[这个H5动画](/blog/projects/star-war.html)。
-
-![the-force-awake](http://7xpqpj.com1.z0.glb.clouddn.com/image/post/20160216/the-force-awake.JPG)
 
 ## 准备工作
 

@@ -8,11 +8,11 @@ date: 2016-09-18 18:50:00 +08:00
 picture-frame: shadow
 ---
 
+![Chameleon Theme Preview](http://7xpqpj.com1.z0.glb.clouddn.com/image/post/20160919/chameleon-theme.jpg)
+
 好长时间没有写文章了。自从五月份以来，实习、论文和面试成为了生活的主旋律。比较压抑，也比较浮躁，压根就无法静下心来 <s>挥洒笔墨</s> 练打字了，不过这并不意味着这个博客就被我遗忘了。其实，在这段时间里，我默默地重构了整个博客项目的代码，同时，**再一次**改变了 <s>世界</s> 博客的样式。从第一版到如今的第三版，整个博客见证了我对前端的理解和我对设计理解的变迁。
 
 这个新的主题被我称为“Chameleon Theme”，意为“变色龙主题”。科技以换壳为本，主题以换色为本。使用者可以根据自己的爱好，设定自己喜欢的主题色，这样就不会千篇一律了，至少在颜色上。
-
-![Chameleon Theme Preview](http://7xpqpj.com1.z0.glb.clouddn.com/image/post/20160919/chameleon-theme.jpg)
 
 <!--more-->
 
