@@ -1,8 +1,8 @@
 <div class="follow-me">
     <div>
-        <ul class="wrapper-col" itemscope itemtype="http://schema.org/Person">
+        <ul class="clearfix" itemscope itemtype="http://schema.org/Person">
             <meta itemprop="name" content="{{ site.author }}">
-            <link itemprop="url" href="{{ '/' | prepend: site.url }}">
+            <link itemprop="url" href="{{ '/' | prepend: site.hostname }}">
             {% if site.email %}
             <li class="round-button mail" title="Send me e-mail.">
                 <a itemprop="sameAs" href="mailto:://{{ site.email }}" target="_blank">

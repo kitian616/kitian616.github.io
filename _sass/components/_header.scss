@@ -4,16 +4,13 @@
 .m-page-header {
     box-sizing: border-box;
     position: relative;
-    width: 100%;
-    padding: $spacing-unit / 2 0;
     color: $header-tx-clr;
     ul {
         list-style-type: none;
     }
     a {
         font-weight: $base-font-weight;
-        color: $header-lk-clr;
-        &:visited {
+        &, &:visited {
             color: $header-lk-clr;
         }
         &:hover, &:active {
@@ -89,22 +86,12 @@
     }
 
     @include media-query($on-palm) {
-        & {
-            padding: $spacing-unit / 2 0 0 0;
-            box-shadow: 0 0 0 $sd-clr;
-        }
         #menu-button {
             opacity: 1;
             visibility: visible;
         }
-        .title-wrapper {
+        .title-wrapper, .site-nav {
             float: none;
-            padding: 0 0 $spacing-unit / 2 $spacing-unit / 2;
-        }
-        .site-nav {
-            float: none;
-            padding: $spacing-unit / 6 $spacing-unit / 2;
-            box-shadow: 0 1px 4px $sd-clr;
         }
     }
     transition:         margin-top .5s;

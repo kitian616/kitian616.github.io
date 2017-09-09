@@ -1,8 +1,6 @@
-<div class="m-article-data">
+<div class="m-article-data clearfix">
 	{% if post %}
-	<h3>
-        <a class="article-link" href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">{{ post.title }}</a>
-    </h3>
+
 	{% elsif page %}
 	<h1 itemprop="headline" class="article-title" itemprop="name headline">{{ page.title }}</h1>
     <meta itemprop="author" itemscope itemtype="https://schema.org/Person">
@@ -13,34 +11,32 @@
         {% endif %}
     </meta>
 	{% endif %}
-    <div class="date-wrapper wrapper-col">
-        <div class="icon icon-date" title="Publish date">{% include icon/icon-date.svg %}</div>
-        {% if post %}
-            <span class="article-meta">{{ post.date | date: "%b %d, %Y" }}</span>
-        {% elsif page %}
-            <time class="article-meta" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-                {{ page.date | date: "%b %-d, %Y" }}
-            </time>
-        {% endif %}
-    </div>
 
 	{% if post %}
-		{% assign cur_page = post %}
+    {% assign cur_page = post %}
     {% elsif page %}
-		{% assign cur_page = page %}
+    {% assign cur_page = page %}
 	{% endif %}
 	{% if cur_page.tags[0] %}
-    <div class="tag-wrapper wrapper-col">
-        <div class="icon icon-tag" title="Article tags">{% include icon/icon-tag.svg %}</div>
-
+    <div class="tag-wrapper">
         {% for tag in cur_page.tags %}
-        <a class="article-tag round-rect-button" href="{{ "/all.html?tag=" | prepend: site.blog.baseurl | prepend: site.baseurl | append: tag | replace: '//', '/' }}"> {{ tag }} </a>
+        <a class="article-tag" href="{{ "/all.html?tag=" | prepend: site.blog.baseurl | prepend: site.baseurl | append: tag | replace: '//', '/' }}"> {{ tag }} </a>
         {% endfor %}
     </div>
 	{% endif %}
-
-    <div class="view-wrapper wrapper-col">
-            <div class="icon icon-view" title="Article tags">{% include icon/icon-view.svg %}</div>
+    <div class="right">
+        <div class="view-wrapper clearfix">
             <span class="article-view" id="post-key-{{ cur_page.key }}">0</span>
+            views,
+        </div>
+        <div class="date-wrapper">
+            {% if post %}
+                <span class="article-meta">{{ post.date | date: "%b %d, %Y" }}</span>
+            {% elsif page %}
+                <time class="article-meta" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+                    {{ page.date | date: "%b %-d, %Y" }}
+                </time>
+            {% endif %}
+        </div>
     </div>
 </div>

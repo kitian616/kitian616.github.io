@@ -22,11 +22,11 @@ blog:
 artworks:
   baseurl: "/artworks"
 
-url: "http://www.thomastian.com" # the base hostname & protocol for your site
+hostname: "http://www.thomastian.com" # the base hostname & protocol for your site
 repository: kitian616/kitian616.github.io
 # site github reop url
-github_repo: blog
-github_repo_tree: gh-pages
+github_repo: kitian616.github.io
+github_repo_tree: master
 
 # language
 lang: zh # the language of your site
@@ -42,7 +42,6 @@ github_username:  kitian616
 googleplus_username: 101827554735084402671
 weibo_username: 234695683
 douban_username: kitian616
-homepage_url: http://www.thomastian.com/blog/about/
 
 ## develop
 ## paginate
@@ -69,4 +68,4 @@ gems:
   - jekyll-paginate
 # server
 server_url: "0.0.0.0"
-debug: true
+debug: false

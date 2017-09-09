@@ -4,7 +4,4 @@ body {
 		background-image: $bg-image;
 		background-repeat: repeat;
 	}
-    @include media-query($on-laptop) {
-        background-color: $card-bg-clr;
-    }
 }

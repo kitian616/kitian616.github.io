@@ -11,18 +11,6 @@
 		font-size: $h3-font-size;
 	}
 
-    .icon {
-        float: left;
-        > svg {
-            width: 1.6em;
-            height: 1.6em;
-            path {
-                fill: $text-clr-l;
-            }
-        }
-        margin-right: 0.2em;
-	}
-
     .date-wrapper, .tag-wrapper, .view-wrapper {
     	display: inline-block;
         line-height: 1;
@@ -32,7 +20,6 @@
 	.date-wrapper {
 		margin: 0 0.5em 0 0;
 		.article-meta {
-			float: left;
             line-height: 1.6;
 		}
 	}
@@ -41,28 +28,14 @@
 		margin: 0 0.5em 0 0;
 
 		.article-tag {
-            float: left;
+			font-weight: $base-font-weight;
 			background-color: $tag-article-bg-clr;
-			border-color: $tag-article-bd-clr;
-			&:hover, &:active {
-				background-color: $tag-article-bg-hv-clr;
-				border-color: $tag-article-bd-hv-clr;
-			}
-
+			padding: 2px 6px;
+			border-radius: 4px;
+			color: $text-clr-l;
 			&:not(:last-child) {
-				margin-right: 8px;
+				margin-right: 6px;
 			}
 		}
 	}
-
-	.view-wrapper {
-		.icon-view {
-			float: left;
-		}
-		span {
-			float: left;
-			line-height: 1.6;
-		}
-	}
-
 }

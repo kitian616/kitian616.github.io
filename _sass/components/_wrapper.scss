@@ -1,18 +1,14 @@
-/**
- * Wrapper
- */
-.wrapper-col {
-     @extend %clearfix;
-}
-
-.card {
-    padding: $spacing-unit;
-    background-color: $card-bg-clr;
+.main {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0 $spacing-unit;
+    max-width: $content-max-width;
+    width: 100%;
     @include media-query($on-laptop) {
-        padding: $spacing-unit * 1.5 $spacing-unit * 2;
+        padding: 0 $spacing-unit / 2;
     }
     @include media-query($on-palm) {
-        padding: $spacing-unit / 2;
+        padding: 0 $spacing-unit / 2;
     }
 }
 
@@ -23,14 +19,14 @@
 	left: -4px;
     top: -4px;
     margin-bottom: -4px;
-	background-color: $card-bg-clr;
+	background-color: $bg-clr;
 	    &:before {
         content: "";
         display: block;
         width: 0;
         height: 0;
         border-top: $spacing-unit * 0.8 solid transparent;
-        border-right: $spacing-unit * 0.8 solid $bd-clr;       
+        border-right: $spacing-unit * 0.8 solid $bd-clr;
         margin-right: -4px;
         margin-bottom: -4px;
     }

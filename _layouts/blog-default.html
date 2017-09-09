@@ -1,15 +1,17 @@
 ---
 layout: blog-base
 ---
-<div class="m-page-content">
-    <div class="m-page-stage">
+<div class="m-page-stage js-page-stage">
+    <div class="m-page-content">
         {% include blog/header.html %}
         <div class="m-page-main">
-            {{ content }}
+            <div class="main">
+                {{ content }}
+            </div>
         </div>
     </div>
-    {% include blog/footer.html %}
 </div>
+{% include blog/footer.html %}
 <script src="//cdn.bootcss.com/emojione/2.2.6/lib/js/emojione.min.js"></script>
 <script>
     function affix() {
@@ -71,11 +73,11 @@ layout: blog-base
     }
     function setFooterHeight() {
         /* responsive design : change height */
-        //var header_height = $("#page-header").outerHeight();
-        var footer_height = $("#page-footer").outerHeight();
-        $("#page-footer").css("margin-top", (-footer_height) + "px");
+        var dom_page_footer = $(".js-page-footer");
+        var footer_height = dom_page_footer.outerHeight();
+        dom_page_footer.css("margin-top", (-footer_height) + "px");
         //$("#page-main").css("padding-top", header_height + 15 + "px");
-        $("#page-stage").css("padding-bottom", footer_height + "px");
+        $(".js-page-stage").css("padding-bottom", footer_height + "px");
     }
     $(document).ready(function(){
         setFooterHeight();

@@ -1,14 +1,23 @@
-.post-list {
+.m-post-list {
     article {
-        padding: $spacing-unit / 3 0;
-        &:not(:last-child) {
-            border-bottom-width: 1px;
-            border-bottom-style: dashed;
-            border-color: $bd-clr;
+        h1 {
+            font-size: $base-font-size * 1.6;
+            & > a {
+                &, &:visited {
+                    color: $text-clr-d;
+                }
+                &:hover, &:active {
+                    color: $header-lk-hv-clr;
+                }
+                color: $text-clr-d;
+            }
         }
-        .m-article-content {
-            padding-top: $spacing-unit / 2;
+        padding-bottom: $spacing-unit;
+    }
+    .m-article-content {
+        margin: $spacing-unit / 2 0;
+        img {
+            max-height: 200px;
         }
     }
 }
-

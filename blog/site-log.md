@@ -3,7 +3,6 @@ layout: page
 title: Site Log
 picture-frame: shadow
 
-share: false
 comment: false
 ---
 ## 2016.01.10
@@ -36,7 +35,7 @@ I design and write the theme, it cost me a lot of time, but it's worthy. I learn
 Get more details at [新的一年，新的博客](/blog/2016/01/02/new-year-new-blog.html).
 
 ## 2015.10.26
-First domain in my life! "**thomastian.com**", what an awesome name. :ghost: :ghost: :ghost: 
+First domain in my life! "**thomastian.com**", what an awesome name. :ghost: :ghost: :ghost:
 
 ## 2015.10.26
 I migrate my blog site from gitpages to [gitcafe](https://gitcafe.com/activities), since the latter visit faster in China Mainland, and Baiduspider is not welcome at gitpages.

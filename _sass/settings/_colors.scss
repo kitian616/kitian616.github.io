@@ -30,8 +30,6 @@ $bg-clr:        $white-color;
 //
 $bg-image:      none;
 //
-$card-bg-clr:   $white-color;
-//
 /////
 // border and shadow colors
 /////
@@ -74,7 +72,7 @@ $code-bd-clr:	    $bd-clr;
 //header
 $header-tx-clr:     $text-clr;
 $header-lk-clr:     $text-clr;
-$header-lk-hv-clr:  $text-clr;
+$header-lk-hv-clr:  $main-color;
 
 ///
 //right side headign color
@@ -121,6 +119,7 @@ $license-bd-clr:    $bd-clr;
 
 ///
 //footer
+$footer-bg-clr:     #f2f2f2;
 $footer-tx-clr:     $text-clr;
 $footer-lk-clr:     $text-clr;
 $footer-lk-hv-clr:  $main-color;

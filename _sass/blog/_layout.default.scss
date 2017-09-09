@@ -1,76 +1,31 @@
 /**
  * Page content
  */
- .m-page-content {
-    max-width: $paper-max-width;
-    height: 100%;
-    padding: 0 $spacing-unit;
-    margin: 0 auto;
-}
 .m-page-stage {
     box-sizing: border-box;
     min-height: 100%;
     overflow:auto;
 }
+
+.m-page-content {
+    padding-top: 40px;
+    @include media-query($on-laptop) {
+        padding-top: 10px;
+    }
+}
 .m-page-main {
-    padding: $spacing-unit * 1.5 0 $spacing-unit;
     margin: 0 auto;
+    padding: 40px 0 60px;
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
     display: -ms-flexbox;
     display: flex;
-    .card {
-        padding: $spacing-unit * 3;
-    }
     @include media-query($on-laptop) {
-        padding: $spacing-unit / 4 $spacing-unit / 2;
-        .card {
-            padding: $spacing-unit;
-        }
+        padding: 20px 0 20px;
     }
     @include media-query($on-palm) {
-        padding: 0;
-        .card {
-            padding: $spacing-unit / 2;
-        }
-    }
-    .one-col {
-        width: 70%;
-        margin: $spacing-unit / 2 auto 0 auto;
-        @include media-query($on-laptop) {
-            width: 100%;
-            margin: 0;
-        }
-    }
-    .left-col {
-        box-sizing: border-box;
-        width: 100%;
-        margin: $spacing-unit / 2 0 0 0;
-        @include media-query($on-laptop) {
-            width: 100%;
-            margin: 0;
-        }
-    }
-    .right-col {
-        box-sizing: border-box;
-        width: $aside-width;
-        h1 {
-            line-height: 1.4;
-            font-size: $h2-font-size;
-            color: $text-clr-l;
-            padding: 0 0 0 $spacing-unit / 3;
-            margin: 0 0 $spacing-unit / 2 (-$spacing-unit / 2);
-            border: 0 solid $right-side-h-clr;
-            border-left-width: 12px;
-        }
-        .card {
-            padding: $spacing-unit / 3 $spacing-unit / 2 $spacing-unit / 2;
-            margin: $spacing-unit / 2 0 $spacing-unit / 2 $spacing-unit / 2;
-        }
-        @include media-query($on-laptop) {
-            display: none;
-        }
+        padding: 10px 0 10px;
     }
 }
 

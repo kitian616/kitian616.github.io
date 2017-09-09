@@ -1,18 +1,13 @@
 ---
 layout: blog-default
 ---
-<div class="one-col card">
-    <article class="page">
-        <h1 class="page-heading">{{ page.title }}</h1>
+<article class="page">
+    <h1 class="page-heading">{{ page.title }}</h1>
 
-        <div class="m-article-content" itemprop="articleBody">
-            {{ content }}
-        </div>
-        {% if page.share == null or page.share == true %}
-            <section>{% include utils/share-duoshuo.html %}</section>
-        {% endif %}
-        {% if page.share == null or page.comment == true %}
-            <section>{% include utils/comment-duoshuo.html %}</section>
-        {% endif %}
-    </article>
-</div>
+    <div class="m-article-content" itemprop="articleBody">
+        {{ content }}
+    </div>
+    {% if page.comment == null or page.comment == true %}
+        <section>{% include utils/comment-disqus.html %}</section>
+    {% endif %}
+</article>

@@ -47,6 +47,22 @@ body {
     }
 }
 
+.clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
 button {
     cursor:pointer;
     outline: none;

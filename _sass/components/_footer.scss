@@ -2,17 +2,8 @@
  * Site Info
  */
 
-.m-site-info {
-    display: table;
-    font-size: $footer-font-size;
-    text-align: center;
-    > div {
-        display: table-cell;
-    }
-}
-
 .m-page-footer {
-    width: 100%;
+    background-color: $footer-bg-clr;
     p {
         color: $footer-tx-clr;
     }
@@ -40,6 +31,11 @@
     }
     .site-info {
         padding: 0 0 $spacing-unit 0;
+    }
+    .site-info-main {
+        display: table;
+        font-size: $footer-font-size;
+        text-align: center;
         margin: 0 auto;
     }
 }
