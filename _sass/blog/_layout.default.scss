@@ -16,15 +16,7 @@
 }
 .m-page-main {
     margin: 0 auto;
-    padding: $spacing-unit 0;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    @include media-query($on-laptop) {
-        padding: $spacing-unit / 2 0;
-    }
+    padding: $spacing-unit / 2 0;
     @include media-query($on-palm) {
         padding: $spacing-unit / 4 0;
     }
