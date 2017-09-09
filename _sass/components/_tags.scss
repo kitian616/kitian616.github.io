@@ -15,12 +15,12 @@
     }
 
     .tag-show-all {
-        &, &:focus {
+        @include link-normal {
             color: $tag-all-tx-clr;
             border-color: $tag-all-bd-clr;
             background-color: $tag-all-bg-clr;
         }
-        &:hover{
+        @include link-emphasize {
             color: $tag-all-tx-hv-clr;
             border-color: $tag-all-bd-hv-clr;
             background-color: $tag-all-bg-hv-clr;
@@ -28,12 +28,12 @@
     }
 
     .tag-other{
-        &, &:focus {
+        @include link-normal {
             color: $tag-tx-clr;
             border-color: $tag-bd-clr;
             background-color: $tag-bg-clr-2;
         }
-        &:hover {
+        @include link-emphasize {
             color: $tag-tx-hv-clr;
             border-color: $tag-bd-hv-clr;
             background-color: $tag-bg-hv-clr;

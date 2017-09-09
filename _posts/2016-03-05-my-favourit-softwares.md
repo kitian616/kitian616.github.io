@@ -29,7 +29,7 @@ picture-max-width: 480px
 
 #### PuTTY
 
-Putty是一个免费的、Windows 32平台下的telnet、rlogin和ssh客户端。
+Putty 是一个免费的，Windows 32平台下的telnet、rlogin 和 ssh 客户端。
 
 ![PuTTY](http://7xpqpj.com1.z0.glb.clouddn.com/image/post/20160305/PuTTY.png)
 
@@ -37,14 +37,14 @@ Putty是一个免费的、Windows 32平台下的telnet、rlogin和ssh客户端�
 
 #### Advanced ip Scanner
 
-是可以在快速扫描局域网计算机信息的网络IP扫描工具，对于寻找一些没有显示的设备（比如没接屏幕的树莓派）IP特别有用。
+是可以在快速扫描局域网计算机信息的网络 IP 扫描工具，对于寻找一些没有显示的设备（比如没接屏幕的树莓派）IP 特别有用。
 
 ![Advanced ip Scanner](http://7xpqpj.com1.z0.glb.clouddn.com/image/post/20160305/Advanced_IP_Scanner.png)
 
 
 #### Oracle VM VirtualBox
 
-VMware Workstation的绝佳开源替代品，十分适合在Windows中虚拟Linux系统环境。
+VMware Workstation 的绝佳开源替代品，十分适合在 Windows 中虚拟 Linux 系统环境。
 
 ![VirtualBox](http://7xpqpj.com1.z0.glb.clouddn.com/image/post/20160305/VirtualBox.png)
 
@@ -53,7 +53,7 @@ VMware Workstation的绝佳开源替代品，十分适合在Windows中虚拟Linu
 
 #### Cmder
 
-cmd替代品，能最大化，标签页以及非常不错的定制性。
+cmd 替代品，能最大化，标签页以及非常不错的定制性。
 
 ![Cmder](http://7xpqpj.com1.z0.glb.clouddn.com/image/post/20160305/cmder.jpg)
 
@@ -61,13 +61,13 @@ cmd替代品，能最大化，标签页以及非常不错的定制性。
 
 ### typora
 
-Windows下非常好用的Markdown编辑器，支持多种主题，更棒的是还支持YAML头文件。
+Windows 下非常好用的 Markdown 编辑器，支持多种主题，更棒的是还支持YAML头文件。
 
 [官网链接](https://www.typora.io/)
 
 #### mp3Tag
 
-MP3文件ID3-Tag信息修改器。可以修改MP3文件中的曲名、演唱者、专集、年月、流派、注释等信息，歌曲收藏者的利器。
+MP3 文件 ID3-Tag 信息修改器。可以修改MP3文件中的曲名、演唱者、专集、年月、流派、注释等信息，歌曲收藏者的利器。
 
 [官网链接](http://www.mp3tag.de/)
 
@@ -76,7 +76,7 @@ MP3文件ID3-Tag信息修改器。可以修改MP3文件中的曲名、演唱者�
 
 #### zsh (with Oh My Zsh)
 
-比bash更好用的shell。更强的可配置性，更强的tab补全，还附带git支持。再加上[Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)的存在，zsh已经相当易用了。
+比 bash 更好用的 shell。更强的可配置性，更强的 tab 补全，还附带 git 支持。再加上[Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)的存在，zsh 已经相当易用了。
 
 ![zsh](http://7xpqpj.com1.z0.glb.clouddn.com/image/post/20160305/zsh.png)
 
@@ -84,7 +84,7 @@ MP3文件ID3-Tag信息修改器。可以修改MP3文件中的曲名、演唱者�
 
 #### Tmux
 
-SSH最佳伴侣。
+SSH 最佳伴侣。
 
 ![Tmux](http://7xpqpj.com1.z0.glb.clouddn.com/image/post/20160305/Tmux.png)
 
@@ -102,7 +102,7 @@ SSH最佳伴侣。
 
 #### Graph::Easy
 
-跟Graphviz类似的软件。用它可以很方便的绘制出字符版的流程图，很适合代码注释。当然，它的功能远不止这些。
+跟 Graphviz 类似的软件。用它可以很方便的绘制出字符版的流程图，很适合代码注释。当然，它的功能远不止这些。
 
 {% highlight text%}
 +------+     +--------+      .............     +---------+
@@ -116,7 +116,7 @@ SSH最佳伴侣。
              +---------+     +---------+
 {% endhighlight %}
 
-[github项目页](https://github.com/ironcamel/Graph-Easy)
+[GitHub 项目页](https://github.com/ironcamel/Graph-Easy)
 
 ## Coding
 
@@ -130,7 +130,7 @@ SSH最佳伴侣。
 
 #### Atom
 
-GitHub出品，免费开源，覆盖3大平台，插件丰富。唯一的缺点就是开启有点慢。
+GitHub 出品，免费开源，覆盖3大平台，插件丰富。唯一的缺点就是开启有点慢。
 
 ![Atom](http://7xpqpj.com1.z0.glb.clouddn.com/image/post/20160305/atom.jpg)
 

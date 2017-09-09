@@ -89,19 +89,19 @@ $tag-article-tx-hv-clr:  $main-tx-odd-clr;
 
 ///
 //all page tags
-$tag-all-bg-clr: 	$main-color;
-$tag-all-bd-clr: 	$main-color;
+$tag-all-bg-clr: 	$text-clr-l;
+$tag-all-bd-clr: 	transparent;
 $tag-all-tx-clr: 	$main-tx-odd-clr;
 $tag-all-bg-hv-clr:	$main-color;
-$tag-all-bd-hv-clr: $main-color;
+$tag-all-bd-hv-clr: transparent;
 $tag-all-tx-hv-clr: $main-tx-odd-clr;
 
 $tag-bd-clr: 	transparent;
 $tag-bg-clr:    $main-color;
-$tag-bg-clr-1:  $main-color;
-$tag-bg-clr-2:  $main-color;
-$tag-bg-clr-3:  $main-color;
-$tag-bg-clr-4: 	$main-color;
+$tag-bg-clr-1:  rgba($main-color, .4);
+$tag-bg-clr-2:  rgba($main-color, .55);
+$tag-bg-clr-3:  rgba($main-color, .7);
+$tag-bg-clr-4: 	rgba($main-color, .9);
 $tag-tx-clr: 	$main-tx-odd-clr;
 $tag-bg-hv-clr: $main-color;
 $tag-bd-hv-clr: transparent;

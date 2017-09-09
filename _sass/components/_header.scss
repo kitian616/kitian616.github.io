@@ -10,10 +10,10 @@
     }
     a {
         font-weight: $base-font-weight;
-        &, &:visited {
+        @include link-normal {
             color: $header-lk-clr;
         }
-        &:hover, &:active {
+        @include link-emphasize {
             color: $header-lk-hv-clr;
         }
     }
@@ -24,7 +24,7 @@
             -moz-transition: fill .8s ease 0s;
             transition: fill .8s ease 0s;
         }
-        &:hover, &:active {
+        @include link-emphasize {
             path {
                 fill: $header-lk-hv-clr;
             }

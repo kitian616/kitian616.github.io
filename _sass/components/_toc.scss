@@ -8,10 +8,10 @@
             font-weight: $base-font-weight;
             font-size: $small-font-size;
             text-decoration: none;
-            &, &:visited, &.active {
+            @include link-normal {
                 color: $toc-tx-clr;
             }
-            &:hover{
+            @include link-emphasize {
                 color: $toc-tx-hv-clr;
             }
         }
@@ -45,9 +45,7 @@
     .toc-active {
         a {
             font-weight: $bold-font-weight;
-            &, &:visited, &.active, &:hover {
-                color: $toc-tx-hv-clr;
-            }
+            color: $toc-tx-hv-clr;
         }
     }
 

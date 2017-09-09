@@ -14,73 +14,7 @@ layout: blog-base
 {% include blog/footer.html %}
 <script src="//cdn.bootcss.com/emojione/2.2.6/lib/js/emojione.min.js"></script>
 <script>
-    function affix() {
-        function getMinHeight() {
-            var min_height = 0;
-            $(".affix").each(function(index) {
-                var cur_height = $(this).offset().top;
-                if (0 === index) {
-                    min_height = cur_height;
-                } else {
-                    if (min_height > cur_height) {
-                        min_height = cur_height;
-                    }
-                }
-            });
-            return min_height;
-        }
-        var min_height = getMinHeight();
-        $(window).on("resize", function() {
-            min_height = getMinHeight();
-        });
-        var flag = false;
-        $(window).on("scroll", function() {
-            if ($(document).scrollTop() < min_height) {
-                flag = false;
-                $(".affix").each(function() {
-                    $(this).css({
-                        position: "relative",
-                        top: 0
-                    });
-                });
-            } else {
-                if (flag == false) {
-                    $(".affix").each(function() {
-                        $(this).css({
-                            position: 'relative',
-                            top: 0
-                        });
-                    });
-                    $(".affix").each(function() {
-                        var width = $(this).width();
-                        $(this).css({
-                            top: function() {
-                                var top = $(this).offset().top - min_height;
-                                return top;
-                            }
-                        });
-                        $(this).width(width);
-                    });
-                    $(".affix").each(function() {
-                        $(this).css({position: 'fixed'});
-                    });
-                }
-                if (flag != true) {
-                    flag = true;
-                }
-            }
-        });
-    }
-    function setFooterHeight() {
-        /* responsive design : change height */
-        var dom_page_footer = $(".js-page-footer");
-        var footer_height = dom_page_footer.outerHeight();
-        dom_page_footer.css("margin-top", (-footer_height) + "px");
-        //$("#page-main").css("padding-top", header_height + 15 + "px");
-        $(".js-page-stage").css("padding-bottom", footer_height + "px");
-    }
     $(document).ready(function(){
-        setFooterHeight();
         // display coding language //
         $(".highlight").each(function() {
             $(this).attr("data-lang", $(this).find("code").attr("data-lang"));
@@ -91,7 +25,6 @@ layout: blog-base
         // });
         // $(".article-content img").unveil();
         //
-        affix();
         $(".m-article-content").each(function() {
             var original = $(this).html();
             emojione.imageType = 'svg';

@@ -3,10 +3,10 @@
         h1 {
             font-size: $base-font-size * 1.6;
             & > a {
-                &, &:visited {
+                @include link-normal {
                     color: $text-clr-d;
                 }
-                &:hover, &:active {
+                @include link-emphasize {
                     color: $header-lk-hv-clr;
                 }
                 color: $text-clr-d;

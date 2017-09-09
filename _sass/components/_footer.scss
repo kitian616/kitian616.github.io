@@ -3,6 +3,8 @@
  */
 
 .m-page-footer {
+    height: $footer-height;
+    margin-top: - $footer-height;
     background-color: $footer-bg-clr;
     p {
         color: $footer-tx-clr;
@@ -30,9 +32,6 @@
         }
     }
     .site-info {
-        padding: 0 0 $spacing-unit 0;
-    }
-    .site-info-main {
         display: table;
         font-size: $footer-font-size;
         text-align: center;

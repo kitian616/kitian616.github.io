@@ -7,6 +7,7 @@
         border-color: $bd-clr;
         border-bottom-style: dashed;
         border-width: 2px;
+        color: $text-clr-d;
     }
 
     .year-wrapper {
@@ -23,6 +24,7 @@
 
     .post-link {
         font-size: $base-font-size;
+        color: $text-clr-d;
         line-height: 1;
     }
 
@@ -35,9 +37,7 @@
     }
     nav {
         padding: 10px;
-        border-color: $bd-clr;
-        border-left-style: solid;
-        border-left-width: 4px;
+
         margin: 15px 0;
 
         background-color: $bg-clr;

@@ -5,10 +5,11 @@
 a {
     font-weight: $bold-font-weight;
     text-decoration: none;
-    &, &:visited, &.active {
+    @include link-colors($link-clr, $link-hv-clr);
+    @include link-normal {
         color: $link-clr;
     }
-    &:hover{
+    @include link-emphasize {
         color: $link-hv-clr;
         text-decoration: underline;
     }
@@ -18,24 +19,24 @@ a {
 
 }
 
-%button {
+%cursor-pointer {
     cursor:pointer;
 }
 
 .round-button {
-    @extend %button;
+    @extend %cursor-pointer;
     display: block;
     font-weight: $base-font-weight;
     text-align: center;
     box-sizing: border-box;
     padding: 8px;
     border-radius: 50%;
-    &, &:visited {
+    @include link-normal {
         border: 1px solid $bd-clr;
         color: $text-clr-l;
         text-decoration: none;
     }
-    &:hover, &:active {
+    @include link-emphasize {
         border: 1px solid $botton-hv-clr;
         background-color: $botton-hv-clr;
         color: $main-tx-odd-clr;
@@ -43,12 +44,12 @@ a {
     }
 
     .icon {
-        &, &:visited {
+        @include link-normal {
             path {
                 fill: $text-clr-l;
             }
         }
-        &:hover, &:active {
+        @include link-emphasize {
             path {
                 fill: $main-tx-odd-clr;
             }
@@ -56,21 +57,21 @@ a {
     }
     //inactive button (gray)
     &.inactive {
-        &, &:visited {
+        @include link-normal {
             color: $text-clr-l;
         }
-        &:hover, &:active {
+        @include link-emphasize {
             border-color: $bd-clr;
             background-color: transparent;
             color: $bd-clr;
         }
         .icon {
-            &, &:visited {
+            @include link-normal {
                 path {
                     fill: $bd-clr;
                 }
             }
-            &:hover, &:active {
+            @include link-emphasize {
                 path {
                     fill: $bd-clr;
                 }
@@ -84,19 +85,19 @@ a {
 }
 
 .round-rect-button {
-    @extend %button;
+    @extend %cursor-pointer;
     display: block;
     font-weight: $base-font-weight;
     box-sizing: border-box;
     padding: 0 0.6em;
     line-height: 1.6;
     border-radius: 1em;
-    &, &:visited {
+    @include link-normal {
         border: 1px solid $bd-clr;
         color: $text-clr-l;
         text-decoration: none;
     }
-    &:hover, &:active {
+    @include link-emphasize {
         border: 1px solid $botton-hv-clr;
         background-color: $botton-hv-clr;
         color: $main-tx-odd-clr;
@@ -104,12 +105,12 @@ a {
 
     }
     .icon {
-        &, &:visited {
+        @include link-normal {
             path {
                 fill: $text-clr-l;
             }
         }
-        &:hover, &:active {
+        @include link-emphasize {
             path {
                 fill: $main-tx-odd-clr;
             }
