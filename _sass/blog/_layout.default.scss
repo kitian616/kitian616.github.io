@@ -16,17 +16,17 @@
 }
 .m-page-main {
     margin: 0 auto;
-    padding: 40px 0 60px;
+    padding: $spacing-unit 0;
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
     display: -ms-flexbox;
     display: flex;
     @include media-query($on-laptop) {
-        padding: 20px 0 20px;
+        padding: $spacing-unit / 2 0;
     }
     @include media-query($on-palm) {
-        padding: 10px 0 10px;
+        padding: $spacing-unit / 4 0;
     }
 }
 

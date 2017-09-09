@@ -1,5 +1,5 @@
 .m-post-list {
-    article {
+    & > article {
         h1 {
             font-size: $base-font-size * 1.6;
             & > a {

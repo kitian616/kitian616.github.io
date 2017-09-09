@@ -1,12 +1,6 @@
 .all {
     .yaer-title{
-        display: block;
-        padding: 1em 3em 0 0;
-        margin: 0;
         font-size: $base-font-size * 1.5;
-        border-color: $bd-clr;
-        border-bottom-style: dashed;
-        border-width: 2px;
         color: $text-clr-d;
     }
 
@@ -34,12 +28,5 @@
     .post-block {
         list-style-type: none;
         margin: .4em 0 .4em 1em;
-    }
-    nav {
-        padding: 10px;
-
-        margin: 15px 0;
-
-        background-color: $bg-clr;
     }
 }

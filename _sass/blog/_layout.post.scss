@@ -1,16 +1,12 @@
 .article-header {
-    margin-bottom: $spacing-unit;
-    padding-bottom: $spacing-unit / 2;
-    border-bottom-width: 2px;
-    border-bottom-style: solid;
-    border-color: $bd-clr;
     color: $head-tx-clr;
+    margin-bottom:  $spacing-unit / 6;
 }
 
 .article-title {
+    margin-bottom:  $spacing-unit;
 	font-size: $h1-font-size;
     color: $text-clr-d;
-    margin-bottom: 0;
 }
 
 .post-license {
