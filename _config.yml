@@ -6,16 +6,15 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Thomas Tian
-subtitle: 田琦的主页
+title: Tian Qi
 description: > # this means to ignore newlines until "baseurl:"
-    Thomas Tian's Home | 田琦的主页
+    Tian Qi | 田琦
 baseurl: "/" # the subpath of your site, e.g. /blog
 
 blog:
   baseurl: "/blog"
-  title: Thomas's blog
-  description: Thomas Tian's Blog | 田琦的博客
+  title: Qi's blog
+  description: Tian Qi's Blog | 田琦的博客
   nav_lists:
     - title: About
       url: /blog/about.html
@@ -33,7 +32,7 @@ lang: zh # the language of your site
 timezone: Asia/Shanghai
 
 # author
-author: "Thomas Tian"
+author: "Tian Qi"
 avata_url: http://7xpqpj.com1.z0.glb.clouddn.com/image/me/peitaiho.JPG
 bio: 前端开发实习生，立志成为全栈开发者。
 email: kitian616@outlook.com
@@ -55,8 +54,6 @@ highlighter: rouge
 permalink: date
 # google analytics
 ga_tracking_id: UA-71907556-1
-# comment
-duoshuo_shortname: thomas-blog
 # leancloud vies
 app_id: uAG3OhdcH8H4fxSqXLyBljA7-gzGzoHsz
 app_key: Mzf5m9skSwYVWVXhGiYMNyXs

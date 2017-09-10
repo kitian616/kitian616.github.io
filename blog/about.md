@@ -5,7 +5,7 @@ key: page-about
 ---
 Welcome to my blog! :earth_asia: :earth_africa: :earth_americas:
 
-I'm Thomas Tian, I now live in Beijing and study in [USTB](http://en.ustb.edu.cn/) for a master's degree, major in Computer Science.
+My Name is Tian Qi ( You can also call me Thomas Tian ), I now work in [Qunar.com](https://www.qunar.com) at Beijing.
 
 <!--more-->
 
@@ -13,7 +13,7 @@ I'm Thomas Tian, I now live in Beijing and study in [USTB](http://en.ustb.edu.cn
 
 你们好，我叫田琦，这是我的博客。
 
-我目前在北京科技大学攻读硕士学位，计算机科学与技术专业。
+我目前就职于[去哪儿网](https://www.qunar.com)。
 
 我崇尚Geek精神与开源文化 :robot: :robot:，喜欢简洁、优美、模块化的代码。爱折腾，折腾系统，折腾软件，折腾语言，折腾框架...生命不息，折腾不止。:muscle:
 
