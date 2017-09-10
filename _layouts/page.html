@@ -1,13 +1,15 @@
 ---
 layout: blog-default
 ---
-<article class="page">
-    <h1 class="page-heading">{{ page.title }}</h1>
+<div class="main">
+    <article class="page">
+        <h1 class="page-heading">{{ page.title }}</h1>
 
-    <div class="m-article-content" itemprop="articleBody">
-        {{ content }}
-    </div>
-    {% if page.comment == null or page.comment == true %}
-        <section>{% include utils/comment-disqus.html %}</section>
-    {% endif %}
-</article>
+        <div class="m-article-content" itemprop="articleBody">
+            {{ content }}
+        </div>
+        {% if page.comment == null or page.comment == true %}
+            <section>{% include utils/comment-disqus.html %}</section>
+        {% endif %}
+    </article>
+</div>

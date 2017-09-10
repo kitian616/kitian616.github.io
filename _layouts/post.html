@@ -1,39 +1,48 @@
 ---
-layout: blog-default
+layout: blog-base
 ---
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-    <meta itemprop="mainEntityOfPage" itemscope itemType="https://schema.org/WebPage"/>
-    <header class="article-header">
-        <h1 itemprop="headline" class="article-title" itemprop="name headline">{{ page.title }}</h1>
-        {% include blog/article-data.html %}
-    </header>
+<div class="m-post m-page-content">
+    <div class="m-page-main">
+        {% include blog/header.html %}
+        <div class="main">
+            <article itemscope itemtype="http://schema.org/BlogPosting">
+                <meta itemprop="mainEntityOfPage" itemscope itemType="https://schema.org/WebPage"/>
+                <header class="article-header">
+                    <h1 itemprop="headline" class="article-title" itemprop="name headline">{{ page.title }}</h1>
+                    {% include blog/article-data.html %}
+                </header>
 
-    <div class="m-toc js-toc"></div>
+                <div class="m-article-content js-article-content" itemprop="articleBody">
+                    {{ content }}
+                </div>
 
-    <div class="m-article-content js-article-content" itemprop="articleBody">
-        {{ content }}
-    </div>
-
-    <footer>
-        {% if page.modify_date %}
-            <div class="article-meta">
-                Last updated
-                <time datetime="{{ page.modify_date | date_to_xmlschema }}" itemprop="dateModified">
-                    {{ page.modify_date | date: "%b %-d, %Y" }}
-                </time>
-            </div>
-        {% else %}
-            <meta itemprop="dateModified" content="{{ page.date | date_to_xmlschema }}">
-        {% endif %}
-        <div class="post-license">
-            <div class="paper-corner-upleft"></div>
-            {% include blog/license.html %}
+                <footer>
+                    {% if page.modify_date %}
+                    <div class="article-meta">
+                        Last updated
+                        <time datetime="{{ page.modify_date | date_to_xmlschema }}" itemprop="dateModified">
+                            {{ page.modify_date | date: "%b %-d, %Y" }}
+                        </time>
+                    </div>
+                    {% else %}
+                    <meta itemprop="dateModified" content="{{ page.date | date_to_xmlschema }}">
+                    {% endif %}
+                    <div class="article-license">
+                        <div class="paper-corner-upleft"></div>
+                        {% include blog/license.html %}
+                    </div>
+                </footer>
+                {% if page.comment == null or page.comment == true %}
+                <section>{% include utils/comment-disqus.html %}</section>
+                {% endif %}
+            </article>
         </div>
-    </footer>
-    {% if page.comment == null or page.comment == true %}
-        <section>{% include utils/comment-disqus.html %}</section>
-    {% endif %}
-</article>
+    </div>
+    <aside class="m-article-aside">
+        <div class="m-toc js-toc"></div>
+    </aside>
+</div>
+
 <script src="//cdn.bootcss.com/toc/0.3.2/toc.min.js"></script>
 <script type="text/javascript">
     $(function() {
