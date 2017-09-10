@@ -39,7 +39,7 @@ a {
     @include link-emphasize {
         border: 1px solid $botton-hv-clr;
         background-color: $botton-hv-clr;
-        color: $main-tx-odd-clr;
+        color: $text-odd-clr;
         text-decoration: none;
     }
 
@@ -51,7 +51,7 @@ a {
         }
         @include link-emphasize {
             path {
-                fill: $main-tx-odd-clr;
+                fill: $text-odd-clr;
             }
         }
     }
@@ -100,7 +100,7 @@ a {
     @include link-emphasize {
         border: 1px solid $botton-hv-clr;
         background-color: $botton-hv-clr;
-        color: $main-tx-odd-clr;
+        color: $text-odd-clr;
         text-decoration: none;
 
     }
@@ -112,7 +112,7 @@ a {
         }
         @include link-emphasize {
             path {
-                fill: $main-tx-odd-clr;
+                fill: $text-odd-clr;
             }
         }
     }

@@ -1,4 +1,4 @@
-#home {
+.home {
     display: table;
     box-sizing: border-box;
     width: 100%;
@@ -11,11 +11,13 @@
         url(http://7xpqpj.com1.z0.glb.clouddn.com/image/cover/lego_dark.jpg)
         #333 no-repeat fixed 50% 50%;
     background-size: cover;
+
     .main {
         display: table-cell;
         box-sizing: border-box;
         text-align: center;
         vertical-align: middle;
+        animation: fade-in-down .8s;
         .follow-me {
             margin: 3em auto 0 auto;
             .mail {
@@ -23,26 +25,21 @@
             }
         }
         h1 {
-            line-height: 1;
-            font-size: 3em;
-            font-weight: 800;
-            color: $main-tx-odd-clr;
-            &:hover {
-                color: $main-tx-odd-clr-sub;
-            }
+            color: $text-odd-clr;
         }
         a {
-            color: $main-tx-odd-clr;
-            font-size: 1.2em;
-            &:hover {
-                color: $main-tx-odd-clr-sub;
+            @include link-normal {
+                color: $text-odd-clr;
+            }
+            @include link-emphasize {
+                color: $link-hv-clr;
             }
         }
     }
+
     .content {
         display: table;
         margin: 0 auto;
-
     }
 
     .my-photo {
@@ -50,7 +47,6 @@
         &:hover {
             transform: rotate(360deg);
         }
-
         img {
             display: block;
             box-sizing: border-box;
@@ -64,18 +60,6 @@
         -webkit-transition: transform 0.8s ease 0s;
         -moz-transition: transform 0.8s ease 0s;
         transition: transform 0.8s ease 0s;
-    }
-
-    @include media-query($on-palm) {
-        .main {
-            margin: 3em auto 0 auto;
-            h1 {
-                font-size: 1.8em;
-            }
-            a {
-                font-size: 1em;
-            }
-        }
     }
 }
 

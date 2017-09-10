@@ -17,17 +17,14 @@
             color: $header-lk-hv-clr;
         }
     }
-    .icon {
+    .site-logo {
+        display: inline-block;
+        vertical-align: middle;
+        width: $h3-font-size;
+        height: $h3-font-size;
+        transform: rotate(45deg);
         path {
-            fill: $header-lk-clr;
-            -webkit-transition: fill .8s ease 0s;
-            -moz-transition: fill .8s ease 0s;
-            transition: fill .8s ease 0s;
-        }
-        @include link-emphasize {
-            path {
-                fill: $header-lk-hv-clr;
-            }
+            fill: $text-clr;
         }
     }
     /**
@@ -37,7 +34,6 @@
         display: inline-block;
         font-size: $h3-font-size;
         line-height: 1.5;
-        letter-spacing: -1px;
     }
     /**
     * Site nav (nav)
