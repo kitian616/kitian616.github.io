@@ -33,27 +33,11 @@
     /**
     * Site title
     */
-    .title-wrapper {
-        float: left;
-    }
     .site-title {
-        display: block;
-        float: left;
-        font-size: $h2-font-size;
+        display: inline-block;
+        font-size: $h3-font-size;
         line-height: 1.5;
         letter-spacing: -1px;
-
-        margin-right: 8px;
-    }
-    //RSS
-    .rss-button {
-        display: block;
-        float: left;
-        svg {
-            width: $h4-font-size;
-            height: $h4-font-size;
-        }
-        padding-top: $h2-font-size * .2;
     }
     /**
     * Site nav (nav)
@@ -62,7 +46,7 @@
         display: block;
         opacity: 1;
         float: right;
-        font-size: $h4-font-size;
+        font-size: $h5-font-size;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
         ul {
@@ -77,25 +61,8 @@
                 }
             }
         }
-
-        transition:         opacity .5s;
-        -moz-transition:    opacity .5s;    /* Firefox 4 */
-        -webkit-transition: opacity .5s;	/* Safari and Chrome */
-        -o-transition:      opacity .5s;      /* Opera */
-
-    }
-
-    @include media-query($on-palm) {
-        #menu-button {
-            opacity: 1;
-            visibility: visible;
-        }
-        .title-wrapper, .site-nav {
+        @include media-query($on-palm) {
             float: none;
         }
     }
-    transition:         margin-top .5s;
-    -moz-transition:    margin-top .5s;    /* Firefox 4 */
-    -webkit-transition: margin-top .5s;   /* Safari and Chrome */
-    -o-transition:      margin-top .5s;      /* Opera */
 }

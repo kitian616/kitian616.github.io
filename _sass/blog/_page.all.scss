@@ -12,13 +12,18 @@
         display: inline-block;
         font-size: $small-font-size;
         line-height: 1;
-        color: $text-clr;
+        color: $text-clr-l;
         width: 4em;
     }
 
     .post-link {
         font-size: $base-font-size;
-        color: $text-clr-d;
+        @include link-normal {
+            color: $text-clr;
+        }
+        @include link-emphasize {
+            color: $link-hv-clr;
+        }
         line-height: 1;
     }
 

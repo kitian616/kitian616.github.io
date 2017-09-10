@@ -1,9 +1,7 @@
 <header class="m-page-header main clearfix">
-    <div class="title-wrapper clearfix">
-        <a class="site-title" title="{% if site.blog.description %}{{ site.blog.description }}{% else %}{{ site.description }}{% endif %}"
-            href="{{ site.blog.baseurl |  prepend: site.baseurl | replace: '//', '/' }}">{% if site.blog.title %}{{ site.blog.title }}{% else %}{{ site.title }}{% endif %}
-        </a>
-    </div>
+    <a class="site-title" title="{% if site.blog.description %}{{ site.blog.description }}{% else %}{{ site.description }}{% endif %}"
+        href="{{ site.blog.baseurl |  prepend: site.baseurl | replace: '//', '/' }}">{% if site.blog.title %}{{ site.blog.title }}{% else %}{{ site.title }}{% endif %}
+    </a>
     <nav class="site-nav">
         <ul class="clearfix">
             <li><a href="{{ "/" | prepend: site.baseurl | replace: '//', '/' }}">Home</a></li>

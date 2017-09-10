@@ -21,6 +21,7 @@ $white-color:   #fff;
 /////
 //
 $main-color:    #fc4d50;
+$extra-color:    #fca24d;
 
 /////
 // background colors
@@ -92,7 +93,7 @@ $tag-article-tx-hv-clr:  $main-tx-odd-clr;
 $tag-all-bg-clr: 	$text-clr-l;
 $tag-all-bd-clr: 	transparent;
 $tag-all-tx-clr: 	$main-tx-odd-clr;
-$tag-all-bg-hv-clr:	$main-color;
+$tag-all-bg-hv-clr:	$extra-color;
 $tag-all-bd-hv-clr: transparent;
 $tag-all-tx-hv-clr: $main-tx-odd-clr;
 
@@ -103,7 +104,7 @@ $tag-bg-clr-2:  rgba($main-color, .55);
 $tag-bg-clr-3:  rgba($main-color, .7);
 $tag-bg-clr-4: 	rgba($main-color, .9);
 $tag-tx-clr: 	$main-tx-odd-clr;
-$tag-bg-hv-clr: $main-color;
+$tag-bg-hv-clr: $extra-color;
 $tag-bd-hv-clr: transparent;
 $tag-tx-hv-clr: $main-tx-odd-clr;
 

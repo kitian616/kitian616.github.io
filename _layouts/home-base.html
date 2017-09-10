@@ -8,6 +8,8 @@
     </head>
     <body>
         {{ content }}
-        {% include utils/google-analytics.html %}
+        {% if site.isdebug == false %}
+            {% include utils/google-analytics.html %}
+        {% endif %}
     </body>
 </html>
