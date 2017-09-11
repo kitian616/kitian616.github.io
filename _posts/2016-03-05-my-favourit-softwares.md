@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "我的软件清单"
+title: 我的软件清单
 key: 10009
 tags: Tools
 category: blog
@@ -29,7 +29,7 @@ picture-max-width: 480px
 
 ### PuTTY
 
-Putty 是一个免费的，Windows 32平台下的telnet、rlogin 和 ssh 客户端。
+Putty 是一个免费的，Windows 32 平台下的 telnet、rlogin 和 ssh 客户端。
 
 ![PuTTY](http://7xpqpj.com1.z0.glb.clouddn.com/image/post/20160305/PuTTY.png)
 
@@ -61,7 +61,7 @@ cmd 替代品，能最大化，标签页以及非常不错的定制性。
 
 ### typora
 
-Windows 下非常好用的 Markdown 编辑器，支持多种主题，更棒的是还支持YAML头文件。
+Windows 下非常好用的 Markdown 编辑器，支持多种主题，更棒的是还支持 YAML 头文件。
 
 [官网链接](https://www.typora.io/)
 

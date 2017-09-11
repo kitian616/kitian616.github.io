@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "第三代主题：Chameleon Theme"
+title: 第三代主题：Chameleon Theme
 key: 100010
 tags: blog
 category: blog
@@ -16,11 +16,11 @@ picture-frame: shadow
 
 <!--more-->
 
-新的主题同样遵循响应式的设计，PC、平板和手机都有着不同的页面布局，同样大量的使用HTML5和CSS3的新特性，所以目前还是只兼容现代浏览器。
+新的主题同样遵循响应式的设计，PC、平板和手机都有着不同的页面布局，同样大量的使用 HTML5 和 CSS3 的新特性，所以目前还是只兼容现代浏览器。
 
 ## 主题色
 
-主题色是“变色龙主题”最大特点，在项目源文件`_sass/_setting.colors.scss` 中有三个变量，分别为`$main-color-1` `$main-color-2`和 `$main-color-3`， 通过设定这3个变量，用户就可以自定义网站的颜色了。
+主题色是“变色龙主题”最大特点，在项目源文件 `_sass/_setting.colors.scss` 中有三个变量，分别为 `$main-color-1`、`$main-color-2`和 `$main-color-3`， 通过设定这 3 个变量，用户就可以自定义网站的颜色了。
 
 `$main-color-1` 代表强调色，建议较鲜艳的颜色。
 
@@ -59,7 +59,7 @@ picture-frame: shadow
 
 ## 标签页
 
-新的标签页(All Posts)在原有的基础上进行了改进，标签按钮使用颜色的深浅来表示该标签下博文数量的多少，同时新的标签按钮使用胶囊型的设计，显得更加精细和美观（见下图右）。
+新的标签页（All Posts）在原有的基础上进行了改进，标签按钮使用颜色的深浅来表示该标签下博文数量的多少，同时新的标签按钮使用胶囊型的设计，显得更加精细和美观（见下图右）。
 
 ![标签页](http://7xpqpj.com1.z0.glb.clouddn.com/image/post/20160919/all-pages.jpg)
 
@@ -69,19 +69,4 @@ picture-frame: shadow
 
 又及，
 
->  不懂产品的设计师不是好前端。
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+> 不懂产品的设计师不是好前端。
