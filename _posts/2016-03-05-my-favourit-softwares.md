@@ -135,7 +135,3 @@ GitHub 出品，免费开源，覆盖3大平台，插件丰富。唯一的缺点
 ![Atom](http://7xpqpj.com1.z0.glb.clouddn.com/image/post/20160305/atom.jpg)
 
 [官网链接](https://www.atom.io/)
-
-
-
-

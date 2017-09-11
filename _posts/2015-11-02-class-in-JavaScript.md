@@ -64,7 +64,7 @@ hanmeimei.speak("Hi, I'm Han Meimei!"); //Hi, I'm Han Meimei!
 
 这种使用new关键字创建对象的方式在Javascript中使用非常广泛，说来也怪，在一个没有Class关键字的语言中居然有创建对象的new关键字。
 
-### prototype 和 \_\_proro\_\_ 属性
+### prototype 和 \_\_proto\_\_ 属性
 
 看到这里大家可能会很困惑，这个 prototype 究竟是如何将属性和函数传递给对象的呢？多说无益，直接上图。
 

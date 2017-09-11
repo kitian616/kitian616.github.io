@@ -66,7 +66,7 @@ OpenSSH 是 SSH 的开源实现，它包含了服务端和客户端。要想连�
 
 这里我把 VirtualBox 虚拟机的 22 端口（sshd 服务端口）转发到实体机的 2201 端口，这样就可以通过访问实体机的 2201 端口来访问虚拟机的 sshd 服务端口。
 
-## 客户端（Winsows）
+## 客户端（Windows）
 
 Windows 下的 SSH 软件有很多，这里使用 [PuTTY](http://www.putty.org/)（官网打不开可以使用快照系统）。
 
