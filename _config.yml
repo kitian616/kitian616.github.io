@@ -21,7 +21,7 @@ blog:
 artworks:
   baseurl: "/artworks"
 
-hostname: "http://www.thomastian.com" # the base hostname & protocol for your site
+hostname: "http://tianqi.name" # the base hostname & protocol for your site
 repository: kitian616/kitian616.github.io
 # site github reop url
 github_repo: kitian616.github.io
