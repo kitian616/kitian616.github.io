@@ -21,7 +21,7 @@ blog:
 artworks:
   baseurl: "/artworks"
 
-hostname: "http://tianqi.name" # the base hostname & protocol for your site
+hostname: "https://tianqi.name" # the base hostname & protocol for your site
 repository: kitian616/kitian616.github.io
 # site github reop url
 github_repo: kitian616.github.io
@@ -33,7 +33,7 @@ timezone: Asia/Shanghai
 
 # author
 author: "Tian Qi"
-avata_url: http://7xpqpj.com1.z0.glb.clouddn.com/image/me/peitaiho.JPG
+avata_url: https://wx3.sinaimg.cn/mw690/73bd9e13ly1fjkqy66hl8j208c08c0td.jpg
 bio: 前端开发实习生，立志成为全栈开发者。
 email: kitian616@outlook.com
 twitter_username: kitian616
