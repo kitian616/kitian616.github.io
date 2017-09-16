@@ -15,7 +15,7 @@ My Name is Tian Qi ( You can also call me Thomas Tian ), I now work in [Qunar.co
 
 我目前就职于[去哪儿网](https://www.qunar.com)。
 
-我崇尚Geek精神与开源文化 :robot: :robot:，喜欢简洁、优美、模块化的代码。爱折腾，折腾系统，折腾软件，折腾语言，折腾框架...生命不息，折腾不止。:muscle:
+我崇尚 Geek 精神与开源文化 :robot: :robot:，喜欢简洁、优美、模块化的代码。爱折腾，折腾系统，折腾软件，折腾语言，折腾框架……生命不息，折腾不止。:muscle:
 
 平时喜欢看小说，看漫画 :books:。没事跑跑步 :runner:，看看电影 :movie_camera: ，聚个餐 :rice: :notes:。一个很普通的在校码农。:see_no_evil:
 
@@ -26,10 +26,6 @@ My Name is Tian Qi ( You can also call me Thomas Tian ), I now work in [Qunar.co
 ## Some Links | 相关链接
 
 - [About This Blog](/blog/2015/10/14/about-this-blog.html)
-
-- [My Projects](/projects/)
-
-- [My Home Page](/)
 
 - [Site Log](/blog/site-log.html)
 

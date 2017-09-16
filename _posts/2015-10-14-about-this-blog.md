@@ -5,7 +5,7 @@ key: 10001
 tags: blog
 category: blog
 date: 2015-10-14 23:15:00 +08:00
-modify_date: 2017-09-16 14:30:00 +08:00
+modify_date: 2017-09-16 15:00:00 +08:00
 ---
 
 一直很喜欢用印象笔记。学习的心得，收藏的网页，突然之间的想法，甚至清单，提醒，歌词等等我都会把它们分（luan）门（qi）别（ba）类（zao）的仍到印象笔记中去，久而久之就积累了大量的笔记。
@@ -46,9 +46,13 @@ modify_date: 2017-09-16 14:30:00 +08:00
 
 ## 本博客使用到的工具
 
-- [Jekyll](https://github.com/jekyll/) 博客框架
+- [GitHub Pages](https://pages.github.com/)
+
+- [Jekyll](https://github.com/jekyll/) 静态博客系统
 
 - [Pygment](http://pygments.org/) 代码高亮
+
+- [微相册](http://photo.weibo.com/) 图床
 
 - [Emojify.js](https://github.com/Ranks/emojify.js) 显示 Emoji
 
