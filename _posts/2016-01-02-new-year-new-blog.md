@@ -20,31 +20,31 @@ modify_date: 2016-01-13 22:40:00 +08:00
 
 因为平时白天要实习，大部分都是在晚上 8：00 - 11：00 和周末弄的。我从去年 10 月初开始学习 JavaScript，写了一篇[关于js的博文](/blog/2015/11/02/class-in-JavaScript.html)。一个月之后，我开始一边写网站一边学习 HTML（HTML5）和 CSS（CSS3, SASS）。在此期间共看了 5 本书（后 3 本只是随便翻了翻）：
 
-- [JavaScript编程精解](http://book.douban.com/subject/19933548/)
-- [HTML5经典实例](http://book.douban.com/subject/25756111/)
-- [响应式Web设计全流程解析](http://book.douban.com/subject/26241601/)
-- [CSS高效开发实战—CSS 3、LESS、SASS、Bootstrap、Foundation](http://book.douban.com/subject/25966259/)
-- [HTML5和CSS3快速参考](http://book.douban.com/subject/25730129/)
+- [JavaScript编程精解](https://book.douban.com/subject/19933548/)
+- [HTML5经典实例](https://book.douban.com/subject/25756111/)
+- [响应式Web设计全流程解析](https://book.douban.com/subject/26241601/)
+- [CSS高效开发实战—CSS 3、LESS、SASS、Bootstrap、Foundation](https://book.douban.com/subject/25966259/)
+- [HTML5和CSS3快速参考](https://book.douban.com/subject/25730129/)
 
 同时也参考了一些网上的资料和文档，当然还包括一些网站的代码和设计。
 
-总之，前端上手很容易，然而想要精通很难，浏览器兼容、动画、访问速度优化、搜索引擎优化……问题太多了。而且前端也是一个变化相对快速的领域，新的规范，新的工具，新的设计模式...当然，这也说明了前端领域的活跃性。我一直都坚信，未来web应用会更加的流行。
+总之，前端上手很容易，然而想要精通很难，浏览器兼容、动画、访问速度优化、搜索引擎优化……问题太多了。而且前端也是一个变化相对快速的领域，新的规范，新的工具，新的设计模式...当然，这也说明了前端领域的活跃性。我一直都坚信，未来 web 应用会更加的流行。
 
 ## 响应式设计
 
-响应式设计简单的说就是网页能够自动适应不同的屏幕尺寸(手机、平板、电脑)。跟扁平化设计一样，它们都是智能手机和平板电脑普及的产物，为了应对当前多样性的设备而出现的。当然，响应式并不局限于网页，安卓应用、Windows10的UWP应用，都或多或少的带有响应式的特性。
+响应式设计简单的说就是网页能够自动适应不同的屏幕尺寸(手机、平板、电脑)。跟扁平化设计一样，它们都是智能手机和平板电脑普及的产物，为了应对当前多样性的设备而出现的。当然，响应式并不局限于网页，安卓应用、Windows 10 的 UWP 应用，都或多或少的带有响应式的特性。
 
-当然，响应式并不是万能的。一些布局复杂的网站，根据不同的设备写不同的css是更好的方案(多套css)。一来更节约带宽，二来可以减小一些复杂度。而像博客这样布局简单的网站，响应式反而更方便，因为你只需维护一套css即可。
+当然，响应式并不是万能的。一些布局复杂的网站，根据不同的设备写不同的 CSS 是更好的方案（多套 CSS）。一来更节约带宽，二来可以减小一些复杂度。而像博客这样布局简单的网站，响应式反而更方便，因为你只需维护一套 CSS 即可。
 
 关于响应式的实现，网上有很多不错的介绍，比如[这篇阮一峰的博文](http://www.ruanyifeng.com/blog/2012/05/responsive_web_design.html)和[这篇w3cplus网站上的文章](http://www.w3cplus.com/css3/responsive-design-in-3-steps)，这里不再累述。其实我主要是想分享一下我的设计思路。
 
-事实证明，设计是一个十分消耗时间的事情，你需要不断的调整，不断的修改。这个网站就是经过了5次大的布局调整和很多次局部布局修改才有了现在的模样。
+事实证明，设计是一个十分消耗时间的事情，你需要不断的调整，不断的修改。这个网站就是经过了 5 次大的布局调整和很多次局部布局修改才有了现在的模样。
 
 响应式网页的布局是通过网页容器的宽度来划分的，本网站的划分方式为：
 
 - 手机：0~600px
 - 平板：600~1000px
-- 电脑：1000px以上
+- 电脑：1000px 以上
 
 一般来说，一个网页一般由网页标题（title）、导航（nav）、侧边栏（aside）、主要类容（main）、页脚（footer）组成。
 
@@ -54,19 +54,19 @@ modify_date: 2016-01-13 22:40:00 +08:00
 
 在电脑布局中，我特地把标题（title）、导航（nav）和个人信息（aside）放在了左边，并且在主要类容右边留了一些空白，这样显得文章更居中一些。
 
-![电脑布局](http://ww4.sinaimg.cn/large/73bd9e13jw1ezmftjyhwkj21kw0uk4bo.jpg)
+![电脑布局](https://ww4.sinaimg.cn/large/73bd9e13jw1ezmftjyhwkj21kw0uk4bo.jpg)
 
 ### 平板布局
 
 对于这种宽度不足的情况，我把标题、导航放在了上方，而把个人信息放在了页脚。
 
-![平板布局](http://ww1.sinaimg.cn/large/73bd9e13jw1ezmftf9ijyj218g1sxwwy.jpg)
+![平板布局](https://ww1.sinaimg.cn/large/73bd9e13jw1ezmftf9ijyj218g1sxwwy.jpg)
 
 ### 手机布局
 
 此时的宽度只能放得下标题了，导航隐藏了起来，点击最右的按钮即可显示导航。
 
-![手机布局](http://ww4.sinaimg.cn/large/73bd9e13jw1ezmfsxyscpj20zk0tc43s.jpg)
+![手机布局](https://ww4.sinaimg.cn/large/73bd9e13jw1ezmfsxyscpj20zk0tc43s.jpg)
 
 总之，这是一种很常见的响应式布局方法，参考了[简书](http://www.jianshu.com/)的布局。
 
@@ -86,4 +86,4 @@ modify_date: 2016-01-13 22:40:00 +08:00
 
 最后祝大家新年快乐! :tada: :tada: :tada:
 
-![happy-2016](http://7xpqpj.com1.z0.glb.clouddn.com/image/post/happy-2016.jpg)
+![happy-2016](https://wx2.sinaimg.cn/large/73bd9e13ly1fjl8wkl8opj20r10ostlp.jpg)

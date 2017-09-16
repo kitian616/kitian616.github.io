@@ -8,7 +8,7 @@ date: 2016-09-18 18:50:00 +08:00
 picture-frame: shadow
 ---
 
-![Chameleon Theme Preview](http://7xpqpj.com1.z0.glb.clouddn.com/image/post/20160919/chameleon-theme.jpg)
+![Chameleon Theme Preview](https://wx4.sinaimg.cn/large/73bd9e13ly1fjled0mmsaj20sg0gf0vg.jpg)
 
 好长时间没有写文章了。自从五月份以来，实习、论文和面试成为了生活的主旋律。比较压抑，也比较浮躁，压根就无法静下心来 <s>挥洒笔墨</s> 练打字了，不过这并不意味着这个博客就被我遗忘了。其实，在这段时间里，我默默地重构了整个博客项目的代码，同时，**再一次**改变了 <s>世界</s> 博客的样式。从第一版到如今的第三版，整个博客见证了我对前端的理解和我对设计理解的变迁。
 
@@ -41,7 +41,7 @@ picture-frame: shadow
 
 对于第二个问题，个人认为汉堡包按钮并不是一个很友好的设计，应该尽量避免使用。汉堡包按钮默认隐藏了导航的条目，只有在用户手动点击按钮之后才可以看到具体的导航条目（见下图），这是一种非常不直观的交互方式，违背了“所见即所得”的设计原则，而且位于屏幕右（左）上角的位置也非常不方便点击。
 
-![新旧导航栏](http://7xpqpj.com1.z0.glb.clouddn.com/image/post/20160919/index-pages.jpg)
+![新旧导航栏](https://wx4.sinaimg.cn/large/73bd9e13ly1fjled04yy4j20qo0fs13n.jpg)
 
 所以，新的主题摒弃了之前的汉堡包导航栏设计，移除了汉堡包按钮，将导航栏另起一行放到了标题的下面（见上图最右）。这样更加直观，同样也能鼓励用户去浏览网站的其他页面。
 
@@ -53,15 +53,15 @@ picture-frame: shadow
 
 同时，新的代码框还使用了间隔条纹的设计，能让用户更方便的去定位一行的内容，方便代码的阅读。
 
-![之前的代码展示](http://7xpqpj.com1.z0.glb.clouddn.com/image/post/20160919/code.jpg)
+![之前的代码展示](https://wx3.sinaimg.cn/large/73bd9e13ly1fjleczi0ftj20b4054mxe.jpg)
 
-![新的代码展示](http://7xpqpj.com1.z0.glb.clouddn.com/image/post/20160919/code-new.jpg)
+![新的代码展示](https://wx1.sinaimg.cn/large/73bd9e13ly1fjlecyil9bj20b404vq35.jpg)
 
 ## 标签页
 
 新的标签页（All Posts）在原有的基础上进行了改进，标签按钮使用颜色的深浅来表示该标签下博文数量的多少，同时新的标签按钮使用胶囊型的设计，显得更加精细和美观（见下图右）。
 
-![标签页](http://7xpqpj.com1.z0.glb.clouddn.com/image/post/20160919/all-pages.jpg)
+![标签页](https://wx4.sinaimg.cn/large/73bd9e13ly1fjlecy3ihmj20hs0fs0yc.jpg)
 
 ## 后记
 

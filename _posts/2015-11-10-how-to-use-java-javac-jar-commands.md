@@ -39,11 +39,11 @@ $ javac HelloJava.java
 $ javac -d . HelloJava.java
 {% endhighlight %}
 
-![带选项的 javac](http://ww2.sinaimg.cn/large/73bd9e13jw1exx0q5nnytj207402dt8m.jpg)
+![带选项的 javac](https://ww2.sinaimg.cn/large/73bd9e13jw1exx0q5nnytj207402dt8m.jpg)
 
 加上了 -d 选项后在当前目录下建立了对应包层次的目录结构（如上图）。如果没有加 -d，则在当前目录下生成 class 文件，需手动建立目录结构。
 
-在运行时，需要加上主类对应的目录层次，可以采用包形式“.”，或者目录的形式“/”，这样JVM就会根据目录层次来查找对应的 class 文件并执行。**执行目录必须是包顶级层次的上级目录**（在这里就是 com 的上级目录“~”了）。
+在运行时，需要加上主类对应的目录层次，可以采用包形式“.”，或者目录的形式“/”，这样 JVM 就会根据目录层次来查找对应的 class 文件并执行。**执行目录必须是包顶级层次的上级目录**（在这里就是 com 的上级目录“~”了）。
 
 {% highlight console %}
 $ java com.thomastian.test.HelloJava
@@ -68,11 +68,11 @@ $ java -jar HelloJava.jar
 
 此时会提示错误：
 
-![错误提示](http://ww1.sinaimg.cn/large/73bd9e13jw1exwbudlmsoj20bn014q2t.jpg)
+![错误提示](https://ww1.sinaimg.cn/large/73bd9e13jw1exwbudlmsoj20bn014q2t.jpg)
 
 用解压软件打开 jar 包文件，可以看到里面有一个 MAINFEST.MF 文件。
 
-![MAINFEST.MF 文件](http://ww3.sinaimg.cn/large/73bd9e13jw1exwbx4yt7jj20cy02hjr9.jpg)
+![MAINFEST.MF 文件](https://ww3.sinaimg.cn/large/73bd9e13jw1exwbx4yt7jj20cy02hjr9.jpg)
 
     Manifest-Version: 1.0
     Created-By: 1.8.0_65 (Oracle Corporation)
@@ -97,11 +97,11 @@ $ java -jar HelloJava.jar
 $ jar cvfm HelloJava.jar mainfest com
 {% endhighlight %}
 
-![带 f 选项的 jar 命令](http://ww2.sinaimg.cn/large/73bd9e13jw1exwbuehk88j20km05j754.jpg)
+![带 f 选项的 jar 命令](https://ww2.sinaimg.cn/large/73bd9e13jw1exwbuehk88j20km05j754.jpg)
 
 生成 jar 包后，再执行 `java -jar HelloJava.jar` 命令即可成功运行。在设定了 jar 的文件关联后甚至可以双击运行，十分方便。
 
-上面说过，被用作可执行的应用程序的 jar 包才需要指定 Main-Class，有些包是供其它程序调用的类库，并没有main方法，下文的 ImportClass 类就是这样。
+上面说过，被用作可执行的应用程序的 jar 包才需要指定 Main-Class，有些包是供其它程序调用的类库，并没有 main 方法，下文的 ImportClass 类就是这样。
 
 ## jar包的引用
 
@@ -148,6 +148,6 @@ $ javac -d . -cp lib/ImportClass.jar  HelloJava.java
 $ java -cp .:lib/ImportClass.jar com.thomastian.test.HelloJava
 {% endhighlight %}
 
-![运行结果](http://ww1.sinaimg.cn/large/73bd9e13jw1exwbufbia7j20eg012t8k.jpg)
+![运行结果](https://ww1.sinaimg.cn/large/73bd9e13jw1exwbufbia7j20eg012t8k.jpg)
 
-多个路径之间用“:”（Linux） / “;”（Windows）隔开（跟系统环境变量的写法相同）。在编译的时候 -cp 路径可以不包含当前路劲，但是在运行的时候必须要加上代表当前路径的“.”，具体可参考[这篇stackoverflow问答](http://stackoverflow.com/questions/11459664/how-to-add-multiple-jar-files-in-classpath-in-linux?newreg=4df9dca55f4a4557a705a3fd90625f28)。
+多个路径之间用“:”（Linux） / “;”（Windows）隔开（跟系统环境变量的写法相同）。在编译的时候 -cp 路径可以不包含当前路劲，但是在运行的时候必须要加上代表当前路径的“.”，具体可参考[这篇stackoverflow问答](https://stackoverflow.com/questions/11459664/how-to-add-multiple-jar-files-in-classpath-in-linux?newreg=4df9dca55f4a4557a705a3fd90625f28)。

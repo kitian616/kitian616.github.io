@@ -62,7 +62,7 @@ document.write(hanmeimei.name); //韩梅梅
 hanmeimei.speak("Hi, I'm Han Meimei!"); //Hi, I'm Han Meimei!
 {% endhighlight %}
 
-这种使用new关键字创建对象的方式在Javascript中使用非常广泛，说来也怪，在一个没有Class关键字的语言中居然有创建对象的new关键字。
+这种使用 new 关键字创建对象的方式在 JavaScript 中使用非常广泛，说来也怪，在一个没有 Class 关键字的语言中居然有创建对象的 new 关键字。
 
 ### prototype 和 \_\_proto\_\_ 属性
 
@@ -70,11 +70,11 @@ hanmeimei.speak("Hi, I'm Han Meimei!"); //Hi, I'm Han Meimei!
 
 **图中用椭圆表示普通对象，用圆角矩形来表示函数对象**。
 
-![模型图](http://ww2.sinaimg.cn/large/73bd9e13jw1expb5r0bn4j20eo0bedg9.jpg)
+![模型图](https://ww2.sinaimg.cn/large/73bd9e13jw1expb5r0bn4j20eo0bedg9.jpg)
 
 之前说过 JavaScript 中的所有事物都是对象，Person 函数也是对象，是普通对象的扩充。JavaScript 的函数对象有一个特殊的 prototype 属性，它指向了一个普通对象。一般的普通对象有一个 \_\_proto\_\_ 属性，当然函数对象也由该属性。
 
-当使用new关键字创建新对象的时候，发生了三件事情：
+当使用 new 关键字创建新对象的时候，发生了三件事情：
 
 - 一个叫 hanmeimei 的空对象被创建，首先 hanmeimei 与{}一致；
 - 将 hanmeimei 的 \_\_proto\_\_ 属性指向 Person 的原型属性，constructor 属性指向 Person 函数对象；
@@ -125,7 +125,7 @@ hanmeimei.speak("Hi, I'm Han Meimei!"); //Hi, I'm Han Meimei!
 
 在这个示例中，当我们使用 new 关键字创建新对象的最后，Person 方法执行，将新对象 lilei 作为 this 引用传递，于是该对象就添加上了 name 和 sex 属性。
 
-![改进的模型图](http://ww2.sinaimg.cn/large/73bd9e13jw1expb5qrg0ej20df0c7t95.jpg)
+![改进的模型图](https://ww2.sinaimg.cn/large/73bd9e13jw1expb5qrg0ej20df0c7t95.jpg)
 
 此时，name 和 sex 属性并不在 Person.prototype 中，而是 Person 构造函数为每个生成的对象添加了 name 和 sex 属性。这些属性是完全属于生成的对象的，构造函数只是执行了“添加属性”的指令。
 
@@ -137,10 +137,10 @@ hanmeimei.speak("Hi, I'm Han Meimei!"); //Hi, I'm Han Meimei!
 
 上面的示意图，为了突出重点，其实省略了不少的细节。这里附上完整的结构示意图，作为参考。
 
-![总示意图](http://ww1.sinaimg.cn/large/73bd9e13jw1expb5rhnvgj20j00n93zx.jpg)
+![总示意图](https://ww1.sinaimg.cn/large/73bd9e13jw1expb5rhnvgj20j00n93zx.jpg)
 
 其实，name、sex 和 speak 函数也是对象，它们同样有 prototype 和 constructor 属性，图中并没有画出。lilei 对象跟 hanmeimei 相同，故省略。
 
 本博文的示意图都是我经过测试得到的，网上的资料都有一些问题和矛盾，所以就自己动手了。这个过程虽然费时但确实很有意义，有时间的朋友可以[下载测试代码](https://github.com/kitian616/practice_workspace/blob/master/javascript/js/proto_test.js)研究一下 :-)
 
-我使用的是Google Chrome（version: 46），不同的浏览器结果可能会有所不同。
+我使用的是 Google Chrome（version: 46），不同的浏览器结果可能会有所不同。
