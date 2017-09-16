@@ -19,7 +19,7 @@ blog:
     - title: About
       url: /blog/about.html
 artworks:
-  baseurl: "/artworks"
+  baseurl: ""
 
 hostname: "https://tianqi.name" # the base hostname & protocol for your site
 repository: kitian616/kitian616.github.io

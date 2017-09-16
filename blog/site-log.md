@@ -20,7 +20,7 @@ for example, if you set **picture-frame** as ```picture-frame: shadow```, then t
 more styles are comming soon.
 
 ## 2016.01.05
-Now you can use Emoji at any page of this site. you can use the Emoji keyword ```:wink:``` to get :wink: , you can find more keywords at [emoji.muan.co](http://emoji.muan.co/).
+Now you can use Emoji at any page of this site. you can use the Emoji keyword ```:wink:``` to get :wink: , you can find more keywords at [emoji.muan.co](https://emoji.muan.co/).
 
 Thanks to [emojify.js](https://github.com/Ranks/emojify.js), great job !!
 
@@ -28,7 +28,7 @@ Thanks to [emojify.js](https://github.com/Ranks/emojify.js), great job !!
 ## 2015.12.22
 The NEW blog site is online at gitpages :octocat: with a new url [www.thomastian.com/blog](http://www.thomastian.com/blog/). I call it "Thomas's blog", simple and straightforward.
 
-![thomas-blog-home](http://7xpqpj.com1.z0.glb.clouddn.com/image/site-log/thomas-blog-home.jpg)
+![thomas-blog-home](https://wx2.sinaimg.cn/large/73bd9e13ly1fjlepcoizij211y0ijtej.jpg)
 
 I design and write the theme, it cost me a lot of time, but it's worthy. I learn a lot from this site.
 
@@ -43,11 +43,11 @@ I migrate my blog site from gitpages to [gitcafe](https://gitcafe.com/activities
 ## 2015.10.14
 My first personal blog is online at gitpages :sunglasses: . I call it "天马行空". It use [pelican-bootstrap3](https://github.com/DandyDev/pelican-bootstrap3) theme.
 
-![天马行空-home-page](http://7xpqpj.com1.z0.glb.clouddn.com/image/site-log/%E5%A4%A9%E9%A9%AC%E8%A1%8C%E7%A9%BA-index.jpg)
+![天马行空-home-page](https://wx4.sinaimg.cn/large/73bd9e13ly1fjlepc5rdxj211y0ii0wt.jpg)
 
 Home page
 
-![天马行空-first-post](http://7xpqpj.com1.z0.glb.clouddn.com/image/site-log/%E5%A4%A9%E9%A9%AC%E8%A1%8C%E7%A9%BA-first-post.jpg)
+![天马行空-first-post](https://wx2.sinaimg.cn/large/73bd9e13ly1fjlepbedzsj211y0iin2y.jpg)
 
 Article page
 

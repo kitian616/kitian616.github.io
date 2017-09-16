@@ -136,4 +136,4 @@ term/definition pair to spread things out more.)
 
 and images can be specified like so:
 
-![example image](http://7xpqpj.com1.z0.glb.clouddn.com/image/cover/qifu-beihai-thomas.jpg "An exemplary image")
+![example image](https://wx3.sinaimg.cn/large/73bd9e13ly1fjlekzmmdjj20sg0sgqko.jpg "An exemplary image")
