@@ -40,7 +40,7 @@ a {
     border-radius: 50%;
     @include link-normal {
         background-color: $text-bg-clr;
-        color: $text-clr-l;
+        color: $text-clr;
         text-decoration: none;
     }
     @include link-emphasize {
@@ -52,7 +52,7 @@ a {
     .icon {
         @include link-normal {
             path {
-                fill: $text-clr-l;
+                fill: $text-clr;
             }
         }
         @include link-emphasize {
@@ -65,7 +65,7 @@ a {
     &.inactive {
         @extend %cursor-not-allowed;
         @include link-normal {
-            color: $text-clr-l;
+            color: $text-clr;
         }
         @include link-emphasize {
             background-color: $text-bg-clr;
@@ -99,7 +99,7 @@ a {
     border-radius: 1em;
     @include link-normal {
         background-color: $text-bg-clr;
-        color: $text-clr-l;
+        color: $text-clr;
         text-decoration: none;
     }
     @include link-emphasize {
@@ -111,7 +111,7 @@ a {
     .icon {
         @include link-normal {
             path {
-                fill: $text-clr-l;
+                fill: $text-clr;
             }
         }
         @include link-emphasize {
