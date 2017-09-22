@@ -5,7 +5,7 @@ key: page-about
 ---
 Welcome to my blog! :earth_asia: :earth_africa: :earth_americas:
 
-My Name is Tian Qi ( You can also call me Thomas Tian ), I now work in [Qunar.com](https://www.qunar.com) at Beijing.
+My Name is Tian Qi ( You can also call me Thomas Tian ), I now work at [Qunar.com](https://www.qunar.com) in Beijing.
 
 <!--more-->
 

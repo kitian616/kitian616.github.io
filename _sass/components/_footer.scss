@@ -5,20 +5,20 @@
 .m-page-footer {
     height: $footer-height;
     margin-top: - $footer-height;
-    background-color: $footer-bg-clr;
+    background-color: $text-bg-clr;
     p {
-        color: $footer-tx-clr;
+        color: $text-clr;
     }
     a {
-        color: $footer-lk-clr;
+        color: $text-clr;
         &:visited {
-            color: $footer-lk-clr;
+            color: $text-clr;
         }
         &:hover {
-          color: $footer-lk-hv-clr;
+          color: $link-hv-clr;
         }
         &:active {
-            color: $footer-lk-clr;
+            color: $text-clr;
         }
     }
     .follow-me {

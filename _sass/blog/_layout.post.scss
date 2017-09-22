@@ -20,14 +20,13 @@
         position: relative;
         max-width: 500px;
         margin: 1.5em 0;
-        background-color: $license-bg-clr;
+        background-color: $text-bg-clr;
     }
 
 }
 .m-article-aside {
     box-sizing: border-box;
     position: fixed;
-    background-color: $aside-bg-clr;
     top: 0;
     bottom: 0;
     right: 0;

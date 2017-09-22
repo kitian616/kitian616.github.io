@@ -56,10 +56,10 @@
         margin: 0 0 $content-gap 0;
         &:before {
             content: attr(data-lang);
-            background-color: $code-title-bg-clr;
+            background-color: $text-bg-clr;
             display: block;
             padding: $code-font-size / 4 $code-font-size $code-font-size / 4 0;
-            color: $code-title-tx-clr;
+            color: $bd-clr;
             font-weight: $bold-font-weight;
             text-align: right;
             text-transform: uppercase;
@@ -68,10 +68,10 @@
 
     code {
         padding: .1em .4em;
-        border: 1px dashed $code-bd-clr;
+        border: 1px dashed $bd-clr;
         border-radius: 4px;
         margin: 0 .2em;
-        background-color: $code-bg-clr;
+        background-color: $text-bg-clr;
         span {
             padding: 0;
             margin: 0;
@@ -125,14 +125,14 @@
 
     //table
     table, th, td{
-        border: 1px solid $table-bd-clr;
+        border: 1px solid $bd-clr;
     }
 
     table {
     	width: 100%;
     	margin: $content-gap 0;
     	border-collapse: collapse;
-    	background-color: $table-bg-clr;
+    	background-color: $text-bg-clr;
     	th, td {
     		padding: .5em;
     	}

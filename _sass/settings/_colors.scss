@@ -22,87 +22,26 @@ $extra-color:   #fca24d;
 
 // background colors
 $bg-clr:        $white-color;
-$bg-image:      none;
 
 // border and shadow colors
 $bd-clr:        rgba(0, 0, 0, .2);
 $sd-clr:        rgba(0, 0, 0, .4);
+$select-clr:    rgba($main-color, .5);
 
 // text colors
+
+$text-clr-d:    #111;
+$text-clr:      #666;
+$text-clr-l:    #999;
+
 $text-odd-clr:  #fff;
 $text-odd-clr-l:#eee;
 
-$select-clr:    rgba($main-color, .5);
-
-$text-clr-d:    #333;
-$text-clr:      #666;
-$text-clr-l:    #999;
+$text-bg-clr:   #f2f2f2;
 
 // link colors
 $link-clr:      $main-color;
 $link-hv-clr:	$main-color;
-
-//bottom color
-$botton-hv-clr:	$main-color;
-
-//table color
-$table-bd-clr:  $bd-clr;
-$table-bg-clr:  #f2f2f2;
-
-//code color
-$code-title-bg-clr:	#f2f2f2;
-$code-title-tx-clr: $bd-clr;
-$code-bg-clr:	    #f2f2f2;
-$code-bd-clr:	    $bd-clr;
-
-//header
-$header-tx-clr:     $text-clr;
-$header-lk-clr:     $text-clr;
-$header-lk-hv-clr:  $main-color;
-
-//right side headign color
-$aside-bg-clr:      transparent;
-
-//article tag
-$tag-article-bg-clr:     #f2f2f2;
-$tag-article-bd-clr:     $bd-clr;
-$tag-article-tx-clr:     $text-clr-l;
-$tag-article-bg-hv-clr:  $main-color;
-$tag-article-bd-hv-clr:  $main-color;
-$tag-article-tx-hv-clr:  $text-odd-clr;
-
-//all page tags
-$tag-all-bg-clr: 	$text-clr-l;
-$tag-all-bd-clr: 	transparent;
-$tag-all-tx-clr: 	$text-odd-clr;
-$tag-all-bg-hv-clr:	$extra-color;
-$tag-all-bd-hv-clr: transparent;
-$tag-all-tx-hv-clr: $text-odd-clr;
-
-$tag-bd-clr: 	transparent;
-$tag-bg-clr:    $main-color;
-$tag-bg-clr-1:  rgba($main-color, .4);
-$tag-bg-clr-2:  rgba($main-color, .55);
-$tag-bg-clr-3:  rgba($main-color, .7);
-$tag-bg-clr-4: 	rgba($main-color, .9);
-$tag-tx-clr: 	$text-odd-clr;
-$tag-bg-hv-clr: $extra-color;
-$tag-bd-hv-clr: transparent;
-$tag-tx-hv-clr: $text-odd-clr;
-
-//toc
-$toc-tx-clr:        $text-clr-l;
-$toc-tx-hv-clr:     $main-color;
-
-//license
-$license-bg-clr:    #f2f2f2;
-$license-bd-clr:    $bd-clr;
-
-//footer
-$footer-bg-clr:     #f2f2f2;
-$footer-tx-clr:     $text-clr;
-$footer-lk-clr:     $text-clr;
-$footer-lk-hv-clr:  $main-color;
 
 // logo colors
 $mail-color:        #0072c5;

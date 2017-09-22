@@ -16,43 +16,39 @@
 
     .tag-show-all {
         @include link-normal {
-            color: $tag-all-tx-clr;
-            border-color: $tag-all-bd-clr;
-            background-color: $tag-all-bg-clr;
+            color: $text-odd-clr;
+            background-color: $text-clr-l;
         }
         @include link-emphasize {
-            color: $tag-all-tx-hv-clr;
-            border-color: $tag-all-bd-hv-clr;
-            background-color: $tag-all-bg-hv-clr;
+            color: $text-odd-clr;
+            background-color: $extra-color;
         }
     }
 
     .tag-other{
         @include link-normal {
-            color: $tag-tx-clr;
-            border-color: $tag-bd-clr;
-            background-color: $tag-bg-clr-2;
+            color: $text-odd-clr;
+            background-color: $main-color;
         }
         @include link-emphasize {
-            color: $tag-tx-hv-clr;
-            border-color: $tag-bd-hv-clr;
-            background-color: $tag-bg-hv-clr;
+            color: $text-odd-clr;
+            background-color: $extra-color;
         }
     }
 
     .tag-1 {
-        background-color: $tag-bg-clr-1;
+        background-color: rgba($main-color, .4);
     }
 
     .tag-2 {
-        background-color: $tag-bg-clr-2;
+        background-color: rgba($main-color, .55);
     }
 
     .tag-3 {
-        background-color: $tag-bg-clr-3;
+        background-color: rgba($main-color, .7);
     }
 
     .tag-4 {
-        background-color: $tag-bg-clr-4;
+        background-color: rgba($main-color, .9);
     }
 }

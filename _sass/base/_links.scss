@@ -23,6 +23,13 @@ a {
     cursor:pointer;
 }
 
+%cursor-default {
+    cursor: default;
+}
+%cursor-not-allowed {
+    cursor: not-allowed;
+}
+
 .round-button {
     @extend %cursor-pointer;
     display: block;
@@ -32,13 +39,12 @@ a {
     padding: 8px;
     border-radius: 50%;
     @include link-normal {
-        border: 1px solid $bd-clr;
+        background-color: $text-bg-clr;
         color: $text-clr-l;
         text-decoration: none;
     }
     @include link-emphasize {
-        border: 1px solid $botton-hv-clr;
-        background-color: $botton-hv-clr;
+        background-color: $link-hv-clr;
         color: $text-odd-clr;
         text-decoration: none;
     }
@@ -57,13 +63,12 @@ a {
     }
     //inactive button (gray)
     &.inactive {
+        @extend %cursor-not-allowed;
         @include link-normal {
             color: $text-clr-l;
         }
         @include link-emphasize {
-            border-color: $bd-clr;
-            background-color: transparent;
-            color: $bd-clr;
+            background-color: $text-bg-clr;
         }
         .icon {
             @include link-normal {
@@ -93,13 +98,12 @@ a {
     line-height: 1.6;
     border-radius: 1em;
     @include link-normal {
-        border: 1px solid $bd-clr;
+        background-color: $text-bg-clr;
         color: $text-clr-l;
         text-decoration: none;
     }
     @include link-emphasize {
-        border: 1px solid $botton-hv-clr;
-        background-color: $botton-hv-clr;
+        background-color: $link-hv-clr;
         color: $text-odd-clr;
         text-decoration: none;
 

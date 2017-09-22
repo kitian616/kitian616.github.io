@@ -1,7 +1,3 @@
 body {
 	background-color: $bg-clr;
-	@if $bg-image != none {
-		background-image: $bg-image;
-		background-repeat: repeat;
-	}
 }
