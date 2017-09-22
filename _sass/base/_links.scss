@@ -73,12 +73,12 @@ a {
         .icon {
             @include link-normal {
                 path {
-                    fill: $bd-clr;
+                    fill: $text-clr-l;
                 }
             }
             @include link-emphasize {
                 path {
-                    fill: $bd-clr;
+                    fill: $text-clr-l;
                 }
             }
         }

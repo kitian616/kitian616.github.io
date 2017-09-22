@@ -1,4 +1,7 @@
 .m-license {
+    border-radius: $spacing-unit / 2;
+    background-color: $text-bg-clr;
+    box-shadow: $shadow-down;
     padding: 0.5em 1em;
     font-weight: $bold-font-weight;
 
@@ -26,5 +29,4 @@
         float: right;
         margin-left: $spacing-unit / 3;
     }
-
 }

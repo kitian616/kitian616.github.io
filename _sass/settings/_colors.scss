@@ -24,9 +24,9 @@ $extra-color:   #fca24d;
 $bg-clr:        $white-color;
 
 // border and shadow colors
-$bd-clr:        rgba(0, 0, 0, .2);
-$sd-clr:        rgba(0, 0, 0, .4);
+$bd-clr:        rgba(#000, .2);
 $select-clr:    rgba($main-color, .5);
+$shadow-down: 0 2px 10px rgba(#000, .15), 0 0 16px rgba(#000, .05);
 
 // text colors
 

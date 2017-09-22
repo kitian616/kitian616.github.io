@@ -51,26 +51,10 @@
         margin: -.2em 0;
     }
     //code
-    figure {
-        padding: 0;
-        margin: 0 0 $content-gap 0;
-        &:before {
-            content: attr(data-lang);
-            background-color: $text-bg-clr;
-            display: block;
-            padding: $code-font-size / 4 $code-font-size $code-font-size / 4 0;
-            color: $bd-clr;
-            font-weight: $bold-font-weight;
-            text-align: right;
-            text-transform: uppercase;
-        }
-    }
-
     code {
-        padding: .1em .4em;
-        border: 1px dashed $bd-clr;
-        border-radius: 4px;
-        margin: 0 .2em;
+        padding: .2em .4em;
+        border-radius: .4em;
+        margin: 0 .1em;
         background-color: $text-bg-clr;
         span {
             padding: 0;
@@ -86,13 +70,36 @@
         background-image: linear-gradient(rgba(0, 0, 0, .05) 50%, transparent 50%);
         background-size: auto $code-font-size * $code-line-height * 2;
         background-origin: content-box;
-        code {
+        & > code {
             font-size: $code-font-size;
-            padding: 0 .4em;
+            padding: $code-font-size * $code-line-height;
+            padding-top: 0;
+            margin: 0;
             display: block;
             line-height: $code-line-height;
             border-width: 0;
             background-color: transparent;
+        }
+    }
+
+    figure {
+        margin: $content-gap 0;
+        &:before {
+            content: attr(data-lang);
+            background-color: $text-bg-clr;
+            display: block;
+            padding: $content-gap / 4 $code-font-size 0 0;
+            color: rgba(0, 0, 0, .2);
+            font-weight: $bold-font-weight;
+            font-size: $h3-font-size;
+            text-align: right;
+            text-transform: uppercase;
+        }
+        & > pre {
+            & > code {
+                padding: $code-font-size * $code-line-height;
+                padding-top: 0;
+            }
         }
     }
 
@@ -124,10 +131,6 @@
     }
 
     //table
-    table, th, td{
-        border: 1px solid $bd-clr;
-    }
-
     table {
     	width: 100%;
     	margin: $content-gap 0;
@@ -135,7 +138,10 @@
     	background-color: $text-bg-clr;
     	th, td {
     		padding: .5em;
-    	}
+        }
+        tbody > tr:nth-child(odd) {
+            background-color: rgba(0, 0, 0, .05);
+        }
     }
 
     hr {
