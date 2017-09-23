@@ -29,9 +29,8 @@
     .round-button {
         width: 2.5em;
         height: 2.5em;
-        border-color: $black-color;
         .icon > svg path {
-            fill: $white-color;
+            fill: $text-odd-clr;
         }
         &:not(:last-child){
             margin-right: $spacing-unit / 6;

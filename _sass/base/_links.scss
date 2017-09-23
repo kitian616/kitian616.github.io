@@ -5,12 +5,12 @@
 a {
     font-weight: $bold-font-weight;
     text-decoration: none;
-    @include link-colors($link-clr, $link-hv-clr);
+    @include link-colors($main-color, $main-color);
     @include link-normal {
-        color: $link-clr;
+        color: $main-color;
     }
     @include link-emphasize {
-        color: $link-hv-clr;
+        color: $main-color;
         text-decoration: underline;
     }
     -webkit-transition: all 0.8s ease 0s;
@@ -48,7 +48,7 @@ a {
         text-decoration: none;
     }
     @include link-emphasize {
-        background-color: $link-hv-clr;
+        background-color: $main-color;
         color: $text-odd-clr;
         text-decoration: none;
     }
@@ -107,7 +107,7 @@ a {
         text-decoration: none;
     }
     @include link-emphasize {
-        background-color: $link-hv-clr;
+        background-color: $main-color;
         color: $text-odd-clr;
         text-decoration: none;
 

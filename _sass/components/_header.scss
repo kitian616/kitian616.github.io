@@ -14,7 +14,7 @@
             color: $text-clr;
         }
         @include link-emphasize {
-            color: $link-hv-clr;
+            color: $main-color;
         }
     }
     .site-logo {

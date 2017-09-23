@@ -20,7 +20,7 @@
             color: $text-clr;
         }
         @include link-emphasize {
-            color: $link-hv-clr;
+            color: $main-color;
         }
     }
 
@@ -57,7 +57,7 @@
 
     .toc-active {
         a {
-            color: $link-hv-clr;
+            color: $main-color;
         }
     }
 

@@ -33,7 +33,7 @@
                 color: $text-odd-clr;
             }
             @include link-emphasize {
-                color: $link-hv-clr;
+                color: $main-color;
             }
         }
     }
