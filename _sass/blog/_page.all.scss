@@ -19,7 +19,7 @@
     .post-link {
         font-size: $base-font-size;
         @include link-normal {
-            color: $text-clr;
+            color: $text-clr-d;
         }
         @include link-emphasize {
             color: $link-hv-clr;

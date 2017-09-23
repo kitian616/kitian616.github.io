@@ -32,6 +32,7 @@
 	.other-wrapper {
 		float: right;
 		color: $text-clr-l;
+		margin: 0 0 0 .6em;
 		@include media-query($on-palm) {
 			float: none;
 		}

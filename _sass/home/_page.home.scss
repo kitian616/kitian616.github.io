@@ -19,12 +19,13 @@
         vertical-align: middle;
         animation: fade-in-down .8s;
         .follow-me {
-            margin: 1.5em auto 0 auto;
+            margin: $content-gap * 1.5 auto 0 auto;
             .mail {
                 display: none;
             }
         }
         h1 {
+            margin: 0;
             color: $text-odd-clr;
         }
         a {
@@ -39,6 +40,7 @@
 
     .content {
         display: table;
+        padding: $content-gap 0 $content-gap / 4 0;
         margin: 0 auto;
     }
 

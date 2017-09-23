@@ -3,7 +3,7 @@
     .article-tag {
         font-size: $base-font-size;
         display: inline-block;
-        margin: 2px 2px;
+        margin: $content-gap / 6 0;
     }
 
     .tag-count {
