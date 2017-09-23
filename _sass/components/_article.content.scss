@@ -72,7 +72,7 @@
         background-origin: content-box;
         & > code {
             font-size: $code-font-size;
-            padding: $code-font-size * $code-line-height;
+            padding: $code-font-size;
             padding-top: 0;
             margin: 0;
             display: block;
@@ -97,7 +97,7 @@
         }
         & > pre {
             & > code {
-                padding: $code-font-size * $code-line-height;
+                padding: $code-font-size;
                 padding-top: 0;
             }
         }
@@ -138,6 +138,10 @@
     	background-color: $text-bg-clr;
     	th, td {
     		padding: .5em;
+        }
+        thead {
+            background-color: $bd-clr;
+            color: $text-odd-clr;
         }
         tbody > tr:nth-child(odd) {
             background-color: rgba(0, 0, 0, .05);

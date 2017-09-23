@@ -27,6 +27,8 @@
 
     //default colors
     .round-button {
+        width: 2.5em;
+        height: 2.5em;
         border-color: $black-color;
         .icon > svg path {
             fill: $white-color;

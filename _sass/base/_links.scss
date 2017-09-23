@@ -32,11 +32,15 @@ a {
 
 .round-button {
     @extend %cursor-pointer;
-    display: block;
-    font-weight: $base-font-weight;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: $bold-font-weight;
+    line-height: 1;
+    height: 2em;
+    width: 2em;
     box-sizing: border-box;
-    padding: 8px;
+    padding: .4em;
     border-radius: 50%;
     @include link-normal {
         background-color: $text-bg-clr;
@@ -92,10 +96,10 @@ a {
 .round-rect-button {
     @extend %cursor-pointer;
     display: block;
-    font-weight: $base-font-weight;
+    font-weight: $bold-font-weight;
     box-sizing: border-box;
-    padding: 0 0.6em;
-    line-height: 1.6;
+    padding: .4em .8em;
+    line-height: 1;
     border-radius: 1em;
     @include link-normal {
         background-color: $text-bg-clr;
