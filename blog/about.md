@@ -30,3 +30,9 @@ My Name is Tian Qi ( You can also call me Thomas Tian ), I am a front end develo
 - [Site Log](/blog/site-log.html)
 
 - [Example Post](/blog/examples/example_post.html)
+
+---
+
+- [dwb-blog](http://dwbbb.com/)
+
+- [venoral's blog](http://www.cnblogs.com/venoral)
