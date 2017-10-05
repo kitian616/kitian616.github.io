@@ -1,7 +1,7 @@
 {
   "name": "personal-site",
   "version": "2.0.0",
-  "description": "thomas's site ",
+  "description": "Qi's site ",
   "directories": {
     "test": "test"
   },
@@ -19,7 +19,7 @@
     "blog",
     "jekyll"
   ],
-  "author": "Thomas Tian",
+  "author": "Tian Qi",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/kitian616/issues"

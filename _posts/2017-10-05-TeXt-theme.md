@@ -11,7 +11,7 @@ date: 2017-10-05 01:00:00 +08:00
 
 颜色的选择和搭配不是一件容易的事，为了简单，新的主题移除了 Header 和 Footer 的背景色彩，改用了白色和灰色，同时也移除了大部分的阴影效果和分割线，整个页面看起来更加清(jian)爽(lou)了。
 
-![TeXt Theme](https://wx2.sinaimg.cn/large/73bd9e13ly1fk6pmmi5gjj21kw10d47c.jpg)
+![TeXt Theme](https://wx1.sinaimg.cn/large/73bd9e13ly1fk7dohjut0j21kw0zb114.jpg)
 
 模仿 iOS 11 的风格，新的标题字体比之前更大了些，链接和按钮也更大更粗了。总之，整体的风格就是：
 
