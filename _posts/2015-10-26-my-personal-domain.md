@@ -7,7 +7,7 @@ category: blog
 date: 2015-10-26 23:00:00 +08:00
 ---
 
-今天折腾了半天，终于用上了自己的域名 <s>[thomastian.com](http://www.thomastian.com)</s>（当前的域名是[tianqi.name](https://tianqi.name)）。其实本来想注册中文拼音 tianqi 的，然而这个名字太火了，所有的域名都被注册了，所以只好用英文网名了。
+今天折腾了半天，终于用上了自己的域名 thomastian.com（当前的域名是[tianqi.name](https://tianqi.name)）。其实本来想注册中文拼音 tianqi 的，然而这个名字太火了，所有的域名都被注册了，所以只好用英文网名了。
 
 <!--more-->
 
