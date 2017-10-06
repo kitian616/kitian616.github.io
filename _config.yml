@@ -47,13 +47,13 @@ douban_username: kitian616
 ## Comment system (Disqus) ##
 disqus_shortname: kitian616-github-io
 
-## Google analytics ##
+## Google Analytics ##
 ga_tracking_id: UA-71907556-1
 
-## Reading quantity (leanCloud) ##
-# app_id: uAG3OhdcH8H4fxSqXLyBljA7-gzGzoHsz
-# app_key: Mzf5m9skSwYVWVXhGiYMNyXs
-# app_class: ThomasBlog
+## Reading quantity (LeanCloud) ##
+app_id: uAG3OhdcH8H4fxSqXLyBljA7-gzGzoHsz
+app_key: Mzf5m9skSwYVWVXhGiYMNyXs
+app_class: ThomasBlog
 
 ## Paginate ##
 paginate: 7
