@@ -57,12 +57,14 @@ excerpt: Tian Qi's Blog | 田琦的博客
     }
 
     function tagSelect(tag) {
-        if (tag == '') {
+        if (tag === undefined || tag === '') {
             $('.page-heading').text('All Posts');
+            $('.article-tag.tag-show-all').focus();
             $('.post-block').show();
         } else {
             $('.page-heading').text('Tag: ' + tag);
             $('.post-block').not('.tag-' + tag).hide();
+            $('.article-tag').filter('.tag-' + tag).focus();
             $('.post-block').filter('.tag-' + tag).show();
         }
         $('.year-wrapper section').each(function() {
@@ -80,14 +82,13 @@ excerpt: Tian Qi's Blog | 田琦的博客
                 $(this).show();
             }
         });
-        window.history.replaceState(null, '', '{{ "/all.html?tag=" | prepend: site.blog.baseurl }}' + tag);
+        tag === undefined || window.history.replaceState(null, '', '{{ "/all.html?tag=" | prepend: site.blog.baseurl }}' + tag);
     }
 
     $(function() {
         var query = queryString();
-        if (query.tag !== undefined) {
-            var tag = decodeURI(query.tag);
-            tagSelect(tag);
-        }
+        var tag = undefined;
+        query.tag === undefined || (tag = decodeURI(query.tag));
+        tagSelect(tag);
     });
 </script>

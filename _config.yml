@@ -5,12 +5,17 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'jekyll serve'. If you change this file, please restart the server process.
 
-# Site settings
-title: Tian Qi
+## Base settings ##
+baseurl: "/"
 description: > # this means to ignore newlines until "baseurl:"
     Tian Qi | 田琦
-baseurl: "/" # the subpath of your site, e.g. /blog
+hostname: "https://tianqi.name" # the base hostname & protocol for your site
 
+##* Home base settings ##
+title: Tian Qi
+avata_url: https://wx3.sinaimg.cn/large/73bd9e13ly1fjkqy66hl8j208c08c0td.jpg
+
+##* Blog base settings ##
 blog:
   baseurl: "/blog"
   title: Qi's blog
@@ -18,22 +23,20 @@ blog:
   nav_lists:
     - title: About
       url: /blog/about.html
+##* Artsworks base settings ##
 artworks:
   baseurl: ""
 
-hostname: "https://tianqi.name" # the base hostname & protocol for your site
-repository: kitian616/kitian616.github.io
-# site github reop url
+## GitHub repository (if the site is hosted by GitHub) ##
 github_repo: kitian616.github.io
 github_repo_tree: master
 
-# language
+## Language & timezone ##
 lang: zh # the language of your site
 timezone: Asia/Shanghai
 
-# author
+## Author & social ##
 author: "Tian Qi"
-avata_url: https://wx3.sinaimg.cn/large/73bd9e13ly1fjkqy66hl8j208c08c0td.jpg
 email: kitian616@outlook.com
 twitter_username: kitian616
 github_username:  kitian616
@@ -41,27 +44,37 @@ googleplus_username: 101827554735084402671
 weibo_username: 234695683
 douban_username: kitian616
 
-## develop
-## paginate
+## Comment system (Disqus) ##
+disqus_shortname: kitian616-github-io
+
+## Google analytics ##
+ga_tracking_id: UA-71907556-1
+
+## Reading quantity (leanCloud) ##
+# app_id: uAG3OhdcH8H4fxSqXLyBljA7-gzGzoHsz
+# app_key: Mzf5m9skSwYVWVXhGiYMNyXs
+# app_class: ThomasBlog
+
+## Paginate ##
 paginate: 7
 paginate_path: /blog/page:num
-# Basic settings
+
+## Post excerpts ##
 excerpt_separator: <!--more-->
-# Build settings
+
+## Build ##
 markdown: kramdown
 highlighter: rouge
 permalink: date
-# google analytics
-ga_tracking_id: UA-71907556-1
-# leancloud vies
-app_id: uAG3OhdcH8H4fxSqXLyBljA7-gzGzoHsz
-app_key: Mzf5m9skSwYVWVXhGiYMNyXs
-app_class: ThomasBlog
-# plugins
+
+## Plugins ##
 gems:
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-paginate
-# server
+
+## Server ##
 server_url: "0.0.0.0"
+
+## Development ##
 isdebug: false

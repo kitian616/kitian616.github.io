@@ -5,7 +5,7 @@ key: page-about
 ---
 Welcome to my blog! :earth_asia: :earth_africa: :earth_americas:
 
-My Name is Tian Qi ( You can also call me Thomas Tian ), I am a front end developer work at [Qunar.com](https://www.qunar.com) in Beijing.
+My Name is Tian Qi ( You can also call me Thomas Tian ), I am a front end developer working at [Qunar.com](https://www.qunar.com) in Beijing.
 
 <!--more-->
 

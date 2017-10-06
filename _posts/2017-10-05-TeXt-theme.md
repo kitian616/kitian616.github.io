@@ -20,17 +20,16 @@ date: 2017-10-05 01:00:00 +08:00
 - 更少的内容无关的修辞
 - 没有太多的图片（不用像有些主题需要费心去找什么封面和配图）
 
-
 <!--more-->
 
 当然功能还是全的：
 
 - 响应式
 
-
 - 文章目录（使用了 [TOC](http://projects.jga.me/toc/) 插件，nice work !）
 - 评论（[Disqus](https://disqus.com/)）
 - 阅读次数统计（[LeanCloud](https://leancloud.cn/)）
+- RSS
 - Emoji（[EmojiOne](https://www.emojione.com/)）
 - Google Analytics
 

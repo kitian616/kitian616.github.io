@@ -31,6 +31,7 @@
     right: 0;
     width: $aside-width;
     padding: $spacing-unit * 1.4 $spacing-unit 0 $spacing-unit;
+    overflow: auto;
     @include media-query($on-laptop) {
         display: none;
     }

@@ -27,11 +27,11 @@ excerpt: Tian Qi's Blog | 田琦的博客
             <ul class="clearfix">
             {% if paginator.previous_page %}
             <li><a class="round-button" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">
-                <div class="icon icon--previous">{% include icon/icon-previous.svg %}</div>
+                <div class="icon icon--previous">{% include icon/previous.svg %}</div>
             </a></li>
             {% else %}
             <li><div class="round-button inactive">
-                <div class="icon icon--prrevious">{% include icon/icon-previous.svg %}</div>
+                <div class="icon icon--prrevious">{% include icon/previous.svg %}</div>
             </div></li>
             {% endif %}
 
@@ -51,11 +51,11 @@ excerpt: Tian Qi's Blog | 田琦的博客
 
             {% if paginator.next_page %}
             <li><a class="round-button" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">
-                <div class="icon icon--next">{% include icon/icon-next.svg %}</div>
+                <div class="icon icon--next">{% include icon/next.svg %}</div>
             </a></li>
             {% else %}
             <li><div class="round-button inactive">
-                <div class="icon icon--next">{% include icon/icon-next.svg %}</div>
+                <div class="icon icon--next">{% include icon/next.svg %}</div>
             </div></li>
             {% endif %}
             </ul>
