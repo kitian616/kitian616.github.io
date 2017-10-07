@@ -39,6 +39,6 @@ modify_date: 2017-10-07 23:00:00 +08:00
 
 整体来说，当前的这个主题算是第一个让我比较满意的作品。首先它不需要去找什么封面和配图（这也是我自己做主题的最大原因）。其次，它不丑（至少我这么认为）。最后，它有文章的目录指示器，我认为这是很有必要的功能。
 
-该主题已经正式发布了，详见 [kitian616/jekyll-TeXt-theme](https://github.com/kitian616/jekyll-TeXt-theme)。欢迎使用和找茬。 :smile:
+该主题已经正式发布了，详见 [kitian616/jekyll-TeXt-theme](https://github.com/kitian616/jekyll-TeXt-theme)。欢迎使用和找茬,当然如果能提交代码就更好了。 :smile:
 
 整个博客的风格应该不会再大变了，内容才是最重要的。
