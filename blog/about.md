@@ -31,6 +31,8 @@ My Name is Tian Qi ( You can also call me Thomas Tian ), I am a front end develo
 
 - [Example Post](/blog/examples/example_post.html)
 
+- [TeXt Theme](https://github.com/kitian616/jekyll-TeXt-theme)
+
 ---
 
 - [dwb-blog](http://dwbbb.com/)
