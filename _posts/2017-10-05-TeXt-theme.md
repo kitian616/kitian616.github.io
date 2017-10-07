@@ -5,6 +5,7 @@ key: 100017
 tags: blog
 category: blog
 date: 2017-10-05 01:00:00 +08:00
+modify_date: 2017-10-07 23:00:00 +08:00
 ---
 
 嗨，最近在原有的基础上做了些修改，形成了这个新的主题，我把它叫做 `TeXt`。
@@ -25,14 +26,19 @@ date: 2017-10-05 01:00:00 +08:00
 当然功能还是全的：
 
 - 响应式
-
+- 分页
+- RSS
 - 文章目录（使用了 [TOC](http://projects.jga.me/toc/) 插件，nice work !）
 - 评论（[Disqus](https://disqus.com/)）
 - 阅读次数统计（[LeanCloud](https://leancloud.cn/)）
-- RSS
 - Emoji（[EmojiOne](https://www.emojione.com/)）
 - Google Analytics
+- 联系方式设置（Email, Facebook, Twitter, 微博, 知乎……）
+- Web 语意化
+- 网站图标的自动化工具
 
 整体来说，当前的这个主题算是第一个让我比较满意的作品。首先它不需要去找什么封面和配图（这也是我自己做主题的最大原因）。其次，它不丑（至少我这么认为）。最后，它有文章的目录指示器，我认为这是很有必要的功能。
+
+该主题已经正式发布了，详见 [kitian616/jekyll-TeXt-theme](https://github.com/kitian616/jekyll-TeXt-theme)。欢迎使用和找茬。 :smile:
 
 整个博客的风格应该不会再大变了，内容才是最重要的。
