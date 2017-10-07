@@ -5,7 +5,7 @@ key: 100010
 tags: blog
 category: blog
 date: 2016-09-18 18:50:00 +08:00
-picture-frame: shadow
+picture_frame: shadow
 ---
 
 ![Chameleon Theme Preview](https://wx4.sinaimg.cn/large/73bd9e13ly1fjled0mmsaj20sg0gf0vg.jpg)

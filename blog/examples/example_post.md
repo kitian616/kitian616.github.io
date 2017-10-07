@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Example Post"
+title: Example Post
 date: 2016-03-05 19:44:00 +08:00
 ---
 
