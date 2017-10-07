@@ -19,13 +19,9 @@
     }
     .site-logo {
         display: inline-block;
-        vertical-align: middle;
+        vertical-align: top;
         width: $h3-font-size;
         height: $h3-font-size;
-        transform: rotate(45deg);
-        path {
-            fill: $text-clr;
-        }
     }
     /**
     * Site title

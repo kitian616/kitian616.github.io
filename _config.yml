@@ -6,12 +6,12 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 ## Base settings ##
-baseurl: "/"
+hostname: "https://tianqi.name" # the base hostname & protocol for your site
 description: > # this means to ignore newlines until "baseurl:"
     Tian Qi | 田琦
-hostname: "https://tianqi.name" # the base hostname & protocol for your site
 
 ##* Home base settings ##
+baseurl: "/"
 title: Tian Qi
 avata_url: https://wx3.sinaimg.cn/large/73bd9e13ly1fjkqy66hl8j208c08c0td.jpg
 
