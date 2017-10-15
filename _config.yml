@@ -6,8 +6,8 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 ## Base settings ##
-base_url: "https://tianqi.name" # The site's Protocol and Hostname e.g. https://blog.someone.com (!!required!!)
-description: > # this means to ignore newlines until "baseurl:"
+base_url: "https://tianqi.name" #The site's Protocol and Hostname e.g. https://blog.someone.com (!!required!!)
+description: > #this means to ignore newlines until "base_path:"
     Tian Qi | 田琦
 
 ##* Home base settings ##
