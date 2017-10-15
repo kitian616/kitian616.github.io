@@ -22,7 +22,7 @@ excerpt: Tian Qi's Blog | 田琦的博客
                     {% assign date = currentdate %}
                 {% endif %}
                 <li class="post-block {% for tag in post.tags %} tag-{{ tag }} {% endfor %}">
-                    <span class="post-date">{{ post.date | date:"%b %d" }}</span><a class="post-link" href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">{{ post.title }}</a>
+                    <span class="post-date">{{ post.date | date:"%b %d" }}</span><a class="post-link" href="{{ post.url | prepend: site.base_path | replace: '//', '/' }}">{{ post.title }}</a>
                 </li>
                 {% if forloop.last %}</ul></section>{% endif %}
             {% endfor %}
@@ -82,7 +82,7 @@ excerpt: Tian Qi's Blog | 田琦的博客
                 $(this).show();
             }
         });
-        tag === undefined || window.history.replaceState(null, '', '{{ "/all.html?tag=" | prepend: site.blog.baseurl }}' + tag);
+        tag === undefined || window.history.replaceState(null, '', '{{ "/all.html?tag=" | prepend: site.blog.base_path }}' + tag);
     }
 
     $(function() {

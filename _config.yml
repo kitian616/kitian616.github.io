@@ -6,19 +6,18 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 ## Base settings ##
-# hostname: The site's Protocol and Hostname e.g. https://blog.someone.com (!!required!!)
-hostname: "https://tianqi.name"
+base_url: "https://tianqi.name" # The site's Protocol and Hostname e.g. https://blog.someone.com (!!required!!)
 description: > # this means to ignore newlines until "baseurl:"
     Tian Qi | 田琦
 
 ##* Home base settings ##
-baseurl: "/"
+base_path: "/"
 title: Tian Qi
 avata_url: https://wx3.sinaimg.cn/large/73bd9e13ly1fjkqy66hl8j208c08c0td.jpg
 
 ##* Blog base settings ##
 blog:
-  baseurl: "/blog"
+  base_path: "/blog"
   title: Qi's blog
   description: Tian Qi's Blog | 田琦的博客
   nav_lists:
@@ -26,7 +25,7 @@ blog:
       url: /blog/about.html
 ##* Artsworks base settings ##
 artworks:
-  baseurl: ""
+  base_path: ""
 
 ## GitHub repository (if the site is hosted by GitHub) ##
 github_repo: kitian616.github.io

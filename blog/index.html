@@ -10,7 +10,7 @@ excerpt: Tian Qi's Blog | 田琦的博客
             {% for post in paginator.posts %}
             <article>
                 <h1>
-                    <a class="article-link" href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">{{ post.title }}</a>
+                    <a class="article-link" href="{{ post.url | prepend: site.base_path | replace: '//', '/' }}">{{ post.title }}</a>
                 </h1>
                 <div class="m-article-content">
                     {{ post.excerpt }}
@@ -26,7 +26,7 @@ excerpt: Tian Qi's Blog | 田琦的博客
             <p>{{ site.posts | size }} post articles | {{ paginator.total_pages }} pages. </p>
             <ul class="clearfix">
             {% if paginator.previous_page %}
-            <li><a class="round-button" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">
+            <li><a class="round-button" href="{{ paginator.previous_page_path | prepend: site.base_path | replace: '//', '/' }}">
                 <div class="icon icon--previous">{% include icon/previous.svg %}</div>
             </a></li>
             {% else %}
@@ -43,14 +43,14 @@ excerpt: Tian Qi's Blog | 田琦的博客
                     </div>
                 </div></li>
                 {% elsif page == 1 %}
-                <li><a class="round-button" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"><span>{{ page }}</span></a></li>
+                <li><a class="round-button" href="{{ paginator.previous_page_path | prepend: site.base_path | replace: '//', '/' }}"><span>{{ page }}</span></a></li>
                 {% else %}
-                <li><a class="round-button" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}"><span>{{ page }}</span></a></li>
+                <li><a class="round-button" href="{{ site.paginate_path | prepend: site.base_path | replace: '//', '/' | replace: ':num', page }}"><span>{{ page }}</span></a></li>
                 {% endif %}
             {% endfor %}
 
             {% if paginator.next_page %}
-            <li><a class="round-button" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">
+            <li><a class="round-button" href="{{ paginator.next_page_path | prepend: site.base_path | replace: '//', '/' }}">
                 <div class="icon icon--next">{% include icon/next.svg %}</div>
             </a></li>
             {% else %}
