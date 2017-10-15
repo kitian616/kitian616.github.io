@@ -78,4 +78,4 @@ gems:
 server_url: "0.0.0.0"
 
 ## Development ##
-isdebug: true
+isdebug: false

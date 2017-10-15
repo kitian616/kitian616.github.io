@@ -7,7 +7,6 @@ category: blog
 date: 2016-03-05 21:48:00 +08:00
 modify_date: 2017-09-16 14:30:00 +08:00
 picture_frame: shadow
-picture_max_width: 480px
 ---
 
 整理了下自己喜欢的软件，列出了这个清单。
