@@ -72,9 +72,10 @@ gems:
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-paginate
+  - jemoji
 
 ## Server ##
 server_url: "0.0.0.0"
 
 ## Development ##
-isdebug: false
+isdebug: true

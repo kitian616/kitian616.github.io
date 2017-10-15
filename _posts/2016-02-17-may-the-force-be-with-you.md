@@ -208,11 +208,11 @@ scrollTop 可以控制滚动条的滚动高度，scrollHeight 可以得到滚动
 知道了 `animate` 函数和必要时属性后，很快的写下了代码。`scrollTop` 属性从开始的 0，经过 `scrollHeight * 20` 毫秒，匀速的变为了 `scrollHeight`。
 
 {% highlight js %}
-$(document).ready(function(){
+$(function(){
     var scrollHeight = $("#content")[0].scrollHeight;
     var scrollTop = $("#content")[0].scrollTop;
     $("#content").animate({scrollTop: scrollHeight}, scrollHeight * 20, "linear");
-}());
+};
 {% endhighlight %}
 
 最后，隐藏滚动条。
