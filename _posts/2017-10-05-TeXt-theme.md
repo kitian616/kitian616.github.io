@@ -5,14 +5,15 @@ key: 100017
 tags: blog
 category: blog
 date: 2017-10-05 01:00:00 +08:00
-modify_date: 2017-10-07 23:00:00 +08:00
+modify_date: 2017-10-18 13:00:00 +08:00
 ---
 
 嗨，最近在原有的基础上做了些修改，形成了这个新的主题，我把它叫做 `TeXt`。
 
 颜色的选择和搭配不是一件容易的事，为了简单，新的主题移除了 Header 和 Footer 的背景色彩，改用了白色和灰色，同时也移除了大部分的阴影效果和分割线，整个页面看起来更加清(jian)爽(lou)了。
 
-![TeXt Theme](https://wx1.sinaimg.cn/large/73bd9e13ly1fk7dohjut0j21kw0zb114.jpg)
+![TeXt Theme](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshot.png)
+
 
 模仿 iOS 11 的风格，新的标题字体比之前更大了些，链接和按钮也更大更粗了。总之，整体的风格就是：
 
@@ -22,6 +23,8 @@ modify_date: 2017-10-07 23:00:00 +08:00
 - 没有太多的图片（不用像有些主题需要费心去找什么封面和配图）
 
 <!--more-->
+
+![TeXt Theme Details](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshot-details.png)
 
 当然功能还是全的：
 
@@ -35,11 +38,12 @@ modify_date: 2017-10-07 23:00:00 +08:00
 - Google Analytics
 - 联系方式设置（Email, Facebook, Twitter, 微博, 知乎……）
 - Web 语意化
+- Color Theme
 - 网站图标的自动化工具
 - RSS
 
 整体来说，当前的这个主题算是第一个让我比较满意的作品。首先它不需要去找什么封面和配图（这也是我自己做主题的最大原因）。其次，它不丑（至少我这么认为）。最后，它有文章的目录指示器，我认为这是很有必要的功能。
 
-该主题已经正式发布了，详见 [kitian616/jekyll-TeXt-theme](https://github.com/kitian616/jekyll-TeXt-theme)。欢迎使用和找茬，当然如果能提交代码就更好了。 :smile:
+该主题已经正式发布了，并且写了份比较详细的文档，详见 [kitian616/jekyll-TeXt-theme](https://github.com/kitian616/jekyll-TeXt-theme)。欢迎使用和找茬，当然如果能提交代码就更好了。 :smile:
 
 整个博客的风格应该不会再大变了，内容才是最重要的。
