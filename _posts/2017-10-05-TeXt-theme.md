@@ -24,7 +24,7 @@ modify_date: 2017-10-18 13:00:00 +08:00
 
 <!--more-->
 
-![TeXt Theme Details](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshot-details.png)
+![TeXt Theme Details](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/TeXt-details.png)
 
 当然功能还是全的：
 
