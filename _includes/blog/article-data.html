@@ -3,8 +3,8 @@
         <meta itemprop="author" itemscope itemtype="https://schema.org/Person">
             {% if page.author %}
                 <meta itemprop="name" content="{{ page.author }}"/>
-            {% elsif site.author %}
-                <meta itemprop="name" content="{{ site.author }}"/>
+            {% elsif site.author.name %}
+                <meta itemprop="name" content="{{ site.author.name }}"/>
             {% endif %}
         </meta>
 	{% endif %}
@@ -15,17 +15,20 @@
     {% assign cur_page = page %}
 	{% endif %}
 	{% if cur_page.tags[0] %}
-        <div class="tag-wrapper">
+        <ul class="inline-list tag-wrapper">
             {% for tag in cur_page.tags %}
-            <a class="article-tag round-rect-button" href="{{ "/all.html?tag=" | prepend: site.blog.base_path | prepend: site.base_path | append: tag | replace: '//', '/' }}"> {{ tag }} </a>
+                <li><a class="round-rect-button"
+                    href="{{ "/all.html?tag=" | prepend: site.blog.baseurl | prepend: site.baseurl | append: tag | replace: '//', '/' }}">{{ tag }}
+                </a></li>
             {% endfor %}
-        </div>
+        </ul>
 	{% endif %}
     <div class="other-wrapper">
-        <div class="view-wrapper clearfix">
-            <span class="article-view" id="post-key-{{ cur_page.key }}">0</span>
-            views |
-        </div>
+        {% if site.leancloud.app_id and site.leancloud.app_key and site.leancloud.app_class %}
+            <div class="view-wrapper">
+                <span class="article-view" id="post-key-{{ cur_page.key }}">0</span> views
+            </div>
+        {% endif %}
         <div class="date-wrapper">
             {% if post %}
                 <span class="article-meta">{{ post.date | date: "%b %d, %Y" }}</span>

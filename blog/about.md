@@ -31,9 +31,7 @@ My Name is Tian Qi ( You can also call me Thomas Tian ), I am a frontend enginee
 
 - [Site Log](/blog/site-log.html)
 
-- [Example Post](/blog/examples/example_post.html)
-
-- [TeXt Theme](https://github.com/kitian616/jekyll-TeXt-theme)
+- [TeXt Theme](https://github.com/kitian616/jekyll-TeXt-theme) :octocat:
 
 ---
 

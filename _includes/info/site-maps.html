@@ -1,15 +1,15 @@
 
 <div class="site-maps">
-    {% if site.blog.base_path %}
+    {% if site.blog.baseurl %}
         <p>
-            <a class="social-link blog" title="Visit my blog." itemprop="sameAs" href="{{ site.blog.base_path | prepend: site.base_path | replace: '//', '/' }}" target="_self">
+            <a class="social-link blog" title="Visit my blog." itemprop="sameAs" href="{{ site.blog.baseurl | prepend: site.baseurl | replace: '//', '/' }}" target="_self">
                 Visit My Blog
             </a>
         </p>
     {% endif %}
-    {% if site.artworks.base_path %}
+    {% if site.artworks.baseurl %}
         <p>
-            <a class="social-link blog" title="See my artworks." itemprop="sameAs" href="{{ site.artworks.base_path | prepend: site.base_path | replace: '//', '/' }}" target="_self">
+            <a class="social-link blog" title="See my artworks." itemprop="sameAs" href="{{ site.artworks.baseurl | prepend: site.baseurl | replace: '//', '/' }}" target="_self">
                 See my artworks
             </a>
         </p>

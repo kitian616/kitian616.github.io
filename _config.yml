@@ -6,18 +6,18 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 ## Base settings ##
-base_url: "https://tianqi.name" #The site's Protocol and Hostname e.g. https://blog.someone.com (!!required!!)
+url: "https://tianqi.name" #The site's Protocol and Hostname e.g. https://blog.someone.com (!!required!!)
+title: Tian Qi
 description: > #this means to ignore newlines until "base_path:"
     Tian Qi | 田琦
 
 ##* Home base settings ##
-base_path: "/"
-title: Tian Qi
+baseurl: "/"
 avata_url: https://wx3.sinaimg.cn/large/73bd9e13ly1fjkqy66hl8j208c08c0td.jpg
 
 ##* Blog base settings ##
 blog:
-  base_path: "/blog"
+  baseurl: "/blog"
   title: Qi's blog
   description: Tian Qi's Blog | 田琦的博客
   nav_lists:
@@ -25,35 +25,38 @@ blog:
       url: /blog/about.html
 ##* Artsworks base settings ##
 artworks:
-  base_path: ""
+  baseurl: ""
 
 ## GitHub repository (if the site is hosted by GitHub) ##
-github_repo: kitian616.github.io
-github_repo_tree: master
+repository: kitian616/kitian616.github.io
+repository_tree: master
 
 ## Language & timezone ##
 lang: zh # the language of your site
 timezone: Asia/Shanghai
 
 ## Author & social ##
-author: "Tian Qi"
-email: kitian616@outlook.com
-twitter_username: kitian616
-github_username:  kitian616
-googleplus_username: 101827554735084402671
-weibo_username: 234695683
-douban_username: kitian616
+author:
+  name: "Tian Qi"
+  email: kitian616@outlook.com
+  twitter: kitian616
+  github:  kitian616
+  googleplus: 101827554735084402671
+  weibo: 234695683
+  douban: kitian616
 
 ## Comment system (Disqus) ##
-disqus_shortname: kitian616-github-io
+disqus:
+  shortname: kitian616-github-io
 
 ## Google Analytics ##
 ga_tracking_id: UA-71907556-1
 
 ## Reading quantity (LeanCloud) ##
-app_id: uAG3OhdcH8H4fxSqXLyBljA7-gzGzoHsz
-app_key: Mzf5m9skSwYVWVXhGiYMNyXs
-app_class: ThomasBlog
+leancloud:
+  app_id: uAG3OhdcH8H4fxSqXLyBljA7-gzGzoHsz
+  app_key: Mzf5m9skSwYVWVXhGiYMNyXs
+  app_class: ThomasBlog
 
 ## Paginate ##
 paginate: 7
