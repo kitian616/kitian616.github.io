@@ -23,7 +23,7 @@ My Name is Tian Qi ( You can also call me Thomas Tian ), I am a frontend enginee
 
 感谢计算机给我们提供了一个完美的试验场，这里没有太多的约束，就像*我的世界*一样，是一片自由的乌托邦之地。在这里，我们可以让想象力 :thought_balloon: 自由驰骋 :rocket:，让计算机完成我们想到的事。我认为，将计算机世界和现实世界连接起来 :computer: :link: :earth_asia: 是我等猿族的使命。
 
-如果你有任何问题，请给我发送邮件：[kitian616@outlook.com](mailto://kitian616@outlook.com)
+如果你有任何问题，请给我发送邮件：[kitian616@outlook.com](mailto:kitian616@outlook.com)
 
 ## Some Links | 相关链接
 
