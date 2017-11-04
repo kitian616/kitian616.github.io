@@ -6,6 +6,7 @@
         }
     }
     .col-1 {
+        @include flex(1);
         max-width: $content-max-width;
         & > article {
             & > header {

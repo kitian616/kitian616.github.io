@@ -13,6 +13,7 @@ title: Blog
                     <div class="m-article-content">
                         {{ post.excerpt | truncatewords: 200 }}
                     </div>
+                    <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">Click to read more ...</a>
                     {% include blog/article-data.html %}
                 </article>
             {% endfor %}
@@ -37,7 +38,7 @@ title: Blog
                         </div></li>
                     {% elsif page == 1 %}
                         <li><a class="round-button"
-                            href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">
+                            href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: 'page:num', '' }}">
                             <span>{{ page }}</span>
                         </a></li>
                     {% else %}
@@ -71,7 +72,7 @@ title: Blog
             $(".article-view").each(function() {
                 var curId = this.id;
                 var query = new AV.Query('{{ site.leancloud.app_class }}');
-                query.equalTo('key', /(.*)-(.*)/.exec(curId)[2]);
+                query.equalTo('key', curId.substr(9));
                 query.first().then(function(result) {
                     if (result) {
                         $('#' + curId).text(result.attributes.views);
