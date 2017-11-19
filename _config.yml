@@ -4,53 +4,59 @@
 # which you are expected to set up once and rarely need to edit after that.
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'jekyll serve'. If you change this file, please restart the server process.
+#
+# ,--------.      ,--.   ,--. ,--.
+# '--.  .--',---.  \  `.'  /,-'  '-.
+#    |  |  | .-. :  .'    \ '-.  .-'
+#    |  |  \   --. /  .'.  \  |  |
+#    `--'   `----''--'   '--' `--'
 
 ## Base settings ##
-url: "https://tianqi.name" #The site's Protocol and Hostname e.g. https://blog.someone.com (!!required!!)
-title: Tian Qi
-description: > #this means to ignore newlines until "base_path:"
-    Tian Qi | 田琦
+url: https://tianqi.name #the base hostname & protocol for your site e.g. https://www.someone.com
+baseurl: /
+title: Qi's Blog
+description: > #this means to ignore newlines until "nav_lists:"
+    Tian Qi's Blog | 田琦的博客
 
-##* Home base settings ##
-baseurl: "/"
-avata_url: https://wx3.sinaimg.cn/large/73bd9e13ly1fjkqy66hl8j208c08c0td.jpg
+nav_lists:
+  - titles:
+      en: About
+      zh: 关于
+      zh-Hans: 关于
+      zh-Hant: 關於
+    url: /blog/about.html
 
-##* Blog base settings ##
-blog:
-  baseurl: "/blog"
-  title: Qi's blog
-  description: Tian Qi's Blog | 田琦的博客
-  nav_lists:
-    - title: About
-      url: /blog/about.html
-##* Artsworks base settings ##
-artworks:
-  baseurl: ""
+paths:
+  home: /blog
+  all:  /blog/all.html
+  rss:  /feed.xml
 
 ## GitHub repository (if the site is hosted by GitHub) ##
 repository: kitian616/kitian616.github.io
 repository_tree: master
 
 ## Language & timezone ##
-lang: zh # the language of your site
+lang: zh #the language of your site, eg: en(English), zh(简体中文), zh-Hans(简体中文), zh-Hant(繁體中文)
 timezone: Asia/Shanghai
 
 ## Author & social ##
 author:
   name: "Tian Qi"
   email: kitian616@outlook.com
+  # facebook:  #your Facebook username
   twitter: kitian616
   github:  kitian616
   googleplus: 101827554735084402671
   weibo: 234695683
   douban: kitian616
+  # linkedin:  #your Linkedin username
 
 ## Comment system (Disqus) ##
 disqus:
-  shortname: kitian616-github-io
+  shortname: kitian616-github-io #the Disqus shortname for the site
 
 ## Google Analytics ##
-ga_tracking_id: UA-71907556-1
+ga_tracking_id: UA-71907556-1 #Google analytics id for the site
 
 ## Reading quantity (LeanCloud) ##
 leancloud:
@@ -58,18 +64,31 @@ leancloud:
   app_key: Mzf5m9skSwYVWVXhGiYMNyXs
   app_class: ThomasBlog
 
+# mathjax: true
+
 ## Paginate ##
 paginate: 7
 paginate_path: /blog/page:num
 
 ## Post excerpts ##
 excerpt_separator: <!--more-->
-excerpt_type: html ## text | html
+excerpt_type: html # text | html
 
 ## Build ##
 markdown: kramdown
 highlighter: rouge
 permalink: date
+
+exclude:
+  - CHANGELOG.md
+  - CHECKLIST.md
+  - README-*.md
+  - README.md
+  - LICENSE
+  - /docs
+  - /screenshots
+  - /test
+  - /vendor
 
 ## Plugins ##
 gems:

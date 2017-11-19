@@ -1,28 +1,26 @@
 {
   "name": "personal-site",
   "version": "2.0.0",
-  "description": "Qi's site ",
-  "directories": {
-    "test": "test"
-  },
+  "description": "My Personal Website, powered by jekyll-TeXt-theme",
   "scripts": {
-    "build": "bundle exec jekyll build --watch",
+    "build": "bundle exec jekyll build",
     "serve": "bundle exec jekyll serve -H 0.0.0.0",
-    "dev": "(npm run build &) && npm run serve",
+    "dev": "bundle exec jekyll serve -H 0.0.0.0 -t",
     "favicon": "gulp favicon",
     "icons": "gulp icons",
-    "artwork": "gulp artwork"
+    "artwork": "gulp artwork",
+    "merge": "sh bin/merge.sh"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kitian616/kitian616.github.io.git"
   },
   "keywords": [
-    "blog",
-    "jekyll"
+    "jekyll",
+    "jekyll-site"
   ],
   "author": "Tian Qi",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/kitian616/issues"
   },
