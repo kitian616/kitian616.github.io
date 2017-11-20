@@ -9,7 +9,9 @@
     "favicon": "gulp favicon",
     "icons": "gulp icons",
     "artwork": "gulp artwork",
-    "merge": "sh bin/merge.sh"
+    "merge": "sh bin/merge.sh",
+    "cm-merge": "git commit -m 'chore: merge to Text Theme'",
+    "cm-post": "git commit -m 'feat: publish new post'"
   },
   "repository": {
     "type": "git",
