@@ -13,10 +13,6 @@ My Name is Tian Qi ( You can also call me Thomas Tian ), I am a frontend enginee
 
 你们好，我叫田琦，这是我的博客。
 
-我毕业于北京科技大学，硕士研究生。
-
-现就职于[去哪儿网](https://www.qunar.com)，前端开发工程师。
-
 我崇尚 Geek 精神与开源文化 :octocat:，喜欢简洁、优美、模块化的代码。爱折腾，折腾系统，折腾软件，折腾语言，折腾框架……生命不息，折腾不止。:muscle:
 
 平时喜欢看小说，看漫画 :books:。没事跑跑步 :runner:，看看电影 :movie_camera: ，聚个餐 :rice: :notes:。一个很普通的开发者。:see_no_evil:
