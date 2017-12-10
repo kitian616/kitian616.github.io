@@ -5,7 +5,6 @@
     {%- assign __path = '/' -%}
   {%- endif -%}
   {%- include snippets/prepend-baseurl.html -%}
-  {%- assign href = __return -%}
   {%- if site.title -%}
     <a class="site-title" title="{%- if site.description -%}{{ site.description }}{%- endif -%}" href="{{ __return }}">{{ site.title }}</a>
   {%- endif -%}
