@@ -14,8 +14,6 @@ My Name is Tian Qi (You can also call me Thomas Tian), I am a ~~frontend enginee
 - gulp, webpack
 - Adobe Photoshop, Sketch
 
-Skills: HTML5, CSS3(SASS), JavaScript(Node.js), React, React Native, Vue.js, gulp, webpack
-
 <!--more-->
 
 ## About Me | 关于我
