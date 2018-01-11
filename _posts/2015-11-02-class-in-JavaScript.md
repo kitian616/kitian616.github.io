@@ -2,7 +2,7 @@
 layout: post
 title: JavaScript 的 prototype（原型）和类
 key: 10004
-tags: JavaScrip
+tags: JavaScript
 category: blog
 date: 2015-11-02 23:00:00 +08:00
 modify_date: 2017-09-11 21:00:00 +08:00

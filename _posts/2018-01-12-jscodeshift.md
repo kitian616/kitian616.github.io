@@ -5,12 +5,14 @@ key: 100018
 tags: JavaScript
 category: blog
 date: 2018-01-12 00:00:00 +08:00
-modify_date: 2018-01-12 00:00:00 +08:00
+mermaid: true
 ---
 
 之所以写这篇文章是因为 jscodeshift 的 [官方文档](https://github.com/facebook/jscodeshift/wiki) 实在是不太详细，而且看起来也没有更新的打算。笔者在开发之前也是查了不少资料，看了部分的源码，才搞懂 jscodeshift 的大概原理、API 接口和使用方法。
 
 接下来我会通过一个简单的示例来介绍 jscodeshift 主要架构类图和使用方法，并对一些源码的调用进行一个简单的介绍。本文使用的 jscodeshift 为 **0.3.32** 版。
+
+<!--more-->
 
 jscodeshift 是一个由 Facebook 出品的 JavaScript codemod 工具集。codemod 的官方定义为：
 
