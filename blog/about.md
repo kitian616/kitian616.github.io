@@ -7,6 +7,8 @@ Welcome to my blog! :earth_asia: :earth_africa: :earth_americas:
 
 My Name is Tian Qi ( You can also call me Thomas Tian ), I am a frontend engineer working at [Qunar.com](https://www.qunar.com) in Beijing.
 
+Skills: HTML5, CSS3(SASS), JavaScript(Node.js), React, React Native, Vue.js, gulp, webpack
+
 <!--more-->
 
 ## About Me | 关于我
