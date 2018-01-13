@@ -8,7 +8,7 @@ date: 2018-01-12 00:00:00 +08:00
 mermaid: true
 ---
 
-之所以写这篇文章是因为 jscodeshift 的 [官方文档](https://github.com/facebook/jscodeshift/wiki) 实在是不太详细，而且看起来也没有更新的打算。这篇文章作为官方文档的补充，讲了一些看我来没有说清楚的地方。你可以在看完这篇文章，了解 jscodeshift 的大概后再来看官方的文档，这样应该能为你节省一些时间。
+之所以写这篇文章是因为 jscodeshift 的 [官方文档](https://github.com/facebook/jscodeshift/wiki) 实在是不太详细，而且看起来也没有更新的打算。这篇文章作为官方文档的补充，讲了一些看我来没有说清楚的地方。你可以在看完这篇文章了解 jscodeshift 的大概后再来看官方的文档，应该能为你节省一些时间。
 
 我会通过一个简单的示例来介绍 jscodeshift 的使用方法，并对 jscodeshift 的一些实现进行一个简单的介绍。本文使用的 jscodeshift 为 **0.3.32** 版。
 
@@ -32,7 +32,7 @@ if (a > b) {
 }
 {% endhighlight %}
 
-转化为对应的语法树时，就会得到类似下面的结构：
+转化为语法树，就会得到类似下面的结构：
 
 ```mermaid
 graph TB
@@ -135,7 +135,7 @@ graph LR
     CORE --> BUI
 ```
 
-其中 AST 节点的类型是固定的，这里推荐[babe-types](https://babeljs.io/docs/core-packages/babel-types/)的文档，介绍了各种 AST 节点的 builder 函数，方便好用。将各 builder 函数名首字母大写即可得到对应的 Type 名称 ，不过要注意的是因为 jscodeshift 使用的是 ast-types，其 builder 函数中以 “jsx” 开头的 builder 函数的这几个字母都是小写的，例如 babe-types 的 “jSXAttribute” 对应的应该是 “jsxAttribute”。
+其中 AST 节点的类型是固定的，这里推荐 [babe-types](https://babeljs.io/docs/core-packages/babel-types/) 的文档，介绍了各种 AST 节点的 builder 函数，方便好用。将各 builder 函数名首字母大写即可得到对应的 Type 名称 ，不过要注意的是因为 jscodeshift 使用的是 ast-types 和 babe-types 还是有一些区别，其 builder 函数中以 “jsx” 开头的 builder 函数的这几个字母都是小写的，例如 babe-types 的 “jSXAttribute” 对应的应该是 “jsxAttribute”。
 
 ast-types 的类型定义在其源码的 def 文件夹中，通过 Type 类的 def 方法定义类型的名称和 builder 函数的参数类型，例如：
 
@@ -172,11 +172,11 @@ function getBuilderName(typeName) {
 }
 {% endhighlight %}
 
-可以看到，当类型名前有多个大写字母时，会将最后一个大写字母保留，其他字母都变成小写，所以就有上文中的“jsxAttribute”这样的 builder 函数名。这也是 ast-types 和 babe-types 不一样的地方。
+可以看到，当类型名前有多个大写字母时，会将最后一个大写字母保留，其他字母都变成小写，所以就有上文“jsxAttribute”这样的 builder 函数名。
 
-ast-types 的 NodePath 类代表了 AST 树的一个节点。通过 NodePath 类的 node 属性可以得到以该节点为根节点的子树结构，可以很方便的获得该节点子树节点的各种值。
+ast-types 的 NodePath 类代表了 AST 的一个节点。通过 NodePath 类的 node 属性可以得到以该节点为根节点的子树结构，可以很方便的获得该节点及其子树节点的各种值。
 
-Collection 类是 jscodeshift 对 ast-types 节点的封装。它提供了 AST 的遍历、查找和操作的方法，这些方法的都以新的 Collection 对象作为返回值，这样能方便的进行链式调用，让代码显得更简洁。该类的 `__paths` 属性就是一个 NodePath 对象的数组，包含了当前操作的 AST 树节点的集合。例如上面代码中 root 的 `__paths` 属性是整个源码树的根节点（数组长度为 1），`find(j.MemberExpression)` 返回的就是 root AST 中类型为 MemberExpression 的所有节点的数组。
+Collection 类是 jscodeshift 对 ast-types 节点的封装。它提供了 AST 的遍历、查找和操作的方法，这些方法的都以新的 Collection 对象作为返回值，这样能方便的进行链式调用，让代码显得更简洁。该类的 `__paths` 属性是一个 NodePath 对象的数组，包含了当前操作的 AST 树节点的集合。例如上面代码中 root 的 `__paths` 属性是整个源码树的根节点（数组长度为 1），`find(j.MemberExpression)` 返回的就是 root AST 中类型为 MemberExpression 的所有节点的数组。
 
 关于 Collection 的介绍可以参考[官方文档](https://github.com/facebook/jscodeshift/wiki/jscodeshift-Documentation)，这里我把比较常用的方法归纳了一下（见下表）。
 
@@ -186,11 +186,11 @@ Collection 类是 jscodeshift 对 ast-types 节点的封装。它提供了 AST �
 | 修改   | replaceWith,  insertBefore, insertAfter, remove |
 | 其他   | forEach, map, size, at                   |
 
-find 和 filter 主要用于查找定位我们需要修改的节点。find 方法接受两个参数：type 和 option（可选）。type 即是上文所说的 Type 对象，option 是附加的过滤条件，例如 `root.find(j.Identifier, { name: 'get' })` 就表示找到名称为“get”的 Identifier 节点。当然这只能去做一些简单的过滤，对于复杂的过滤就该 filter 登场了。
+find 和 filter 主要用于查找和定位我们需要修改的节点。find 方法接受两个参数：type 和 option（可选）。type 即是上文所说的 Type 对象，option 是附加的过滤条件，例如 `root.find(j.Identifier, { name: 'get' })` 就表示找到名称为“get”的 Identifier 节点。当然这只能去做一些简单的过滤，对于复杂的过滤就该 filter 登场了。
 
-filter 方法其实就是调用了 Collection 类 `__paths` 属性 NodePath 对象数组的 filter 方法，该方法接受一个返回布尔值的回调函数，其函数的参数就是数组遍历的 NodePath 对象。例如上面的代码，先通过 `path.node` 得到该节点及子节点的数据结构，取 `object` 和 `property` 的值，然后判断它们的`type`和`name`是否为我们期望的值，从而定位我们想要修改的节点。
+filter 方法其实就是调用了 Collection 类 `__paths` 属性的值 NodePath 对象数组的 filter 方法，该方法接受一个布尔返回值的回调函数，改回调函数的参数就是遍历的 NodePath 对象。例如上面的代码，先通过 `path.node` 得到该节点及子节点的数据结构，取 `object` 和 `property` 的值，然后判断它们的 `type` 和 `name` 是否为我们期望的值，从而定位我们想要修改的节点。
 
-和 filter 一样，forEach 和 map 也对应 NodePath 对象数组的同名方法，例如上面代码的：
+和 filter 一样，forEach 和 map 也对应 NodePath 对象数组的同名方法，例如上面代码中的这几行：
 
 {% highlight javascript %}
 .forEach(path => {
@@ -198,6 +198,6 @@ filter 方法其实就是调用了 Collection 类 `__paths` 属性 NodePath 对�
 });
 {% endhighlight %}
 
-将 filter 所得的结果进行一个遍历，对每个节点执行 replaceWith 进行替换，这样就把“createClass” 变成了“createReactClass”。
+将 filter 所得的结果进行一个遍历，对每个节点执行 replaceWith 进行替换，这样就把“createClass” 替换成了“createReactClass”。
 
-最后通过调用 `root.toSource` 将整个 AST 树转化为源码并返回，这样就可以通过 jscodeshift 命令来运行了。
+最后通过调用 `root.toSource` 将整个 AST 转化为源码并返回，然后就可以通过 jscodeshift 命令来运行转化源码了。
