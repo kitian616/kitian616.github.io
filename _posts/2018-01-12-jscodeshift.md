@@ -92,7 +92,7 @@ var Counter = createReactClass({
 
 整个过程简单来说就是找到需要替换的节点，修改节点，使用新的语法树生成源码。其代码实现如下：
 
-{% highlight javascript %}
+{% highlight javascript linenos %}
 const transformer = (file, api) => {
   const j = api.jscodeshift;
   const root = j(file.source);
