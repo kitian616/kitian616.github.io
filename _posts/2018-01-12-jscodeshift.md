@@ -8,7 +8,7 @@ date: 2018-01-12 00:00:00 +08:00
 mermaid: true
 ---
 
-之所以写这篇文章是因为 jscodeshift 的 [官方文档](https://github.com/facebook/jscodeshift/wiki) 实在是不太详细，而且看起来也没有更新的打算。这篇文章作为官方文档的补充，讲了一些看我来没有说清楚的地方。你可以在看完这篇文章了解 jscodeshift 的大概后再来看官方的文档，应该能为你节省一些时间。
+个人认为 jscodeshift 的 [官方文档](https://github.com/facebook/jscodeshift/wiki) 对新手不是特别的友好，所以写下了这篇文章，希望能给想要上手 jscodeshift 的同学一些方便。
 
 我会通过一个简单的示例来介绍 jscodeshift 的使用方法，并对 jscodeshift 的一些实现进行一个简单的介绍。本文使用的 jscodeshift 为 **0.3.32** 版。
 
@@ -22,7 +22,7 @@ jscodeshift 是一个由 Facebook 出品的 JavaScript codemod 工具集。codem
 
 ## 抽象语法树（AST）
 
-抽象语法树是将程序 token 解析出来，组织成与程序结构对应的树状结构表示，例如代码段：
+抽象语法树（以下简称 AST）是将程序 token 解析出来，组织成与程序结构对应的树状结构表示，例如代码段：
 
 {% highlight javascript %}
 if (a > b) {
@@ -32,7 +32,7 @@ if (a > b) {
 }
 {% endhighlight %}
 
-转化为语法树，就会得到类似下面的结构：
+转化为 AST 就会得到类似下面的结构：
 
 ```mermaid
 graph TB
@@ -86,7 +86,9 @@ var Counter = createReactClass({
 });
 {% endhighlight %}
 
-在 [astexplorer](https://astexplorer.net/) 网站上对比这两段代码的抽象语法树，观察出改动后的代码相比原始代码的改动。
+在 [astexplorer](https://astexplorer.net/) 网站上对比这两段代码的 AST，观察出改动后的代码相比原始代码的改动。
+
+![astexplorer diff](https://ww1.sinaimg.cn/large/73bd9e13ly1fnhc7fyvuoj20t70kj41k.jpg)
 
 可以看到这两段代码的语法书不同点在 CallExpression 的 `callee` 值，我们只需替换 `callee` 原本的 MemberExpression 节点到新建的 Identifier 节点就行了。
 
@@ -135,7 +137,7 @@ graph LR
     CORE --> BUI
 ```
 
-其中 AST 节点的类型是固定的，这里推荐 [babe-types](https://babeljs.io/docs/core-packages/babel-types/) 的文档，介绍了各种 AST 节点的 builder 函数，方便好用。将各 builder 函数名首字母大写即可得到对应的 Type 名称 ，不过要注意的是因为 jscodeshift 使用的是 ast-types 和 babe-types 还是有一些区别，其 builder 函数中以 “jsx” 开头的 builder 函数的这几个字母都是小写的，例如 babe-types 的 “jSXAttribute” 对应的应该是 “jsxAttribute”。
+其中 AST 节点的类型是固定的，由于没有找到比较方便的 ast-types 文档，这里推荐 [babe-types](https://babeljs.io/docs/core-packages/babel-types/) 的文档。它介绍了各种 AST 节点的 builder 函数，方便好用。将各 builder 函数名首字母大写即可得到对应的 Type 名 ，不过要注意的是因为 jscodeshift 使用的是 ast-types，和 babe-types 还是有一些区别。babe-types 文档中以 “jsx” 开头的 builder 函数在 ast-types 中的这几个字母都是小写的，所以在使用的时候转化下就好了，例如 babe-types 文档中的的 “jSXAttribute” 对应的是 “jsxAttribute”。
 
 ast-types 的类型定义在其源码的 def 文件夹中，通过 Type 类的 def 方法定义类型的名称和 builder 函数的参数类型，例如：
 
@@ -172,11 +174,11 @@ function getBuilderName(typeName) {
 }
 {% endhighlight %}
 
-可以看到，当类型名前有多个大写字母时，会将最后一个大写字母保留，其他字母都变成小写，所以就有上文“jsxAttribute”这样的 builder 函数名。
+可以看到，当类型名前有多个大写字母时，会将最后一个大写字母保留，其他字母都变成小写，所以就有上文所说 builder 函数名的不同。
 
 ast-types 的 NodePath 类代表了 AST 的一个节点。通过 NodePath 类的 node 属性可以得到以该节点为根节点的子树结构，可以很方便的获得该节点及其子树节点的各种值。
 
-Collection 类是 jscodeshift 对 ast-types 节点的封装。它提供了 AST 的遍历、查找和操作的方法，这些方法的都以新的 Collection 对象作为返回值，这样能方便的进行链式调用，让代码显得更简洁。该类的 `__paths` 属性是一个 NodePath 对象的数组，包含了当前操作的 AST 树节点的集合。例如上面代码中 root 的 `__paths` 属性是整个源码树的根节点（数组长度为 1），`find(j.MemberExpression)` 返回的就是 root AST 中类型为 MemberExpression 的所有节点的数组。
+Collection 类是 jscodeshift 对 ast-types 节点的封装。它提供了 AST 的遍历、查找和操作的方法，这些方法的都以一个新的 Collection 对象作为返回值，这样能方便的进行链式调用，让代码显得更简洁。该类的 `__paths` 属性是一个 NodePath 对象的数组，包含了当前操作的 AST 树节点的集合。例如上面代码中 root 的 `__paths` 属性是整个源码树的根节点（数组长度为 1），`find(j.MemberExpression)` 返回的就是 root AST 中类型为 MemberExpression 的所有节点的数组。
 
 关于 Collection 的介绍可以参考[官方文档](https://github.com/facebook/jscodeshift/wiki/jscodeshift-Documentation)，这里我把比较常用的方法归纳了一下（见下表）。
 
@@ -188,7 +190,7 @@ Collection 类是 jscodeshift 对 ast-types 节点的封装。它提供了 AST �
 
 find 和 filter 主要用于查找和定位我们需要修改的节点。find 方法接受两个参数：type 和 option（可选）。type 即是上文所说的 Type 对象，option 是附加的过滤条件，例如 `root.find(j.Identifier, { name: 'get' })` 就表示找到名称为“get”的 Identifier 节点。当然这只能去做一些简单的过滤，对于复杂的过滤就该 filter 登场了。
 
-filter 方法其实就是调用了 Collection 类 `__paths` 属性的值 NodePath 对象数组的 filter 方法，该方法接受一个布尔返回值的回调函数，改回调函数的参数就是遍历的 NodePath 对象。例如上面的代码，先通过 `path.node` 得到该节点及子节点的数据结构，取 `object` 和 `property` 的值，然后判断它们的 `type` 和 `name` 是否为我们期望的值，从而定位我们想要修改的节点。
+filter 方法其实就是调用了 Collection 类 `__paths` 属性的值（一个 NodePath 对象数组）的 filter 方法，该方法接受一个布尔返回值的回调函数，这个回调函数的参数就是遍历的 NodePath 对象。例如上面的代码，先通过 `path.node` 得到该节点及子节点的数据结构，取 `object` 和 `property` 的值，然后判断它们的 `type` 和 `name` 是否为我们期望的值，从而定位我们想要修改的节点。
 
 和 filter 一样，forEach 和 map 也对应 NodePath 对象数组的同名方法，例如上面代码中的这几行：
 
