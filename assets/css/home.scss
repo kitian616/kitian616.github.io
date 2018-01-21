@@ -3,25 +3,17 @@
 ---
 @charset "utf-8";
 
-// Import partials from `sass_dir` (defaults to `_sass`)
 @import
-    "settings/base",
-    "settings/colors",
-    "settings/font",
+    "common/variables",
+    "common/colors",
+    "common/highlighting",
+    "common/classes",
+    "common/reset",
+    "common/components/button",
 
-    "mixins/media",
-    "mixins/link",
-    "mixins/flex",
-    "mixins/prefix",
-    "mixins/shape",
+    "animate/fade-in",
+    "animate/fade-in-down",
 
-    "base/base",
-    "base/text",
-    "base/image&icon",
-    "base/links",
-    "base/animate",
-
-    "components/wrapper",
     "components/follow-me",
 
     "home/page.home"

@@ -4,24 +4,18 @@
 @charset "utf-8";
 
 @import
-    "settings/base",
-    "settings/colors",
-    "settings/font",
-    "settings/highlighting",
+    "common/variables",
+    "common/colors",
+    "common/highlighting",
+    "common/classes",
+    "common/reset",
+    "common/components/button",
 
-    "mixins/prefix",
-    "mixins/media",
-    "mixins/link",
-    "mixins/flex",
-    "mixins/shape",
+    "animate/fade-in",
+    "animate/fade-in-down",
 
-    "base/base",
-    "base/text",
-    "base/links",
-    "base/image&icon",
-    "base/animate",
 
-    "components/wrapper",
+    "components/main",
 
     "components/follow-me",
 
@@ -36,11 +30,10 @@
     "components/article.content",
     "components/license",
 
-    "blog/layout.base",
-    "blog/layout.default",
-    "blog/layout.post",
+    "layout/default",
+    "layout/post",
 
-    "blog/page.all",
-    "blog/page.index",
-    "blog/page.error-404"
+    "page/all",
+    "page/index",
+    "page/404"
 ;

@@ -1,0 +1,21 @@
+.m-page-stage {
+  box-sizing: border-box;
+  min-height: 100%;
+  overflow: auto;
+  padding-bottom: map-get($layout, footer-height);
+  @include animation(fade-in-down .8s);
+}
+
+.m-page-content {
+  padding: 2.5rem 0 1.6rem;
+  @include media-breakpoint-down(l) {
+    padding: 2rem 0;
+  }
+  @include media-breakpoint-down(s) {
+    padding: 1rem 0;
+  }
+}
+
+.m-page-main {
+  margin: 0 auto;
+}

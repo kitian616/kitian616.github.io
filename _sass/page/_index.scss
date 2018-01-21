@@ -1,0 +1,50 @@
+.m-post-list {
+  &>article {
+    &>h1 {
+      font-size: map-get($base, font-size-header-list);
+      &>a {
+        @include link-text-colors( $text-color-d, $main-color-1);
+      }
+    }
+    &>a {
+      font-size: map-get($base, font-size-sub);
+    }
+    margin: 2.6rem 0;
+  }
+  .m-article-content {
+    font-size: map-get($base, font-size-sub);
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin: .8rem 0;
+    }
+    h1,
+    h2,
+    h3 {
+      color: $text-color;
+    }
+    h1,
+    h2 {
+      padding: 0;
+      border: none;
+    }
+    h1 {
+      font-size: map-get($base, font-size-h1-excerpt);
+    }
+    h2 {
+      font-size: map-get($base, font-size-h2-excerpt);
+    }
+    h3 {
+      font-size: map-get($base, font-size-h3-excerpt);
+    }
+    h4 {
+      font-size: map-get($base, font-size-h4-excerpt);
+    }
+    img {
+      max-height: 12rem;
+    }
+  }
+}
