@@ -1,13 +1,13 @@
 html {
   height: 100%;
   font-size: map-get($base, font-size-root);
-  background-color: $background-color;
 }
 
 body {
   height: 100%;
   font: map-get($base, font-weight) #{map-get($base, font-size)}/#{map-get($base, line-height)} map-get($base, font-family);
   color: $text-color;
+  background-color: $background-color;
   ::-moz-selection {
     background: $select-color;
   }
