@@ -137,7 +137,7 @@ graph LR
     CORE --> BUI
 ```
 
-其中 AST 节点的类型是固定的，由于没有找到比较方便的 ast-types 文档，这里推荐 [babe-types](https://babeljs.io/docs/core-packages/babel-types/) 的文档。它介绍了各种 AST 节点的 builder 函数，方便好用。将各 builder 函数名首字母大写即可得到对应的 Type 名 ，不过要注意的是因为 jscodeshift 使用的是 ast-types，和 babe-types 还是有一些区别。babe-types 文档中以 “jsx” 开头的 builder 函数在 ast-types 中的这几个字母都是小写的，所以在使用的时候转化下就好了，例如 babe-types 文档中的的 “jSXAttribute” 对应的是 “jsxAttribute”。
+其中 AST 节点的类型是固定的，由于没有找到比较方便的 ast-types 文档，这里推荐 [babe-types](https://babeljs.io/docs/core-packages/babel-types/) 的文档。它介绍了各种 AST 节点的 builder 函数，方便好用。将各 builder 函数名首字母大写即可得到对应的 Type 名 ，不过要注意的是因为 jscodeshift 使用的是 ast-types，和 babe-types 还是有一些区别。babe-types 文档中以 “jsx” 开头的 builder 函数在 ast-types 中的这几个字母都是小写的，所以在使用的时候转化下就好了，例如 babe-types 文档中的的 “jSXAttribute” 对应的是 “jsxAttribute”。
 
 ast-types 的类型定义在其源码的 def 文件夹中，通过 Type 类的 def 方法定义类型的名称和 builder 函数的参数类型，例如：
 
