@@ -51,6 +51,10 @@ layout: blog-default
 					<div class="article-next"><span>{{ __return }}</span><a href="{{ href }}">{{ page.previous.title }}</a></div>
 				{%- endif -%}
 			</div>
+			{%- if jekyll.environment != "development" and page.comment != false -%}
+				<section>{%- include utils/comment-disqus.html -%}</section>
+				<section>{%- include utils/comment-gitalk.html -%}</section>
+			{%- endif -%}
 		</div>
 	</div>
 </div>
@@ -212,8 +216,4 @@ layout: blog-default
 			});
 		});
 	</script>
-{%- endif -%}
-{%- if jekyll.environment != "development" and page.comment != false -%}
-	<section>{%- include utils/comment-disqus.html -%}</section>
-	<section>{%- include utils/comment-gitalk.html -%}</section>
 {%- endif -%}
