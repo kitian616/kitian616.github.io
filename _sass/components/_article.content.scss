@@ -1,41 +1,43 @@
 .m-article-content {
   word-wrap: break-word;
   line-height: map-get($base, line-height-large);
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
+  h1, h2, h3, h4, h5, h6, p,
+  hr, blockquote, figure, pre, .highlighter-rouge,
+  ul, ol, dl, table, .footnotes {
+    margin: map-get($base, vertical-space-large) 0;
+  }
+  h1, h2, h3, h4, h5, h6 {
     position: relative;
-    margin: map-get($base, vertical-space-large) + .5rem 0 map-get($base, vertical-space-large) 0;
+    margin-top: map-get($base, vertical-space-large) + .5rem;
     & > .anchor {
       @include link-text-colors($border-color, $main-color-1);
       @include transform(translate(-100% ,0));
-      text-decoration: none;
+      visibility: hidden;
       margin: .5rem;
-      display: none;
+      text-decoration: none;
+      opacity: 0;
     }
     &:hover {
       & > .anchor {
-        display: inline;
+        visibility: visible;
+        opacity: 1;
         cursor: pointer;
       }
     }
   }
   h1,
   h2 {
-    border: 0 dashed $border-color;
-    border-bottom-width: 2px;
+    border: 0 solid $border-color-l;
+    border-bottom-width: 1px;
   }
-  p {
-    margin: map-get($base, vertical-space-large) 0;
+  hr {
+    border: 0 solid $border-color-l;
+    border-bottom-width: 1px;
   }
   blockquote {
     padding: 0 0 0 1rem;
     border: 0 solid $border-color;
     border-left-width: 4px;
-    margin: map-get($base, vertical-space-large) 0;
     font-size: map-get($base, font-size-sub);
     color: $text-color-l;
     p {
@@ -78,9 +80,6 @@
         }
       }
     }
-  }
-  .highlighter-rouge, figure.highlight, pre {
-    margin: map-get($base, vertical-space-large) 0;
   }
   .highlighter-rouge>.highlight, figure.highlight {
     &>pre {
@@ -152,9 +151,8 @@
       }
     }
   }
-  ul,
-  ol {
-    margin: map-get($base, vertical-space-large) 0 map-get($base, vertical-space-large) 1.4rem;
+  ul, ol {
+    margin-left: 1.5rem;
     li {
       margin: 0;
       p {
@@ -163,9 +161,7 @@
     }
   }
   dl {
-    margin: map-get($base, vertical-space-large) 0;
-    dt,
-    dd {
+    dt, dd {
       margin: 0;
       p {
         margin: 0;
@@ -183,27 +179,16 @@
     width: 100%;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    margin: map-get($base, vertical-space-large) 0;
     border-collapse: collapse;
-    th,
-    td {
+    thead, tfoot {
+      background-color: $text-background-color;
+    }
+    th, td {
       border: 1px solid $border-color-l;
       padding: .5rem;
     }
-    thead,
-    tbody {
-      border: 1px solid $border-color-l;
+    th {
+      font-weight: map-get($base, font-weight-bold);
     }
-    thead {
-      border-bottom-width: 2px;
-    }
-    tbody>tr:nth-child(even) {
-      background-color: $text-background-color;
-    }
-  }
-  hr {
-    border: 0 dashed $border-color;
-    border-top-width: 2px;
-    margin: 1rem 0;
   }
 }
