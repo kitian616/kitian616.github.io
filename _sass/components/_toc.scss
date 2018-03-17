@@ -1,23 +1,35 @@
 .m-toc {
   ul {
     display: block;
+    margin: 0;
     list-style-type: none;
+    & > li {
+      &:not(:last-child) {
+        margin-bottom: .1rem;
+      }
+    }
   }
   a {
     display: inline-block;
     font-size: map-get($base, font-size-sub);
-    text-decoration: none;
+    @include link-normal() {
+      text-decoration: none;
+    }
+    @include link-emphasize() {
+      text-decoration: none;
+    }
+    @include link-focus() {
+      text-decoration: none;
+    }
+    @include link-background-colors(transparent, $text-background-color, $text-background-color);
     line-height: map-get($base, line-height-small);
     font-weight: map-get($base, font-weight);
     @include round-rect(default, .2rem 1rem);
-    @include link-emphasize-no-focus {
-      background-color: $text-background-color;
-    }
   }
   .toc-h1,
   .toc-h2 {
     padding: 0;
-    &>a {
+    & > a {
       color: $text-color-d;
       font-weight: map-get($base, font-weight-bold);
     }
@@ -27,16 +39,14 @@
   .toc-h5,
   .toc-h6 {
     &>a {
+      padding-top: .15rem;
+      padding-bottom: .15rem;
       color: $text-color;
       font-size: map-get($base, font-size-tiny);
     }
   }
   .toc-h1>a {
     font-size: map-get($base, font-size);
-  }
-  .toc-h1,
-  .toc-h2 {
-    margin-top: .6rem;
   }
   .toc-h3 {
     padding-left: 1.5rem;
