@@ -6,6 +6,7 @@
     "build": "bundle exec jekyll build",
     "serve": "bundle exec jekyll serve -H 0.0.0.0",
     "dev": "bundle exec jekyll serve -H 0.0.0.0 -t",
+    "production": "JEKYLL_ENV=production bundle exec jekyll serve -H 0.0.0.0 -t",
     "favicon": "gulp favicon",
     "icons": "gulp icons",
     "artwork": "gulp artwork",

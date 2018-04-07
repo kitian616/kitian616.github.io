@@ -7,7 +7,9 @@
     {%- assign __path = '/assets/css/blog.css' -%}
     {%- include snippets/prepend-baseurl.html -%}
     <link rel="stylesheet" href="{{ __return }}">
-    {%- include scripts/utils.html -%}
+    <script>
+      {%- include scripts/utils.js -%}
+    </script>
   </head>
   <body>
     <div class="m-page-stage js-page-stage">
@@ -17,22 +19,37 @@
       </div>
     </div>
     {%- include components/footer.html -%}
-    {%- include scripts/common.html -%}
+    <script>
+      {%- include scripts/common.js -%}
+    </script>
+    {%- include scripts/variables.html -%}
     {%- if page.layout == "home" -%}
-      {%- include scripts/home.html -%}
+      <script>
+        {%- include scripts/components/pageview.js -%}
+        {%- include scripts/home.js -%}
+      </script>
     {%- elsif page.layout == "page" -%}
-      {%- include scripts/page-post.html -%}
+      <script>
+        {%- include scripts/page-post.js -%}
+      </script>
     {%- elsif page.layout == "post" -%}
-      {%- include scripts/page-post.html -%}
-      {%- include scripts/post.html -%}
+      <script>
+        {%- include scripts/page-post.js -%}
+        {%- include scripts/components/pageview.js -%}
+        {%- include scripts/components/affix.js -%}
+        {%- include scripts/components/toc.js -%}
+        {%- include scripts/post.js -%}
+      </script>
     {%- elsif page.layout == "all" -%}
-      {%- include scripts/all.html -%}
+      <script>
+        {%- include scripts/all.js -%}
+      </script>
     {%- endif -%}
-    {%- include utils/mathjax.html -%}
-    {%- include utils/mermaid.html -%}
-    {%- include utils/chart.html -%}
-    {%- if jekyll.environment != "development" -%}
-      {%- include utils/google-analytics.html -%}
-    {%- endif -%}
+    <script>
+      {%- include scripts/components/mathjax.js -%}
+      {%- include scripts/components/mermaid.js -%}
+      {%- include scripts/components/chart.js -%}
+      {%- include scripts/components/google-analytics.js -%}
+    </script>
   </body>
 </html>
