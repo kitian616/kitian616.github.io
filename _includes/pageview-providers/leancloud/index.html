@@ -1,0 +1,62 @@
+{%- include snippets/get-sources.html -%}
+{%- assign _sources = __return -%}
+
+{%- assign _LEANCLOUD_APP_ID = site.leancloud.app_id -%}
+{%- assign _LEANCLOUD_APP_KEY = site.leancloud.app_key -%}
+{%- assign _LEANCLOUD_APP_CLASS = site.leancloud.app_class -%}
+
+{%- if page.layout == "home" -%}
+
+  {%- if _LEANCLOUD_APP_ID and
+    _LEANCLOUD_APP_KEY and
+    _LEANCLOUD_APP_CLASS and
+    jekyll.environment != "development" -%}
+    <script>
+      {%- include pageview-providers/leancloud/leancloud.js -%}
+    </script>
+    <script>
+      window.Lazyload.js(['{{ _sources.jquery }}', '{{ _sources.leancloud_js_sdk}}'], function() {
+        var pageview = window.pageview(AV, {
+          appId:    '{{ _LEANCLOUD_APP_ID }}',
+          appKey:   '{{ _LEANCLOUD_APP_KEY }}',
+          appClass: '{{ _LEANCLOUD_APP_CLASS }}'
+        });
+        $('.article-view').each(function() {
+          var $this = $(this);
+          var key = $this.attr('data-page-key');
+          pageview.get(key, function(view) {
+            $this.text(view);
+          });
+        });
+      });
+    </script>
+  {%- endif -%}
+
+{%- elsif page.layout == "post" -%}
+
+  {%- if page.key and
+    _LEANCLOUD_APP_ID and
+    _LEANCLOUD_APP_KEY and
+    _LEANCLOUD_APP_CLASS and
+    jekyll.environment != "development" and
+    jekyll.environment != "beta"  -%}
+    <script>
+      {%- include pageview-providers/leancloud/leancloud.js -%}
+    </script>
+    <script>
+      window.Lazyload.js(['{{ _sources.jquery }}', '{{ _sources.leancloud_js_sdk}}'], function() {
+        var pageview = window.pageview(AV, {
+          appId:    '{{ _LEANCLOUD_APP_ID }}',
+          appKey:   '{{ _LEANCLOUD_APP_KEY }}',
+          appClass: '{{ _LEANCLOUD_APP_CLASS }}'
+        });
+        var key =   '{{ page.key }}';
+        var title = '{{ page.title }}';
+        pageview.increase(key, title, function(view) {
+          $("data-page-key='{{ page.key }}']").text(view);
+        });
+      });
+    </script>
+  {%- endif -%}
+
+{%- endif -%}

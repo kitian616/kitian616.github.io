@@ -185,7 +185,7 @@
       }
       if (target) {
         buttonFoucs(target);
-        _tag = target.data('encode');
+        _tag = target.attr('data-encode');
         if (_tag === '' || typeof _tag !== 'string') {
           setUrlQuery();
         } else {

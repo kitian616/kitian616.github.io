@@ -1,4 +1,4 @@
-{%- if page.key -%}
+{%- if jekyll.environment != "development" -%}
 
   {%- if site.disqus.shortname -%}
     {%- include comment-providers/disqus.html -%}
