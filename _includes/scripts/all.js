@@ -58,7 +58,7 @@
     };
   })();
 
-  var data = initData('{%- include scripts/data.html -%}');
+  var data = initData('{%- include scripts/article-list.html -%}');
 
   var searchByTag = memorize(function(tag) {
     var i, j, cur, _tags, _tag, _data = {};
