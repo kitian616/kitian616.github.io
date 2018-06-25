@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: article
 title: Site Log
 picture-frame: shadow
 

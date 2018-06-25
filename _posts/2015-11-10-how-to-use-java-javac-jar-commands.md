@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: 使用命令来编译、运行、打包 Java 程序（java, javac, jar）
 key: 10005
 tags: Java Linux bash

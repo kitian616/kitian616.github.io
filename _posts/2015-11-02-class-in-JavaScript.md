@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: JavaScript 的 prototype（原型）和类
 key: 10004
 tags: JavaScript

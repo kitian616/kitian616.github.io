@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: 极简主题：TeXt Theme
 key: 100017
 tags: blog

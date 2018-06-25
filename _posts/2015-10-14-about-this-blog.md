@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: 关于此博客
 key: 10001
 tags: blog

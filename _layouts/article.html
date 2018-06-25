@@ -1,0 +1,69 @@
+---
+layout: page
+---
+
+{%- assign __source = page.show_author_profile -%}
+{%- assign __target = layout.show_author_profile -%}
+{%- include snippets/assign.html -%}
+{%- assign __source = __return -%}
+{%- assign __target = site.data.variables.default.page.show_author_profile -%}
+{%- include snippets/assign.html -%}
+{%- assign _show_author_profile = __return -%}
+
+<div class="layout--article">
+
+  {%- if _show_author_profile -%}
+    {%- if page.author -%}
+      {%- assign __author = site.data.authors[page.author] -%}
+    {%- else -%}
+      {%- assign __author = site.author -%}
+    {%- endif -%}
+    {%- include author-profile.html -%}
+  {%- endif -%}
+
+  <div class="article__content" itemprop="articleBody">{{ content }}</div>
+
+  <footer class="article__footer">
+    {%- if page.modify_date -%}
+      {%- assign __locale = site.data.locale.ARTICLE_DATE_FORMAT -%}
+      {%- include snippets/locale-to-string.html -%}
+      {%- assign date_format = __return -%}
+      {%- assign __locale = site.data.locale.LAST_UPDATED -%}
+      {%- include snippets/locale-to-string.html -%}
+      <span>{{ __return }}
+        <time itemprop="dateModified" datetime="{{ page.modify_date | date_to_xmlschema }}">{{ page.modify_date | date: date_format }}</time>
+      </span>
+    {%- else -%}
+      <meta itemprop="dateModified" content="{{ page.date | date_to_xmlschema }}">
+    {%- endif -%}
+    {%- if page.license -%}
+      <div class="article__license">{%- include article-footer/license.html -%}</div>
+    {%- endif -%}
+  </footer>
+
+  {%- if page.next or page.previous -%}
+    <div class="article__previous-next clearfix">
+    {%- if page.next -%}
+      {%- assign __path = page.next.url -%}
+      {%- include snippets/prepend-baseurl.html -%}
+      {%- assign href = __return -%}
+      {%- assign __locale = site.data.locale.PREVIOUS -%}
+      {%- include snippets/locale-to-string.html -%}
+      <div class="previous"><span>{{ __return }}</span><a href="{{ href }}">{{ page.next.title }}</a></div>
+    {%- endif -%}
+    {%- if page.previous -%}
+      {%- assign __path = page.previous.url -%}
+      {%- include snippets/prepend-baseurl.html -%}
+      {%- assign href = __return -%}
+      {%- assign __locale = site.data.locale.NEXT -%}
+      {%- include snippets/locale-to-string.html -%}
+      <div class="next"><span>{{ __return }}</span><a href="{{ href }}">{{ page.previous.title }}</a></div>
+    {%- endif -%}
+    </div>
+  {%- endif -%}
+
+</div>
+
+<script>
+  {%- include scripts/article.js -%}
+</script>

@@ -1,13 +1,156 @@
 ---
 layout: base
 ---
-<div class="m-page">
-  <article class="main">
-    {%- include snippets/page-title.html -%}
-    <div class="main-header"><h1>{{ __return }}</h1></div>
-    <div class="m-article-content" itemprop="articleBody">{{ content }}</div>
-    {%- if jekyll.environment != "development" and page.comment != false -%}
-      <section>{%- include comment.html -%}</section>
+
+{%- assign locale = site.data.locale -%}
+
+{%- include snippets/page-title.html -%}
+{%- assign _title = __return -%}
+
+{%- assign __source = page.show_header -%}
+{%- assign __target = layout.show_header -%}
+{%- include snippets/assign.html -%}
+{%- assign __source = __return -%}
+{%- assign __target = site.data.variables.default.page.show_header -%}
+{%- include snippets/assign.html -%}
+{%- assign _show_header = __return -%}
+
+{%- assign __source = page.full_width -%}
+{%- assign __target = layout.full_width -%}
+{%- include snippets/assign.html -%}
+{%- assign __source = __return -%}
+{%- assign __target = site.data.variables.default.page.full_width -%}
+{%- include snippets/assign.html -%}
+{%- assign _full_width = __return -%}
+
+{%- assign __source = page.show_title -%}
+{%- assign __target = layout.show_title -%}
+{%- include snippets/assign.html -%}
+{%- assign __source = __return -%}
+{%- assign __target = site.data.variables.default.page.show_title -%}
+{%- include snippets/assign.html -%}
+{%- assign _show_title = __return -%}
+
+
+{%- assign __source = page.show_edit_on_github -%}
+{%- assign __target = layout.show_edit_on_github -%}
+{%- include snippets/assign.html -%}
+{%- assign __source = __return -%}
+{%- assign __target = site.data.variables.default.page.show_edit_on_github -%}
+{%- include snippets/assign.html -%}
+{%- assign _show_edit_on_github = __return -%}
+
+{%- if page.sidebar -%}
+<div class="layout--page layout--page--sidebar clearfix js-page-root">
+  <div class="page__actions">
+    <div class="button button--circle  button--lg box-shadow-2 sidebar-button js-sidebar-show">
+      <i class="fas fa-bars icon--show"></i>
+    </div>
+  </div>
+  <div class="page__sidebar">
+    {%- include sidebar/toc.html -%}
+  </div>
+  <div class="page__mask js-sidebar-hide"></div>
+
+
+{%- else -%}
+<div class="layout--page clearfix">
+{%- endif -%}
+
+  {%- if _full_width -%}
+  <div class="page__main js-page-main full-width">
+  {%- elsif page.aside -%}
+  <div class="page__main js-page-main has-aside">
+  {%- else -%}
+  <div class="page__main js-page-main">
+  {%- endif -%}
+
+    <div class="page__main-inner">
+    <div></div>
+    {%- if _show_header -%}
+      <div class="page__header">{%- include header.html -%}</div>
     {%- endif -%}
-  </article>
+
+      <div class="page__content">
+      {%- if _full_width == false -%}
+        <div class ="main">
+      {%- endif -%}
+
+          <div class="col-2 js-col-2">
+            {%- if page.aside -%}
+              <aside class="page__aside js-page-aside">
+                {%- include aside/toc.html -%}
+              </aside>
+            {%- endif -%}
+          </div>
+
+          <div class="col-1">
+            <article itemscope itemtype="http://schema.org/Article">
+              {%- if _show_title or _show_edit_on_github -%}
+                <div class="article__header">
+                  {%- if _show_title -%}
+                    <header><h1 itemprop="name">{{ _title }}</h1></header>
+                  {%- else -%}
+                    <meta itemprop="name" content="_title" />
+                  {%- endif-%}
+                  {%- if _show_edit_on_github -%}
+                    {%- if site.repository and site.repository_tree -%}
+                      {%- assign __locale = locale.POST_ON_GITHUB -%}
+                      {%- include snippets/locale-to-string.html -%}
+                      <a class="edit-on-github-button button button--secondary button--rounded button--sm"
+                        href="https://github.com/{{ site.repository }}/tree/{{ site.repository_tree }}/{{ page.path }}">
+                        <i class="fab fa-github"></i> {{ __return }}</a>
+                    {%- endif -%}
+                  {%- endif -%}
+                </div>
+              {%- endif -%}
+
+              {%- include article-info.html -%}
+              <div class="js-article-content">{{ content }}</div>
+
+              {%- if jekyll.environment != "development" and page.comment != false -%}
+                <section class="page__comments">{%- include comments.html -%}</section>
+              {%- endif -%}
+
+            </article>
+          </div>
+
+      {%- if _full_width == false -%}
+        </div>
+      {%- endif -%}
+      </div>
+
+      <div class="page__footer">{%- include footer.html -%}</div>
+
+    </div>
+  </div>
 </div>
+
+
+<script>
+  {%- include scripts/lib/scroll.js -%}
+  {%- include scripts/lib/affix.js -%}
+  {%- include scripts/lib/toc.js -%}
+  {%- include scripts/page.js -%}
+</script>
+
+{%- if page.sidebar -%}
+<script>
+  {%- include scripts/sidebar.js -%}
+</script>
+{%- endif -%}
+
+{%- if page.aside -%}
+<script>
+  /* toc must before affix, since affix need to konw toc' height. */
+  {%- if page.aside.toc -%}
+    {%- include scripts/aside/toc.js -%}
+  {%- endif -%}
+  {%- include scripts/aside/affix.js -%}
+</script>
+{%- endif -%}
+
+
+{%- include markdown-enhancements.html -%}
+{%- include pageview.html -%}
+{%- include analytics.html -%}

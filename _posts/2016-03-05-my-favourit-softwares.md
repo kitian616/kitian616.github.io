@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: 我的软件清单
 key: 10009
 tags: Tools

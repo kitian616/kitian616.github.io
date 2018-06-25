@@ -1,0 +1,155 @@
+.layout--page {
+  height: 100%;
+
+  .page__main {
+    height: 100%;
+  }
+  &.layout--page--sidebar {
+    .page__main {
+      @include overflow(auto);
+    }
+  }
+
+  .page__main-inner {
+    position: relative;
+    height: auto !important;
+    height: 100%;
+    min-height: 100%;
+
+    .col-2 {
+      display: none;
+      float: right;
+      & > aside {
+        width: map-get($layout, aside-width);
+        position: absolute;
+        overflow: hidden;
+      }
+      @include media-breakpoint-down(lg) {
+        float: none;
+      }
+    }
+  }
+
+  .page__content {
+    margin: 0 auto;
+    padding-bottom: map-get($layout, footer-height);
+  }
+
+  .article__header {
+    margin-top: map-get($spacers, 4);
+    header, h1 {
+      display: inline;
+    }
+    .edit-on-github-button {
+      vertical-align: text-bottom;
+      margin-left: map-get($spacers, 3);
+      @include media-breakpoint-down(md) {
+        display: none;
+      }
+    }
+  }
+
+  .page__comments {
+    padding-bottom: map-get($base, vertical-space-lg);
+  }
+
+  .page__actions {
+    position: absolute;
+    left: 1rem;
+    bottom: 1rem;
+    display: none;
+    z-index: 996;
+  }
+
+  .sidebar-button {
+    @include button-colors($text-color-d, rgba($main-color-3, .75));
+    border: 1px $border-color solid;
+  }
+
+  .page__sidebar {
+    display: block;
+    width: 80%;
+    max-width: map-get($layout, sidebar-width);
+    float: left;
+    height: 100%;
+    background-color: $background-color;
+    z-index: 998;
+    @include split-line(right);
+    @include transition(transform .4s);
+    @include overflow(auto);
+    .sidebar-toc {
+      padding: 1rem 1rem 2rem 2rem;
+    }
+  }
+
+  .page__mask {
+    background-color: $mask-color;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 997;
+    display: none;
+    cursor: pointer;
+  }
+
+  .page__aside {
+    .toc-aside {
+      padding: 1rem 0 1rem 3rem;
+    }
+
+  }
+
+  .page__footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .has-aside {
+    .page__main-inner{
+      .col-1 {
+        margin-right: map-get($layout, aside-width);
+        @include media-breakpoint-down(lg) {
+          margin-right: 0;
+        }
+      }
+      .col-2 {
+        width: map-get($layout, aside-width);
+        position: relative;
+        display: block;
+        &>aside {
+          &.fixed {
+            position: fixed;
+            z-index: 2;
+            -webkit-font-smoothing: subpixel-antialiased;
+          }
+        }
+        @include media-breakpoint-down(lg) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    .page__sidebar {
+      position: fixed;
+      @include transform(translate(- map-get($layout, sidebar-width), 0));
+    }
+
+    .page__actions {
+      display: block;
+    }
+
+    &.show-sidebar {
+      .page__sidebar {
+        @include transform(translate(0));
+      }
+      .page__mask {
+        display: block;
+      }
+    }
+  }
+}

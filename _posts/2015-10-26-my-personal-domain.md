@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: 终于有自己的域名了
 key: 10003
 tags: blog

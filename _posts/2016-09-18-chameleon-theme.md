@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: 第三代主题：Chameleon Theme
 key: 100010
 tags: blog

@@ -11,71 +11,94 @@
 #    |  |  \   --. /  .'.  \  |  |
 #    `--'   `----''--'   '--' `--'
 
-## Base settings ##
-url: https://tianqi.name #the base hostname & protocol for your site e.g. https://www.someone.com
+
+
+
+## => Site Settings
+##############################
+url: https://tianqi.name
 baseurl: /
-title: Qi's Blog
-description: > #this means to ignore newlines until "nav_lists:"
-    Tian Qi's Blog | 田琦的博客
+title: Qi's Site
+description: >
+    Tian Qi's Site | 田琦的小站
 
-nav_lists:
-  - titles:
-      en: About
-      zh: 关于
-      zh-Hans: 关于
-      zh-Hant: 關於
-    url: /blog/about.html
 
-paths:
-  base: /blog
-  home: /
-  all:  /blog/all.html
-  rss:  /feed.xml
-
-## GitHub repository (if the site is hosted by GitHub) ##
-repository: kitian616/kitian616.github.io
-repository_tree: master
-
-## Language & timezone ##
-lang: zh #the language of your site, eg: en(English), zh(简体中文), zh-Hans(简体中文), zh-Hant(繁體中文)
+## => Language and Timezone
+##############################
+lang: zh
 timezone: Asia/Shanghai
 
-## Author & social ##
+
+## => Author and Social
+##############################
 author:
-  name: "Tian Qi"
+  name: Tian Qi
   email: kitian616@outlook.com
-  # facebook:  #your Facebook username
   twitter: kitian616
   github:  kitian616
   googleplus: 101827554735084402671
   weibo: 234695683
   douban: kitian616
-  # linkedin:  #your Linkedin username
 
-## Comment system (Disqus) ##
-disqus:
-  shortname: kitian616-github-io #the Disqus shortname for the site
 
-## Google Analytics ##
-ga_tracking_id: UA-71907556-1 #Google analytics id for the site
+## => GitHub Repository (if the site is hosted by GitHub)
+##############################
+repository: kitian616/kitian616.github.io
+repository_tree: master
 
-## Reading quantity (LeanCloud) ##
-leancloud:
-  app_id: uAG3OhdcH8H4fxSqXLyBljA7-gzGzoHsz
-  app_key: Mzf5m9skSwYVWVXhGiYMNyXs
-  app_class: ThomasBlog
 
-# mathjax: true
+## => Paths
+##############################
+paths:
+  base: /blog
+  archive: /blog/archive.html
+  rss:  /feed.xml
 
-## Paginate ##
+
+## => Post
+##############################
+## excerpt
+excerpt_separator: <!--more-->
+excerpt_type: html # text (default), html
+
+## license
+license: CC-BY-4.0
+
+
+## => Paginate
+##############################
 paginate: 7
 paginate_path: /blog/page:num
 
-## Post excerpts ##
-excerpt_separator: <!--more-->
-excerpt_type: html # text | html
 
-## Build ##
+## => Comments
+##############################
+comments:
+  provider: disqus
+  disqus:
+    shortname: kitian616-github-io
+
+
+## => Pageview
+##############################
+pageview:
+  provider: leancloud
+  leancloud:
+    app_id: uAG3OhdcH8H4fxSqXLyBljA7-gzGzoHsz
+    app_key: Mzf5m9skSwYVWVXhGiYMNyXs
+    app_class: ThomasBlog
+
+
+## => Analytics
+##############################
+analytics:
+  provider: google
+  google:
+    tracking_id: UA-71907556-1
+
+
+## => Build
+##############################
 markdown: kramdown
 highlighter: rouge
 permalink: date
@@ -98,13 +121,29 @@ exclude:
   - /test
   - /vendor
 
-## Plugins ##
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: article
+      license: true
+      aside:
+        toc: true
+      show_edit_on_github: true
+      pageview: true
+
+
+## => Plugins
+##############################
 plugins:
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-paginate
   - jemoji
 
-## Server ##
+
+## => Server
+##############################
 server_url: "0.0.0.0"
 port: 4001

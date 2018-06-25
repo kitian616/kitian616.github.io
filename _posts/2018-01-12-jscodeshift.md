@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: jscodeshift 入门指南
 key: 100018
 tags: JavaScript

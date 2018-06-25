@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: 如何通过 SSH 来连接 VirtualBox 虚拟机
 key: 10002
 tags: Linux VirtualBox SSH

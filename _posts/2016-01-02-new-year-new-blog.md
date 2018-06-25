@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: 新的一年，新的博客
 key: 10006
 tags: blog FrontEnd

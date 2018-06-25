@@ -1,6 +1,6 @@
 ---
-layout: page
-title: About
+layout: article
+title: 关于
 key: page-about
 ---
 Welcome to my blog! :earth_asia: :earth_africa: :earth_americas:

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: 用 HTML5 实现星战的开篇字幕
 key: 10007
 tags: FrontEnd

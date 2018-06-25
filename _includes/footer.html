@@ -1,10 +1,40 @@
-<div class="m-page-footer js-page-footer">
+
+<div class="footer js-page-footer">
   <div class="main">
-    <aside> {%- include follow-me.html -%} </aside>
+    {%- assign __author = site.author -%}
+    {%- if __author.type == 'organization' -%}
+      {%- assign _author_itemtype = 'http://schema.org/Organization' -%}
+    {%- else -%}
+      {%- assign _author_itemtype = 'http://schema.org/Person' -%}
+    {%- endif -%}
+    <aside  itemscope itemtype="{{ _author_itemtype }}">
+      <meta itemprop="name" content="{{ __author.name }}">
+      {%- if __author.url -%}
+        {%- assign _author_url = __author.url -%}
+      {%- else -%}
+        {%- assign __path = '/'-%}
+        {%- include snippets/prepend-baseurl.html -%}
+        {%- assign _author_url = __return -%}
+      {%- endif -%}
+      <meta itemprop="url" content="{{ _author_url }}">
+      {%- if __author.bio -%}
+        <meta itemprop="description" content="{{ __author.bio }}">
+      {%- endif -%}
+      {%- include follow-me.html -%}
+    </aside>
     <footer class="site-info">
-      <p>© {{ site.title }} {{ site.data.locale.COPYRIGHT_DATES }}</p>
+      {%- assign __path = site.paths.rss | default: site.data.variables.default.paths.rss -%}
+      {%- include snippets/get-nav-url.html -%}
+      {%- assign href = __return -%}
+      {%- assign __locale = site.data.locale.NAV.RSS -%}
+      {%- include snippets/locale-to-string.html -%}
+      <p>
+        <span class="site-info__copyright">© {{ site.title }} {{ site.data.locale.COPYRIGHT_DATES }}</span>
+        <a class="site-info__rss" type="application/rss+xml" href="{{ href }}">{{ __return }}</a>
+      </p>
       <p>Powered by <a title="Jekyll is a simple, blog-aware, static site generator." href="http://jekyllrb.com/">Jekyll</a> & <a
-        title="TeXt is a succinct theme for blogging." href="https://github.com/kitian616/jekyll-TeXt-theme">TeXt Theme</a>.</p>
+        title="TeXt is a succinct theme for blogging." href="https://github.com/kitian616/jekyll-TeXt-theme">TeXt Theme</a>.
+      </p>
     </footer>
   </div>
 </div>

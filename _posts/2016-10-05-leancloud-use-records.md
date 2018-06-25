@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: LeanCloud 使用记
 key: 100011
 tags: blog
