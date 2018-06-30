@@ -1,4 +1,6 @@
 header:
+  - title:      Home
+    url:        /
   - titles:
       en:       Archive
       zh:       归档
@@ -9,4 +11,5 @@ header:
       en:       About
       zh:       关于
       zh-Hans:  关于
+      zh-Hant:  關於
     url:        /blog/about.html
