@@ -4,8 +4,15 @@
 @charset "utf-8";
 
 @import
+    "skins/{{ site.text_skin | default: site.data.variables.default.text_skin }}",
+    // "skins/chocolate",
+    // "skins/dark",
+    // "skins/default",
+    // "skins/forest",
+    // "skins/ocean",
+    // "skins/orange",
+
     "common/variables",
-    "common/colors",
     "common/highlighting",
     "common/classes",
     "common/reset",

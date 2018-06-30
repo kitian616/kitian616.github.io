@@ -1,5 +1,5 @@
 default:
-  text_color_theme: default
+  text_skin: default
   lang: en
   paths:
     root: /
