@@ -29,7 +29,7 @@
             color: $text-color-theme-dark-d;
         }
         a {
-            @include link-colors($text-color-theme-dark-d, $text-color-theme-dark-d, $text-color-theme-dark-d)
+            @include link-colors($text-color-theme-dark-d)
         }
     }
 

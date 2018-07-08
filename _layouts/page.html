@@ -73,7 +73,7 @@ layout: base
         <div class ="main">
       {%- endif -%}
 
-          <div class="col-2 js-col-2">
+          <div class="col-aside js-col-aside">
             {%- if page.aside -%}
               <aside class="page__aside js-page-aside">
                 {%- include aside/toc.html -%}
@@ -81,7 +81,7 @@ layout: base
             {%- endif -%}
           </div>
 
-          <div class="col-1">
+          <div class="col-main">
             {%- if _page_type == 'article' -%}
               <article itemscope itemtype="http://schema.org/Article">
             {%- elsif _page_type == 'webpage' -%}
@@ -101,9 +101,10 @@ layout: base
                     {%- if site.repository and site.repository_tree -%}
                       {%- assign __locale = site.data.locale.POST_ON_GITHUB -%}
                       {%- include snippets/locale-to-string.html -%}
-                      <a class="edit-on-github-button button button--secondary button--rounded button--sm"
+                      <a class="edit-on-github ml-3"
+                        title="{{ __return }}"
                         href="https://github.com/{{ site.repository }}/tree/{{ site.repository_tree }}/{{ page.path }}">
-                        <i class="fab fa-github"></i> {{ __return }}</a>
+                        <i class="far fa-edit"></i></a>
                     {%- endif -%}
                   {%- endif -%}
               {%- if _show_title or _show_edit_on_github -%}

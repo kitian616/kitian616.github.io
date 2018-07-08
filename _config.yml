@@ -50,7 +50,7 @@ repository_tree: master
 ## => Paths
 ##############################
 paths:
-  root: /blog
+  root: /
   home: /blog
   archive: /blog/archive.html
   rss:  /feed.xml
