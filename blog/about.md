@@ -31,13 +31,10 @@ My Name is Tian Qi (You can also call me Thomas Tian), I am a ~~frontend enginee
 ## Some Links | 相关链接
 
 - [About This Blog](/blog/2015/10/14/about-this-blog.html)
-
 - [Site Log](/blog/site-log.html)
-
 - [TeXt Theme](https://github.com/kitian616/jekyll-TeXt-theme) [![GitHub stars](https://img.shields.io/github/stars/kitian616/jekyll-TeXt-theme.svg?style=social&label=Stars)]()
 
 ---
 
 - [dwb-blog](http://dwbbb.com/)
-
 - [venoral's blog](http://www.cnblogs.com/venoral)
