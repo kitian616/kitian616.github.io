@@ -3,11 +3,12 @@ ul.toc {
   margin: 0;
   list-style-type: none;
   & > li {
-    margin: .1rem 0;
+    margin: .2rem 0;
     &.active {
       a {
+        color: $text-color-3;
         background-color: $main-color-3;
-        @include link-colors($main-color-1);
+        box-shadow: 0 0 0 2px rgba($main-color-3, .4);
       }
     }
   }
@@ -17,17 +18,14 @@ ul.toc {
     padding: .2rem .8rem .2rem .8rem;
     border-radius: map-get($base, border-radius);
     text-decoration: none !important;
-    @include link-colors($text-color);
-    @include hover() {
-      background-color: $main-color-3;
-    }
+    @include clickable($text-color, null, $text-color-3, $main-color-3);
   }
 
   .toc-h1 {
     @include split-line(bottom);
     padding: .8rem 0 .3rem 0;
     margin-bottom: .6rem;
-    &, a {
+    a {
       @include link-colors($text-color-d);
     }
   }
@@ -47,7 +45,7 @@ ul.toc {
   }
   .toc-h5,
   .toc-h6 {
-    &, a {
+    a {
       @include link-colors($text-color-l);
     }
   }
@@ -64,13 +62,13 @@ ul.toc {
   .toc-h1 {
     &, a {
       font-size: map-get($base, font-size);
-      line-height: map-get($base, line-height-lg);
+      line-height: map-get($base, line-height);
     }
   }
   .toc-h2 {
     &, a {
       font-size: map-get($base, font-size-sm);
-      line-height: map-get($base, line-height);
+      line-height: map-get($base, line-height-sm);
     }
   }
   .toc-h3,
@@ -89,6 +87,7 @@ ul.toc--navigator {
     &.active {
       a {
         background-color: transparent;
+        box-shadow: none;
         @include link-colors($main-color-1);
         @include split-line(left, 4px, $main-color-1);
         margin-left: -4px;
