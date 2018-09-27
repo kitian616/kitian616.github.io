@@ -15,14 +15,13 @@
       _options.disabled !== undefined && (disabled = _options.disabled);
       $scrollTarget = $(scrollTarget);
       $scroller = $(scroller);
-      isOverallScroller = window.isOverallScroller($scroller[0]);
+      isOverallScroller = window.isOverallScroller($scrollTarget[0]);
       $scroll = $(scroll);
-      calc(true);
     }
     function initData() {
       top();
       rootHeight = $root.outerHeight();
-      rootTop = $root.offset().top + (isOverallScroller ? 0 :  $scroller.scrollTop());
+      rootTop = $root.offset().top + (isOverallScroller ? 0 :  $scrollTarget.scrollTop());
       rootLeft = $root.offset().left;
     }
     function calc(needInitData) {
@@ -77,19 +76,19 @@
         }, 100);
         timeout = setTimeout(function() {
           clearInterval(interval);
-        }, 60000);
+        }, 45000);
         window.pageLoad.then(function() {
           setTimeout(function() {
             clearInterval(interval);
             clearTimeout(timeout);
-          }, 1500);
+          }, 3000);
         });
         $scrollTarget.on('scroll', function() {
           disabled || setState();
         });
-        $window.on('resize', window.throttle(function() {
+        $window.on('resize', function() {
           disabled || (calc(true), setState());
-        }, 100));
+        });
         hasInit = true;
       }
     }
@@ -104,7 +103,10 @@
         init();
       }, 200));
       return {
-        setOptions: setOptions
+        setOptions: setOptions,
+        refresh: function() {
+          calc(true); setState();
+        }
       };
     }
     $.fn.affix = affix;

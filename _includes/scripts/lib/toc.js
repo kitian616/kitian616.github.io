@@ -11,10 +11,9 @@
       _options.scrollTarget && (scrollTarget = _options.scrollTarget);
       _options.scroller && (scroller = _options.scroller);
       _options.disabled !== undefined && (disabled = _options.disabled);
-      $headings = $(container).find(selectors);
+      $headings = $(container).find(selectors).filter('[id]');
       $scrollTarget = $(scrollTarget);
       $scroller = $(scroller);
-      calc();
     }
     function calc() {
       headingsPos = [];
@@ -23,7 +22,7 @@
       });
     }
     function setState(element, disabled) {
-      var scrollTop = $scroller.scrollTop(), i;
+      var scrollTop = $scrollTarget.scrollTop(), i;
       if (disabled || !headingsPos || headingsPos.length < 1) { return; }
       if (element) {
         $activeCur = element;
@@ -71,12 +70,12 @@
         }, 100);
         timeout = setTimeout(function() {
           clearInterval(interval);
-        }, 60000);
+        }, 45000);
         window.pageLoad.then(function() {
           setTimeout(function() {
             clearInterval(interval);
             clearTimeout(timeout);
-          }, 1500);
+          }, 3000);
         });
         $scrollTarget.on('scroll', function() {
           disabled || setState(null, scrolling);
@@ -102,7 +101,6 @@
         setOptions: setOptions
       };
     }
-    toc.setOptions = setOptions;
     $.fn.toc = toc;
   });
 })();

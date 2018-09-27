@@ -1,5 +1,6 @@
 .article__info {
   font-size: map-get($base, font-size-sm);
+  color: $text-color-l;
   .left-col {
     float: left;
     @include media-breakpoint-down(md) {
@@ -8,7 +9,6 @@
   }
   .right-col {
     float: right;
-    color: $text-color-l;
     margin-left: map-get($button, padding-x-sm);
     @include media-breakpoint-down(md) {
       float: none;
@@ -16,9 +16,9 @@
     & > li {
       &:not(:last-child) {
         @include split-line(right, default, $text-color-l);
-        line-height: map-get($base, line-height-xs);
         padding-right: .7rem;
         margin-right: .7rem;
+        line-height: map-get($base, line-height-xs);
       }
     }
   }

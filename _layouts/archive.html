@@ -5,19 +5,13 @@ titles:
   zh: 归档
   zh-Hans: 归档
   zh-Hant: 歸檔
-show_title: false
 ---
 
 <div class="layout--archive js-all">
-  <div class="search-box js-search-box">
-    <div class="search-box__icon-search"><i class="fas fa-search"></i></div>
-    <input type="text" />
-    <div class="search-box__icon-clear js-icon-clear">
-      <div class="button button--secondary button--circle button--sm"><i class="fas fa-times"></i></div>
-    </div>
-  </div>
   {%- include tags.html -%}
-  <div class="js-result layout--archive__result"></div>
+  <div class="js-result layout--archive__result d-none">
+    {%- include article-list.html articles=site.posts type='brief' show_info=true reverse=true group_by='year' -%}
+  </div>
 </div>
 
 <script>
