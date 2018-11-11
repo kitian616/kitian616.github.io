@@ -245,7 +245,7 @@ $(function(){
 
 这样就差不多了。当然我们还可以加图片背景，加背景音乐。这里就不做了……
 
-[动画演示](/blog/projects/star-war.html) |
-[源码](https://github.com/kitian616/blog/blob/gh-pages/projects/star-war.html)
+[动画演示](/projects/demo/star-wars-opening-crawl/) |
+[源码](https://github.com/kitian616/kitian616.github.io/blob/master/projects/demo/star-wars-opening-crawl/index.html)
 
 ![Yoda](https://wx1.sinaimg.cn/large/73bd9e13ly1fjldo4fv1nj20b404qglq.jpg)
