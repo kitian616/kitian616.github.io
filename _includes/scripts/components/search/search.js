@@ -56,9 +56,7 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
   };
 
   function render(data) {
-    if (!data) {
-      return null;
-    }
+    if (!data) { return null; }
     var $root = $('<ul></ul>'), i, j, key, keys, cur, itemIndex = 0;
     keys = Object.keys(data);
     for (i = 0; i < keys.length; i++) {
@@ -105,37 +103,28 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
   });
 
   // search panel
-  var $pageRoot = $('.js-page-root');
-  var $pageMain = $('.js-page-main');
+  var $searchModal = $('.js-page-search-modal');
   var $searchToggle = $('.js-search-toggle');
-  var showSearch = false;
-  var scrollTop;
+  var modalVisible = false;
 
-  function openSearchPanel() {
-    scrollTop = $(window).scrollTop() || $pageMain.scrollTop();
-    $pageRoot.addClass('show-search-panel');
-    $pageMain.scrollTop(scrollTop);
-    $searchInput[0].focus();
-  }
+  var searchModal = $searchModal.modal({ onChange: handleModalChange, hideWhenWindowScroll: true });
 
-  function closeSearchPanel() {
-    $pageRoot.removeClass('show-search-panel');
-    $(window).scrollTop(scrollTop);
-    $searchInput[0].blur();
-    setTimeout(function() {
-      $searchInput.val(''); searchBoxEmpty();
-      window.pageAsideAffix && window.pageAsideAffix.refresh();
-    }, 400);
+  function handleModalChange(visible) {
+    modalVisible = visible;
+    if (visible) {
+      $searchInput[0].focus();
+    } else {
+      $searchInput[0].blur();
+      setTimeout(function() {
+        $searchInput.val(''); searchBoxEmpty();
+        window.pageAsideAffix && window.pageAsideAffix.refresh();
+      }, 400);
+    }
   }
 
-  // Char Code: 13  Enter, 27  ESC, 37  ⬅, 38  ⬆, 39  ➡, 40  ⬇, 83  S, 191 /
-  function isFormElement(e) {
-    var tagName = e.target.tagName || e.srcElement.tagName;
-    return tagName === 'INPUT' || tagName === 'SELECT' || tagName === 'TEXTAREA';
-  }
-  function charCodeFilter(e) {
-    return e.target === $searchInput[0] && (e.which === 13 || e.which === 27 || e.which === 38 || e.which === 40);
-  }
+  $searchToggle.on('click', function() {
+    modalVisible ? searchModal.hide() : searchModal.show();
+  });
 
   function updateResultItems() {
     lastActiveIndex >= 0 && $resultItems.eq(lastActiveIndex).removeClass('active');
@@ -155,18 +144,19 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
     }
   }
 
-  $(document).on('keyup', function(e) {
-    if (!isFormElement(e) || charCodeFilter(e)) {
-      if (e.which === 83 || e.which === 191) {
-        showSearch || (showSearch = true, openSearchPanel());
-      } else if (e.which ===  27) {
-        showSearch && (showSearch = false, closeSearchPanel());
-      } else if (e.which === 38) {
-        showSearch && moveActiveIndex('up');
+  // Char Code: 13  Enter, 37  ⬅, 38  ⬆, 39  ➡, 40  ⬇, 83  S, 191 /
+  $(window).on('keyup', function(e) {
+    if (modalVisible) {
+      if (e.which === 38) {
+        modalVisible && moveActiveIndex('up');
       } else if (e.which === 40) {
-        showSearch && moveActiveIndex('down');
+        modalVisible && moveActiveIndex('down');
       } else if (e.which === 13) {
-        showSearch && $resultItems && activeIndex >= 0 && $resultItems.eq(activeIndex).children('a')[0].click();
+        modalVisible && $resultItems && activeIndex >= 0 && $resultItems.eq(activeIndex).children('a')[0].click();
+      }
+    } else {
+      if (!window.isFormElement(e.target || e.srcElement) && (e.which === 83 || e.which === 191)) {
+        modalVisible || searchModal.show();
       }
     }
   });
@@ -174,10 +164,5 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
   $result.on('mouseover', '.search-result__item > a', function() {
     var itemIndex = $(this).parent().data('index');
     itemIndex >= 0 && (lastActiveIndex = activeIndex, activeIndex = itemIndex, updateResultItems());
-  });
-
-  $searchToggle.on('click', function() {
-    showSearch = !showSearch;
-    showSearch ? openSearchPanel() : closeSearchPanel();
   });
 });

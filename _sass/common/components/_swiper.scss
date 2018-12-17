@@ -1,6 +1,6 @@
 .swiper {
   position: relative;
-  overflow: hidden;
+  @include overflow(hidden);
 }
 
 .swiper__wrapper, .swiper__slide {
@@ -18,6 +18,9 @@
 
 .swiper__slide {
   @include flex-shrink(0);
+  & > img {
+    max-width: 100%;
+  }
 }
 
 .swiper__button {
@@ -25,15 +28,15 @@
   top: 50%;
   @extend .button, .button--circle;
   @include transform(translate(0, -50%));
-  @include clickable($text-color-d, rgba($main-color-3, .5));
+  @include clickable($text-color-d, rgba($main-color-3, .4));
 }
 
 .swiper--light .swiper__button {
-  @include clickable($text-color-theme-light, rgba(#fff, .15));
+  @include clickable($text-color-theme-light, rgba($main-color-theme-dark, .4));
 }
 
 .swiper--dark .swiper__button {
-  @include clickable($text-color-theme-dark, rgba(#000, .15));
+  @include clickable($text-color-theme-dark, rgba($main-color-theme-light, .4));
 }
 
 .swiper__button--prev {

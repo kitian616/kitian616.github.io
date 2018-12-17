@@ -14,6 +14,9 @@ $text-color-2:     rgba(#fff, .8);
 $main-color-3:     #202020;
 $text-color-3:     rgba(#fff, .8);
 
+$main-color-theme-light: rgba(#000, .8);
+$main-color-theme-dark:  rgba(#fff, .8);
+
 // page background
 $background-color: #121212;
 
@@ -43,7 +46,7 @@ $footer-background: $main-color-3;
 $border-color:     mix(#fff, $background-color, 20%);
 $border-color-l:   mix(#fff, $background-color, 10%);
 $decorate-color:   rgba(#fff, .1);
-$mask-color:       rgba(#000, .8);
+$mask-color:       rgba(#000, .9);
 $select-color:     rgba($main-color-1, .5);
 
 // function colors
