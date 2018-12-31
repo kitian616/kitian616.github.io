@@ -96,7 +96,6 @@
       this.$swiperWrapper.on('touchstart', function(e) {
         var touch0, touch1, rect;
         touchstartFingerCount = getTouchesCount(e);
-        self.swiper.setOptions({ disabled: true });
         if (touchstartFingerCount > 1) {
           touch0 = e.touches[0];
           touch1 = e.touches[1];
@@ -127,7 +126,6 @@
         }
       });
       this.$swiperWrapper.on('touchend', function(e) {
-        self.swiper.setOptions({ disabled: false });
         self.lastZoom = self.zoom;
         self.lastTranslate = self.translate;
         touchstartFingerCount = 0;

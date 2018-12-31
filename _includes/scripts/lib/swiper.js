@@ -3,13 +3,12 @@
   window.Lazyload.js(SOURCES.jquery, function() {
     function swiper(options) {
       var $window = $(window), $root = this, $swiperWrapper, $swiperSlides, $swiperButtonPrev, $swiperButtonNext,
-        initialSlide, disabled, animation, onChange, onChangeEnd,
+        initialSlide, animation, onChange, onChangeEnd,
         rootWidth, count, preIndex, curIndex, translateX, CRITICAL_ANGLE = Math.PI / 3;
 
       function setOptions(options) {
         var _options = options || {};
         initialSlide = _options.initialSlide || 0;
-        disabled = _options.disabled;
         animation = _options.animation === undefined && true;
         onChange = onChange || _options.onChange;
         onChangeEnd = onChangeEnd || _options.onChangeEnd;
@@ -122,7 +121,6 @@
       (function() {
         var pageX, pageY, velocityX, preTranslateX = translateX, timeStamp, touching;
         function handleTouchstart(e) {
-          if (disabled) { return; }
           var point = e.touches ? e.touches[0] : e;
           pageX = point.pageX;
           pageY = point.pageY;
@@ -130,7 +128,9 @@
           preTranslateX = translateX;
         }
         function handleTouchmove(e) {
-          if (disabled || (e.touches && e.touches.length > 1)) { return; }
+          if (e.touches && e.touches.length > 1) {
+            return;
+          }
           var point = e.touches ? e.touches[0] : e;
           var deltaX = point.pageX - pageX;
           var deltaY = point.pageY - pageY;
@@ -145,7 +145,6 @@
           pageY = point.pageY;
         }
         function handleTouchend() {
-          if (disabled) { return; }
           touching = false;
           var deltaX = translateX - preTranslateX;
           var distance = deltaX + velocityX * rootWidth;

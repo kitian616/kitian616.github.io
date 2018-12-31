@@ -84,8 +84,7 @@ $layout: (
   content-max-width:      950px,
   sidebar-width:          250px,
   sidebar-header-height:  3rem,
-  aside-width:            220px,
-  footer-height:          10rem
+  aside-width:            220px
 );
 
 //     sm       md       lg
@@ -104,7 +103,7 @@ $animation: (
   timing-function:        ease-in-out
 );
 
-$link: (
+$clickable: (
   transition:             all .2s ease-in-out
 );
 
@@ -134,9 +133,7 @@ $button: (
   circle-diameter-sm:     $button-height-sm,
   circle-diameter-xs:     $button-height-xs,
 
-  font-weight:            map-get($base, font-weight-bold),
-
-  transition:             all .2s ease-in-out
+  font-weight:            map-get($base, font-weight-bold)
 );
 
 $image: (
@@ -148,6 +145,6 @@ $image: (
 );
 
 $menu: (
-  horizontal-spacer:      1,
+  horizontal-spacer: 1,
   horizontal-item-vertical-spacer: 1
 );

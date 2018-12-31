@@ -68,7 +68,6 @@ layout: base
     <div class="{{ _page_main_class }} cell cell--auto">
 
       <div class="page__main-inner">
-        <div></div>
       {%- if _header != false -%}
         <div class="page__header d-print-none">
         {%- assign _header_theme = page.header.theme | default: layout.header.theme -%}
@@ -193,6 +192,7 @@ layout: base
               </div>
 
               <div class="col-main cell cell--auto">
+                {%- include main/top/custom.html -%}
                 {%- if _page_type == 'article' -%}
                   <article itemscope itemtype="http://schema.org/Article">
                 {%- elsif _page_type == 'webpage' -%}
@@ -214,7 +214,7 @@ layout: base
                       <section class="page__comments d-print-none">{%- include comments.html -%}</section>
                     {%- endif -%}
                 </article>
-                {%- include main-bottom/custom.html -%}
+                {%- include main/bottom/custom.html -%}
               </div>
             </div>
 
